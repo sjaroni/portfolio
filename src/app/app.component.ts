@@ -5,7 +5,6 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import { NavbarMobileComponent } from './shared/components/navbar-mobile/navbar-mobile.component';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +13,6 @@ import { NavbarMobileComponent } from './shared/components/navbar-mobile/navbar-
     CommonModule, 
     RouterOutlet,
     NavbarComponent,
-    NavbarMobileComponent, 
     MainContentComponent, 
     FooterComponent,
     ImprintComponent,

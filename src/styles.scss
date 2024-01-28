@@ -1,8 +1,12 @@
+@import './styles/mixins.scss';
+
 body {
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   background-color: #141d2f;
   color: white; //**ANCHOR - Schriftfarbe prüfen
+  font-family: 'Poppins'; //*ANCHOR - Schrift einbinden unten
+  @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
 }
