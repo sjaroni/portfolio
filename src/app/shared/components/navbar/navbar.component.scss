@@ -1,0 +1,48 @@
+@import "../../../../styles/mixins.scss";
+
+nav {
+  height: 109px;
+  top: 0;
+  position: sticky;
+  z-index: 999;
+  background-color: #141d2f;
+  @include dFlex($jc: center, $ai: center, $fd: row, $g: 0px);
+
+  header {
+    width: calc(100% - 200px);
+    left: 100px;
+    right: 100px;
+    @include dFlex($jc: space-between, $ai: center, $fd: row, $g: 0px);
+  }
+}
+
+.menu {
+  width: 324px;
+  height: 32px;
+  font-size: 23px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  @include dFlex($jc: flex-end, $ai: center, $fd: row, $g: 29px);
+
+  .menu-property {
+    @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 0);
+
+    > a {
+      text-decoration: none;
+      color: #ffffff;
+      line-height: 28px;
+
+      &:hover {
+        color: #00bee8;
+      }
+      &:active {
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+.isActive {
+  color: #00bee8 !important;
+}
