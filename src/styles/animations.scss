@@ -1,0 +1,67 @@
+@keyframes fadeOut {
+  from  {
+      background-color: rgba(0, 0, 0 , 1);
+  }
+  to {
+      background-color: rgba(255, 255, 255 , 0);
+  }
+}
+
+@keyframes fadeIn {
+  from  {
+      background-color: rgba(255, 255, 255 , 0);
+  }
+  to {
+      background-color: rgba(0, 0, 0, 1);
+  }
+}
+
+@keyframes rotateTop {
+  from {
+      transform: translateY(0px)rotate(0);
+  } to {
+      transform: translateY(14px) rotate(-45deg);
+  }
+}
+
+@keyframes rotateBottom {
+  from {
+      transform: translateY(0px)rotate(0);
+  } to {
+      transform: translateY(-10px) rotate(45deg);
+  }
+}
+
+@keyframes rotateBackTop {
+  from {
+      transform: translateY(14px)rotate(-45deg);
+  } to {
+      transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes rotateBackBottom {
+  from {
+      transform: translateY(-10px)rotate(45deg);
+  } to {
+      transform: translateY(0px) rotate(0deg);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
