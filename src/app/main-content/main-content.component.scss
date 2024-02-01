@@ -5,3 +5,10 @@
   min-width: 1024px;
   height: 200vh;
 }
+
+@media (max-width: 992px){
+  #content{
+    min-width: inherit;
+    background-color: yellow !important;
+  }
+}

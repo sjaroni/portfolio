@@ -7,7 +7,6 @@ nav {
   position: sticky;
   z-index: 999;
   background-color: #141d2f;
-  // overflow: hidden;
   overflow: visible; 
   @include dFlex($jc: center, $ai: center, $fd: row, $g: 0px);
 
@@ -66,13 +65,40 @@ nav {
 #menuMobile {
   position: absolute;
   top: 0;
-  height: 924px;
-  width: calc(100% - 200px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100vh;  
+  width: 100%;
+  font-size: 23px;
   // background-color: #141d2f;
   background-color: pink;
   opacity: 0.8;
   z-index: 1;
+  @include dFlex($jc: center, $ai: center, $fd: column, $g: 0);
   animation: slideIn 125ms ease-in-out;
+
+  .navLinkContent {
+    @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 0);
+
+    > a {
+      text-decoration: none;
+      color: #ffffff;
+      line-height: 28px;
+
+      &:hover {
+        color: #00bee8;
+      }
+      &:active {
+        color: #ffffff;
+      }
+    }
+
+    .isActive {
+      color: #00bee8 !important;
+    }
+  }
+
 }
 
 
@@ -88,12 +114,11 @@ nav {
   align-items: end;
   cursor: pointer;
   height: 30px;
-  z-index: 2;
 }
 
 .hamburgerMenuLine {
   background-color: #FFFFFF;
-  height: 4px;
+  height: 2px;
   width: 32px;
   border-radius: 16px;
 }
@@ -128,6 +153,12 @@ nav {
       left: 0;
       transform: translateX(100%);
   }
+
+  #header-menu {
+    width: 100% !important;
+    padding: 37px 25px;
+  }
+
 }
 
 @media (min-width: 993px) {
