@@ -1,12 +1,5 @@
-<section class="atf">
-  <img
-    id="hero-character-picture"
-    src="./assets/img/profile.png"
-    alt=""
-    srcset=""
-  />
-  <div class="whoAmI">   
-  <svg xmlns="http://www.w3.org/2000/svg">
+<?xml-stylesheet type="text/css" href="./styles.css"?>
+<svg width="683" height="200" xmlns="http://www.w3.org/2000/svg">
     <text x="-75" y="150" fill="#FFFFFF" font-family="Poppins" font-size="52" font-weight="400" transform="rotate(270, 10, 40)">
         I am
     </text>
@@ -17,9 +10,3 @@
         FRONTEND DEVELOPER
     </text>
 </svg>
-    <button>Let`s talk!</button>
-  </div>
-</section>
-<!-- <section class="atf-contact">
-  stefan.jaroni
-</section> -->

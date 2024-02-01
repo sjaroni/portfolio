@@ -16,10 +16,10 @@ export class NavbarComponent {
   isMenuOpen: boolean = false;
   showOverlay: boolean = false;
 
-  @ViewChild('menuMobile') menuMobile!: ElementRef;  
-  @ViewChild('lineTop') lineTop!: ElementRef;  
-  @ViewChild('lineMiddle') lineMiddle!: ElementRef;  
-  @ViewChild('lineBottom') lineBottom!: ElementRef;  
+  @ViewChild('menuMobile') menuMobile!: ElementRef;
+  @ViewChild('lineTop') lineTop!: ElementRef;
+  @ViewChild('lineMiddle') lineMiddle!: ElementRef;
+  @ViewChild('lineBottom') lineBottom!: ElementRef;
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
@@ -30,7 +30,7 @@ export class NavbarComponent {
     this.deactivateLinks();
     this.activateLink(fragment);
   }
-
+  
   deactivateLinks() {
     this.isAboutMeClicked = false;
     this.isSkillsClicked = false;
@@ -43,6 +43,10 @@ export class NavbarComponent {
     this.isSkillsClicked = fragment === 'skills';
     this.isPortfolioClicked = fragment === 'portfolio';
     this.isContactClicked = fragment === 'contact';
+
+    setTimeout(() => {
+      if (this.isMenuOpen) this.closeMenu();
+    }, 450);
   }
 
   getMenuMobileElement(): any {
@@ -81,7 +85,7 @@ export class NavbarComponent {
     this.toggleMenu();
   }
 
-  closeMenu(): void {    
+  closeMenu(): void {
     let menuMobile = this.getMenuMobileElement();
     let lineTop = this.getLineTopElement();
     let lineMiddle = this.getLineMiddleElement();
@@ -101,9 +105,9 @@ export class NavbarComponent {
     lineBottom.style.transform = 'translateY(0px) rotate(0deg)';
 
     setTimeout(() => {
-         menuMobile.style.display = 'none';
-         this.showOverlay = false;
-        }, 200);
+      menuMobile.style.display = 'none';
+      this.showOverlay = false;
+    }, 200);
     this.toggleMenu();
   }
 }

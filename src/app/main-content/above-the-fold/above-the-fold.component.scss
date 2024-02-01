@@ -1,11 +1,42 @@
 @import "../../../styles/mixins.scss";
 
-section {
-  height: 815px;
-  @include dFlex($jc: center, $ai: center, $fd: row, $g: 0px);
+.atf {
+  height: 615px;
+  @include dFlex($jc: center, $ai: flex-start, $fd: row, $g: 0px);
+  width: calc(100% - 200px);
+  padding: 0 100px;
 
   #hero-character-picture {
-    height: 605px;
-    width: auto;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .whoAmI {
+    width: 100% !important;
+    height: 100%;
+    @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
+    background-color: green;
+
+    svg {
+      width: 683px;
+      height: 200px;
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .atf {
+    width: calc(100% - 50px);
+    padding: 0 25px;
+    @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 0px);
+  }
+}
+@media (max-width: 1280px) {
+
+  svg {   
+   text{
+     font-size: 3em;
+    }
   }
 }

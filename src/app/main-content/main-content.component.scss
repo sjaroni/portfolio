@@ -1,6 +1,6 @@
 #content {  
   background-color: #141d2f;
-  width: calc(100vw - 20px);
+  width: 100%;
   max-width: 1440px;
   min-width: 1024px;
   height: 200vh;
@@ -8,6 +8,6 @@
 
 @media (max-width: 992px){
   #content{
-    min-width: inherit;    
+    min-width: inherit;
   }
 }
