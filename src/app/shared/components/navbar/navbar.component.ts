@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,6 +13,16 @@ export class NavbarComponent {
   isSkillsClicked: boolean = false;
   isPortfolioClicked: boolean = false;
   isMenuOpen: boolean = false;
+  showOverlay: boolean = false;
+
+  @ViewChild('menuMobile') menuMobile!: ElementRef;  
+  @ViewChild('lineTop') lineTop!: ElementRef;  
+  @ViewChild('lineMiddle') lineMiddle!: ElementRef;  
+  @ViewChild('lineBottom') lineBottom!: ElementRef;  
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
   clickedLink(fragment: string, event: Event): void {
     event.preventDefault();
@@ -32,59 +42,48 @@ export class NavbarComponent {
     this.isPortfolioClicked = fragment === 'portfolio';
   }
 
-  //   function init() {
-
-  //     menu = document.getElementById('menu-mobile');
-  //     lineTop = document.getElementById('lineTop');
-  //     lineMiddle = document.getElementById('lineMiddle');
-  //     lineBottom = document.getElementById('lineBottom');
-  //     hamburgerButton = document.getElementById('hamburgerButton');
-  // }
-
-  openMenu() {
-    console.log('menu opened');
+  openMenu(): void {
     this.deactivateLinks();
+    this.showOverlay = true;
 
+    let lineTop = this.lineTop.nativeElement;
+    let lineMiddle = this.lineMiddle.nativeElement;
+    let lineBottom = this.lineBottom.nativeElement;    
 
-    this.isMenuOpen = true;
-    // menu.style.animation = 'slideIn 1000ms';
-    // menu.style.display = 'flex';
-    // menu.style.transform = 'translateX(0%)';
-    // menu.style.zIndex = '4';
+    lineTop.style.animation = 'rotateTop 125ms';
+    lineTop.style.transform = 'translateY(14px) rotate(-45deg)';
 
-    // lineTop.style.animation = 'rotateTop 1000ms';
-    // lineTop.style.transform = 'translateY(14px) rotate(-45deg)';
+    lineMiddle.style.animation = 'fadeOut 125ms';
+    lineMiddle.style.backgroundColor = 'rgba(254, 254, 254 , 0)';
 
-    // lineMiddle.style.animation = 'fadeOut 1000ms';
-    // lineMiddle.style.backgroundColor = 'rgba(254, 254, 254 , 0)';
-
-    // lineBottom.style.animation = 'rotateBottom 1000ms';
-    // lineBottom.style.transform = 'translateY(-10px) rotate(45deg)';
-
-    // hamburgerButton.setAttribute( "onClick", "closeMenu()")
-    // hamburgerButton.style.zIndex = '5'
+    lineBottom.style.animation = 'rotateBottom 125ms';
+    lineBottom.style.transform = 'translateY(-10px) rotate(45deg)';
+    this.toggleMenu();
   }
 
-  closeMenu() {
-    console.log('menu closed');
-    this.isMenuOpen = false;
-    // menu.style.animation = 'slideOut 1000ms';
-    // menu.style.transform = 'translateX(100%)';
-    // menu.style.zIndex = '1';
+  closeMenu(): void {    
+    let menuMobile = this.menuMobile.nativeElement;
+    let lineTop = this.lineTop.nativeElement;
+    let lineMiddle = this.lineMiddle.nativeElement;
+    let lineBottom = this.lineBottom.nativeElement;
 
-    // lineTop.style.animation = 'rotateBackTop 1000ms';
-    // lineTop.style.transform = 'translateY(0px) rotate(0deg)';
+    menuMobile.style.animation = 'slideOut 125ms';
+    menuMobile.style.transform = 'translateX(100%)';
+    menuMobile.style.zIndex = '1';
 
-    // lineMiddle.style.animation = 'fadeIn 1000ms';
-    // lineMiddle.style.backgroundColor = 'rgba(0, 0, 0 , 1)';
+    lineTop.style.animation = 'rotateBackTop 125ms';
+    lineTop.style.transform = 'translateY(0px) rotate(0deg)';
 
-    // lineBottom.style.animation = 'rotateBackBottom 1000ms';
-    // lineBottom.style.transform = 'translateY(0px) rotate(0deg)';
+    lineMiddle.style.animation = 'fadeIn 125ms';
+    lineMiddle.style.backgroundColor = 'rgba(255, 255, 255 , 1)';
 
-    // hamburgerButton.setAttribute( "onClick", "openMenu()")
+    lineBottom.style.animation = 'rotateBackBottom 125ms';
+    lineBottom.style.transform = 'translateY(0px) rotate(0deg)';
 
-    // setTimeout(function() {
-    //     menu.style.display = 'none';
-    //   }, 1001);
+    setTimeout(() => {
+         menuMobile.style.display = 'none';
+         this.showOverlay = false;
+        }, 200);
+    this.toggleMenu();
   }
 }

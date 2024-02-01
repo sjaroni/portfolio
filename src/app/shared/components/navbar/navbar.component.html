@@ -77,11 +77,11 @@
     <div
       id="hamburgerButton"
       class="hamburgerMenu"
-      (click)="openMenu()"
+      (click)="isMenuOpen ? closeMenu() : openMenu()"
       style="z-index: 5"
     >
       <div
-        id="lineTop"
+        id="lineTop" #lineTop
         class="hamburgerMenuLine topLine"
         style="
           animation: 125ms ease 0s 1 normal none running rotateBackTop;
@@ -89,7 +89,7 @@
         "
       ></div>
       <div
-        id="lineMiddle"
+        id="lineMiddle" #lineMiddle
         class="hamburgerMenuLine middleLine"
         style="
           animation: 125ms ease 0s 1 normal none running fadeIn;
@@ -97,7 +97,7 @@
         "
       ></div>
       <div
-        id="lineBottom"
+        id="lineBottom" #lineBottom
         class="hamburgerMenuLine bottomLine"
         style="
           animation: 125ms ease 0s 1 normal none running rotateBackBottom;
@@ -106,14 +106,9 @@
       ></div>
     </div>
 
-    <!-- style="
-        animation: 125ms ease 0s 1 normal none running slideOut;
-        display: block;
-        transform: translateX(100%);
-        z-index: 1;
-      " -->
-
-      <div id="menu-mobile">
+      <div id="menuMobile" #menuMobile *ngIf="showOverlay"
+        style="transform: translateX(0);"
+      >
         <!-- <div class="navLinkContent">
           <a
             (click)="clickedLink('aboutMe', $event)"

@@ -63,14 +63,16 @@ nav {
   }
 }
 
-#menu-mobile {
+#menuMobile {
   position: absolute;
   top: 0;
   height: 924px;
   width: calc(100% - 200px);
-  background-color: #141D2FCC;
-  opacity: 0.8;  
+  // background-color: #141d2f;
+  background-color: pink;
+  opacity: 0.8;
   z-index: 1;
+  animation: slideIn 125ms ease-in-out;
 }
 
 
@@ -86,6 +88,7 @@ nav {
   align-items: end;
   cursor: pointer;
   height: 30px;
+  z-index: 2;
 }
 
 .hamburgerMenuLine {
@@ -128,7 +131,7 @@ nav {
 }
 
 @media (min-width: 993px) {
-  #menu {
+  #menuMobile {
       display: none;
   }
   
