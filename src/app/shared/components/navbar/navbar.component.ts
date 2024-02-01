@@ -12,6 +12,7 @@ export class NavbarComponent {
   isAboutMeClicked: boolean = false;
   isSkillsClicked: boolean = false;
   isPortfolioClicked: boolean = false;
+  isContactClicked: boolean = false;
   isMenuOpen: boolean = false;
   showOverlay: boolean = false;
 
@@ -34,12 +35,14 @@ export class NavbarComponent {
     this.isAboutMeClicked = false;
     this.isSkillsClicked = false;
     this.isPortfolioClicked = false;
+    this.isContactClicked = false;
   }
 
   activateLink(fragment: string) {
     this.isAboutMeClicked = fragment === 'aboutMe';
     this.isSkillsClicked = fragment === 'skills';
     this.isPortfolioClicked = fragment === 'portfolio';
+    this.isContactClicked = fragment === 'contact';
   }
 
   getMenuMobileElement(): any {

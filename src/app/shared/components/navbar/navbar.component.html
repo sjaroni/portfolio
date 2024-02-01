@@ -1,8 +1,6 @@
 <nav>
   <div id="header-menu">
-    <div class="logoBox"
-    style="z-index: 5"
-    >
+    <div class="logoBox" style="z-index: 5">
       <a href="#"
         >Stefan
         <!-- 
@@ -10,10 +8,113 @@
           /*ANCHOR - LOGO & NAME & LINK auf HOME
         -->
       </a>
-    </div>   
+    </div>
 
     <div class="menu-system">
-      
+      <div class="navLinkContent">
+        <a
+          (click)="clickedLink('aboutMe', $event)"
+          href="#aboutMe"
+          [ngClass]="{ isActive: isAboutMeClicked }"
+          >About me</a
+        >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="59"
+          height="4"
+          viewBox="0 0 59 4"
+          fill="none"
+        >
+          <path
+            d="M2 0.5H0.5V3.5H2V0.5ZM57.5 3.5C58.3284 3.5 59 2.82843 59 2C59 1.17157 58.3284 0.5 57.5 0.5V3.5ZM2 3.5H57.5V0.5H2V3.5Z"
+            [attr.fill]="isAboutMeClicked ? '#4B47FF' : '#141d2f'"
+          />
+        </svg>
+      </div>
+      <div class="navLinkContent">
+        <a
+          (click)="clickedLink('skills', $event)"
+          href="#skills"
+          [ngClass]="{ isActive: isSkillsClicked }"
+          >Skills</a
+        >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="59"
+          height="4"
+          viewBox="0 0 59 4"
+          fill="none"
+        >
+          <path
+            d="M2 0.5H0.5V3.5H2V0.5ZM57.5 3.5C58.3284 3.5 59 2.82843 59 2C59 1.17157 58.3284 0.5 57.5 0.5V3.5ZM2 3.5H57.5V0.5H2V3.5Z"
+            [attr.fill]="isSkillsClicked ? '#4B47FF' : '#141d2f'"
+          />
+        </svg>
+      </div>
+      <div class="navLinkContent">
+        <a
+          (click)="clickedLink('portfolio', $event)"
+          href="#portfolio"
+          [ngClass]="{ isActive: isPortfolioClicked }"
+          >Portfolio</a
+        >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="59"
+          height="4"
+          viewBox="0 0 59 4"
+          fill="none"
+        >
+          <path
+            d="M2 0.5H0.5V3.5H2V0.5ZM57.5 3.5C58.3284 3.5 59 2.82843 59 2C59 1.17157 58.3284 0.5 57.5 0.5V3.5ZM2 3.5H57.5V0.5H2V3.5Z"
+            [attr.fill]="isPortfolioClicked ? '#4B47FF' : '#141d2f'"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <div
+      id="hamburgerButton"
+      class="hamburgerMenu"
+      (click)="isMenuOpen ? closeMenu() : openMenu()"
+      style="z-index: 5"
+    >
+      <div
+        id="lineTop"
+        #lineTop
+        class="hamburgerMenuLine topLine"
+        style="
+          animation: 125ms ease 0s 1 normal none running rotateBackTop;
+          transform: translateY(0px) rotate(0deg);
+        "
+      ></div>
+      <div
+        id="lineMiddle"
+        #lineMiddle
+        class="hamburgerMenuLine middleLine"
+        style="
+          animation: 125ms ease 0s 1 normal none running fadeIn;
+          background-color: rgb(255, 255, 255);
+        "
+      ></div>
+      <div
+        id="lineBottom"
+        #lineBottom
+        class="hamburgerMenuLine bottomLine"
+        style="
+          animation: 125ms ease 0s 1 normal none running rotateBackBottom;
+          transform: translateY(0px) rotate(0deg);
+        "
+      ></div>
+    </div>
+
+    <div
+      id="menuMobile"
+      #menuMobile
+      *ngIf="showOverlay"
+      style="transform: translateX(0)"
+    >
+      <div class="navLink">
         <div class="navLinkContent">
           <a
             (click)="clickedLink('aboutMe', $event)"
@@ -73,108 +174,28 @@
               [attr.fill]="isPortfolioClicked ? '#4B47FF' : '#141d2f'"
             />
           </svg>
-        </div>      
-    </div>
-
-    <div
-      id="hamburgerButton"
-      class="hamburgerMenu"
-      (click)="isMenuOpen ? closeMenu() : openMenu()"
-      style="z-index: 5"
-    >
-      <div
-        id="lineTop" #lineTop
-        class="hamburgerMenuLine topLine"
-        style="
-          animation: 125ms ease 0s 1 normal none running rotateBackTop;
-          transform: translateY(0px) rotate(0deg);
-        "
-      ></div>
-      <div
-        id="lineMiddle" #lineMiddle
-        class="hamburgerMenuLine middleLine"
-        style="
-          animation: 125ms ease 0s 1 normal none running fadeIn;
-          background-color: rgb(255, 255, 255);
-        "
-      ></div>
-      <div
-        id="lineBottom" #lineBottom
-        class="hamburgerMenuLine bottomLine"
-        style="
-          animation: 125ms ease 0s 1 normal none running rotateBackBottom;
-          transform: translateY(0px) rotate(0deg);
-        "
-      ></div>
-    </div>
-
-      <div id="menuMobile" #menuMobile *ngIf="showOverlay"
-        style="transform: translateX(0);"
-      >
-      <div class="navLink">
-
+        </div>
         <div class="navLinkContent">
           <a
-          (click)="clickedLink('aboutMe', $event)"
-          href="#aboutMe"
-          [ngClass]="{ isActive: isAboutMeClicked }"
-          >About me</a
+            (click)="clickedLink('contact', $event)"
+            href="#contact"
+            [ngClass]="{ isActive: isContactClicked }"
+            >Contact</a
           >
           <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="59"
-          height="4"
-          viewBox="0 0 59 4"
-          fill="none"
-          >
-          <path
-          d="M2 0.5H0.5V3.5H2V0.5ZM57.5 3.5C58.3284 3.5 59 2.82843 59 2C59 1.17157 58.3284 0.5 57.5 0.5V3.5ZM2 3.5H57.5V0.5H2V3.5Z"
-          [attr.fill]="isAboutMeClicked ? '#4B47FF' : '#141d2f'"
-          />
-        </svg>
-      </div>
-      <div class="navLinkContent">
-        <a
-        (click)="clickedLink('skills', $event)"
-        href="#skills"
-        [ngClass]="{ isActive: isSkillsClicked }"
-        >Skills</a
-        >
-        <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="59"
-        height="4"
-        viewBox="0 0 59 4"
-        fill="none"
-        >
-        <path
-        d="M2 0.5H0.5V3.5H2V0.5ZM57.5 3.5C58.3284 3.5 59 2.82843 59 2C59 1.17157 58.3284 0.5 57.5 0.5V3.5ZM2 3.5H57.5V0.5H2V3.5Z"
-        [attr.fill]="isSkillsClicked ? '#4B47FF' : '#141d2f'"
-        />
-      </svg>
-    </div>
-    <div class="navLinkContent">
-      <a
-      (click)="clickedLink('portfolio', $event)"
-            href="#portfolio"
-            [ngClass]="{ isActive: isPortfolioClicked }"
-            >Portfolio</a
-            >
-            <svg
             xmlns="http://www.w3.org/2000/svg"
             width="59"
             height="4"
             viewBox="0 0 59 4"
             fill="none"
-            >
+          >
             <path
-            d="M2 0.5H0.5V3.5H2V0.5ZM57.5 3.5C58.3284 3.5 59 2.82843 59 2C59 1.17157 58.3284 0.5 57.5 0.5V3.5ZM2 3.5H57.5V0.5H2V3.5Z"
-            [attr.fill]="isPortfolioClicked ? '#4B47FF' : '#141d2f'"
+              d="M2 0.5H0.5V3.5H2V0.5ZM57.5 3.5C58.3284 3.5 59 2.82843 59 2C59 1.17157 58.3284 0.5 57.5 0.5V3.5ZM2 3.5H57.5V0.5H2V3.5Z"
+              [attr.fill]="isContactClicked ? '#4B47FF' : '#141d2f'"
             />
           </svg>
         </div>
       </div>
-      </div>
-
+    </div>
   </div>
 </nav>

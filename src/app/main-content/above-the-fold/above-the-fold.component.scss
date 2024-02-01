@@ -1,13 +1,11 @@
 @import "../../../styles/mixins.scss";
 
-section{
+section {
   height: 815px;
   @include dFlex($jc: center, $ai: center, $fd: row, $g: 0px);
 
-  #hero-character-picture{
+  #hero-character-picture {
     height: 605px;
     width: auto;
   }
-
-  
 }

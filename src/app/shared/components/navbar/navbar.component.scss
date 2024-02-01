@@ -38,28 +38,7 @@ nav {
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  @include dFlex($jc: flex-end, $ai: center, $fd: row, $g: 29px);
-
-  .navLinkContent {
-    @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 0);
-
-    > a {
-      text-decoration: none;
-      color: #ffffff;
-      line-height: 28px;
-
-      &:hover {
-        color: #00bee8;
-      }
-      &:active {
-        color: #ffffff;
-      }
-    }
-
-    .isActive {
-      color: #00bee8 !important;
-    }
-  }
+  @include dFlex($jc: flex-end, $ai: center, $fd: row, $g: 29px); 
 }
 
 #menuMobile {
@@ -71,39 +50,36 @@ nav {
   height: 100vh;  
   width: 100%;
   font-size: 23px;
-  // background-color: #141d2f;
-  background-color: pink;
+  background-color: #141d2f;
   opacity: 0.8;
-  z-index: 1;
-  @include dFlex($jc: center, $ai: center, $fd: column, $g: 0);
+  z-index: 1;  
+  @include dFlex($jc: center, $ai: center, $fd: column, $g: 29px);
   animation: slideIn 125ms ease-in-out;
 
-  .navLinkContent {
-    @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 0);
-
-    > a {
-      text-decoration: none;
-      color: #ffffff;
-      line-height: 28px;
-
-      &:hover {
-        color: #00bee8;
-      }
-      &:active {
-        color: #ffffff;
-      }
-    }
-
-    .isActive {
-      color: #00bee8 !important;
-    }
-  }
-
+  .navLink{
+    @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 29px);
+  }  
 }
 
+.navLinkContent {
+  @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 0px);    
+}
 
-.hamburgerMenuContainer {
-  display: none;
+a {
+  text-decoration: none;
+  color: #ffffff;
+  line-height: 28px;
+
+  &:hover {
+    color: #00bee8;
+  }
+  &:active {
+    color: #ffffff;
+  }
+}
+
+.isActive {
+  color: #00bee8 !important;
 }
 
 .hamburgerMenu {
@@ -127,32 +103,7 @@ nav {
 
   .menu-system{
     display: none;
-  }
-  .navLinkBox {
-      display: none;
-      flex-direction: column;
-      justify-content: space-evenly;
-      align-items: center;
-
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      transform: translateX(100%);
-
-      background-color: rgba(255, 255, 255, 0.9);
-  }
-
-  .hamburgerMenuContainer {
-      display: flex;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      right: 0;
-      left: 0;
-      transform: translateX(100%);
-  }
+  }  
 
   #header-menu {
     width: 100% !important;
@@ -168,19 +119,7 @@ nav {
   
   .hamburgerMenu {
       display: none;
-  }
-
-  .navLinkBox {
-      justify-content: space-evenly;
-      align-items: end;
-      height: 120px;
-      width: 800px;
-      margin-bottom: 15px;
-  }
-
-  .d-none {
-      display: none;
-  }
+  }  
 }
 
 input::-webkit-outer-spin-button,
