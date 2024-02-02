@@ -11,6 +11,10 @@ body {
   color: white; //**ANCHOR - Schriftfarbe prüfen
   font-family: "Poppins";
   @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
+
+  outline: 1px solid;
+  outline-color: red;
+
 }
 
 /* poppins-200 - latin */
@@ -44,4 +48,10 @@ body {
   font-style: normal;
   font-weight: 600;
   src: url("./assets/fonts/poppins-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+app-root{
+  width: 100%;
+  max-width: 1440px;
+  // min-width: 1024px;
 }
