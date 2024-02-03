@@ -5,3 +5,35 @@
   flex-direction: $fd;
   gap: $g;
 }
+
+@mixin btn() {  
+  font-family: 'Poppins';
+  height: 58px;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 15px 30px;  
+  top: 60px;  
+  border: 1px solid #00BEE8;
+  background-color: #00BEE8;
+  font-weight: 300;
+  line-height: 27.6px;
+  font-size: 23px;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;  
+  width: max-content !important;
+  transition: all 125ms ease-in-out;
+  gap: 10px;
+
+  &:hover{
+    height: 68px;
+    margin-top: 0;
+    width: calc(100% + 20px);
+    font-size: 23px;
+    gap: 10px;
+    background-color: #4B47FF;
+    border: 1px solid #4B47FF;
+    padding: 20px 40px !important;
+    text-align: center;
+  }
+}

@@ -55,3 +55,7 @@ app-root{
   max-width: 1440px;
   // min-width: 1024px;
 }
+
+.btn{
+  @include btn();
+}
