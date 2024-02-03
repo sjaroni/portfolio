@@ -6,8 +6,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  // background-color: #141d2f; //**ANCHOR - Welcher Hintergrund?
-  background-color: #000000;
+  background-color: #141d2f; //**ANCHOR - Welcher Hintergrund?
+  //background-color: #000000;
   color: white; //**ANCHOR - Schriftfarbe prüfen
   font-family: "Poppins";
   @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);

@@ -2,45 +2,76 @@
 
 .atf {
   width: 100%;
-  height: 615px;
+  height: 1000px;
   @include dFlex($jc: center, $ai: flex-start, $fd: row, $g: 0px);
-  padding: 0 100px;
+  //padding: 0 100px;
 
-  #hero-character-picture,
+  .picture-container,
   .whoAmI {
-    flex: 1;
-    overflow: hidden;
-    box-sizing: border-box;
-  }
-
-  #hero-character-picture {
-    max-width: 646px;
-    width: 40%;
-    object-fit: contain;
+    width: 50%;
   }
 
   .whoAmI {
-    height: 90%;
-    @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
-    background-color: green;
-    width: 60%;
-    max-width: 718px;
-    overflow: visible;
-
-    svg {      
+    @include dFlex($jc: center, $ai: flex-end, $fd: column, $g: 0px);
+    margin-right: 100px;
+    svg {
       width: 100%;
       max-width: 718px;
       height: 172px;
-      background-color: gold;      
+      background-color: gold;
     }
   }
 }
 
-// @media (max-width: 1328px) {
+// .atf {
+//   width: 100%;
+//   height: 1000px;
+//   @include dFlex($jc: center, $ai: normal, $fd: row, $g: 0px);
+//   //padding: 0 100px;
+//   position: relative;
+
+//   .picture-container,
 //   .whoAmI {
-//     aspect-ratio: 0.8;
+//     flex: 1;
+//     overflow: hidden;
+//     box-sizing: border-box;
+//     width: 100%;
+//     height: 100%;
+//     position: absolute;
+//   }
+
+//   .picture-container{
+//     background: url('../../../assets/img/profile-shadow.png') no-repeat;
+//     background-position: -60px 0px;
+//     background-size: contain;
+//   }
+
+//   // #hero-character-picture {
+//   //   position: fixed;
+//   //   max-width: 646px;
+//   //   object-fit: contain;
+//   // }
+
+//   .whoAmI {
+//     @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
+//     background-color: green;
+//     max-width: 718px;
+//     overflow: visible;
+
+//     svg {
+//       width: 100%;
+//       max-width: 718px;
+//       height: 172px;
+//       background-color: gold;
+//     }
 //   }
 // }
+
+// // @media (max-width: 1328px) {
+// //   .whoAmI {
+// //     aspect-ratio: 0.8;
+// //   }
+// // }
 
 @media (max-width: 992px) {
   .atf {
