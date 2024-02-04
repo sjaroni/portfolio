@@ -1,14 +1,18 @@
 @import "./styles/mixins.scss";
 @import "./styles/animations.scss";
 
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;  
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
   background-color: #141d2f; //**ANCHOR - Welcher Hintergrund?
   //background-color: #000000;
-  color: white; //**ANCHOR - Schriftfarbe prüfen
+  color: white;
   font-family: "Poppins";
   @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
 
@@ -50,12 +54,31 @@ body {
   src: url("./assets/fonts/poppins-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+::-webkit-scrollbar{
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #141d2f;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: green;
+  border-radius: 4px;
+
+  &:hover{
+    background: #00BEE8;
+  }
+
+}
+
 app-root{
   width: 100%;
   max-width: 1440px;
-  // min-width: 1024px;
 }
 
 .btn{
   @include btn();
 }
+

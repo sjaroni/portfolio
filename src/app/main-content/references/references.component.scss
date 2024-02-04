@@ -1,0 +1,15 @@
+@import "../../../styles/mixins.scss";
+
+.reference-icons {
+  width: 100%;
+  @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 42px);  
+
+  .social-icon {
+    width: 30px !important;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

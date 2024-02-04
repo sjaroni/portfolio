@@ -1,93 +1,126 @@
 @import "../../../styles/mixins.scss";
 
 .atf {
+  height: 680px;
+  @include dFlex($jc: space-evenly, $ai: center, $fd: column, $g: 0px);
+  position: relative;
+}
+
+.picture-container {
+  // background: url('../../../assets/img/vector-mobile.png') no-repeat;
+  // background-size: contain;
+  //position: relative;
+  // @include dFlex($jc: center, $ai: flex-start, $fd: column, $g: 0px);
+
+  // #background-shadow {
+  //   position: absolute;
+  //   width: 100%;
+  //   top: 300px;
+  //   z-index: 0;
+  //   overflow: hidden;
+  // }
+  #shadow-character-picture {
+    width: 100%;
+  }
+
+  #hero-character-picture{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+  }
+
+}
+
+.whoAmI{  
+  // background-color: green;
   width: 100%;
-  height: 1000px;
-  @include dFlex($jc: center, $ai: flex-start, $fd: row, $g: 0px);
-
-  .picture-container,
-  .whoAmI {
-    width: 50%;
-    height: 100%;
-  }
-
-  .picture-container{
-    //@include dFlex($jc: center, $ai: flex-start, $fd: row, $g: 0px);
-
-    background: url('../../../assets/img/profile-shadow.png') no-repeat;
-    background-position: -20px 0px;
-    background-size: contain;     
-    
-    // outline: 1px solid;
-    // outline-color: red;
-  }
-
-
-  .whoAmI {
-    @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
-    margin-right: 133px;    
-    gap: 60px;
-
-    img{
-      width: 110%;      
-    }
+  margin-top: 90px;
+  @include dFlex($jc: space-between, $ai: center, $fd: column, $g: 20px);  
+  #whoAmI-picture{
+    width: 90%;
   }
 }
 
+// .atf-top{
+//   @include dFlex($jc: center, $ai: flex-start, $fd: column, $g: 0px);
+//   position: relative;
+
+//   img{
+//     position: absolute;
+//     top: 290px;
+//   }
+
+// }
+
 // .atf {
+//   position: relative;
 //   width: 100%;
 //   height: 1000px;
-//   @include dFlex($jc: center, $ai: normal, $fd: row, $g: 0px);
-//   //padding: 0 100px;
-//   position: relative;
+//   @include dFlex($jc: center, $ai: flex-start, $fd: row, $g: 0px);
 
 //   .picture-container,
 //   .whoAmI {
-//     flex: 1;
-//     overflow: hidden;
-//     box-sizing: border-box;
-//     width: 100%;
+//     width: 50%;
 //     height: 100%;
-//     position: absolute;
 //   }
 
-//   .picture-container{
-//     background: url('../../../assets/img/profile-shadow.png') no-repeat;
-//     background-position: -60px 0px;
-//     background-size: contain;
-//   }
+//   .picture-container {
+//     position: relative;
 
-//   // #hero-character-picture {
-//   //   position: fixed;
-//   //   max-width: 646px;
-//   //   object-fit: contain;
-//   // }
+//     img {
+//       width: 100%;
+//       position: absolute;
+//       top: 10px;
+//     }
+
+//     #shadow-character-picture{
+//       top: 120px;
+//       left: -80px;
+//       width: 120%;
+//     }
+
+//   }
 
 //   .whoAmI {
 //     @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
-//     background-color: green;
-//     max-width: 718px;
-//     overflow: visible;
+//     margin-right: 133px;
+//     gap: 60px;
+//     position: relative;
 
-//     svg {
-//       width: 100%;
-//       max-width: 718px;
-//       height: 172px;
-//       background-color: gold;
+//     img {
+//       width: 110%;
+//       position: absolute;
+//       top: 200px;
 //     }
+
+//     .contact{
+//       top: 40%;
+//       position: absolute;
+//     }
+
 //   }
 // }
 
-// // @media (max-width: 1328px) {
-// //   .whoAmI {
-// //     aspect-ratio: 0.8;
-// //   }
-// // }
+// .atf-contact{
+//   // background-color: blue;
+//   //position: absolute;
+//   //top: 390px;
+//   width: 100%;
+//   z-index: 1;
+//   overflow-y: visible;
+//   position: relative;
+// }
 
-@media (max-width: 992px) {
-  .atf {
-    width: calc(100% - 50px);
-    padding: 0 25px;
-    @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 0px);
-  }
-}
+// @media (min-width: 992px) and (max-width: 1439px){
+//   .contact{
+//     top: 34% !important;
+//   }
+// }
+
+// @media (max-width: 992px) {
+//   .atf {
+//     width: calc(100% - 50px);
+//     padding: 0 25px;
+//     @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 0px);
+//   }
+// }

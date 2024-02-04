@@ -107,7 +107,7 @@ export class NavbarComponent {
     setTimeout(() => {
       menuMobile.style.display = 'none';
       this.showOverlay = false;
-    }, 200);
+    }, 160);
     this.toggleMenu();
   }
 }
