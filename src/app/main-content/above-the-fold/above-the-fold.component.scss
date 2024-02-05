@@ -1,15 +1,15 @@
 @import "../../../styles/mixins.scss";
 
-.atf {
-  height: 680px;
-  @include dFlex($jc: space-evenly, $ai: center, $fd: column, $g: 0px);
+.atf {  
+  @include dFlex($jc: space-evenly, $ai: center, $fd: column, $g: 20px);
   position: relative;
 }
 
 .picture-container {
   // background: url('../../../assets/img/vector-mobile.png') no-repeat;
   // background-size: contain;
-  //position: relative;
+  // position: relative;
+  background-color: gold;
   // @include dFlex($jc: center, $ai: flex-start, $fd: column, $g: 0px);
 
   // #background-shadow {
@@ -20,19 +20,24 @@
   //   overflow: hidden;
   // }
   #shadow-character-picture {
-    width: 100%;
+    background-color: pink;
+    width: 110%;
+    height: auto;
+    top: 300px;
+    z-index: 0;
+    overflow: visible;
+    position: absolute;
   }
 
-  #hero-character-picture{
-    position: absolute;
-    width: 100%;
-    overflow: hidden;
-  }
+  // #hero-character-picture{
+  //   position: absolute;
+  //   width: 100%;
+  //   overflow: hidden;
+  // }
 
 }
 
 .whoAmI{  
-  // background-color: green;
   width: 100%;
   margin-top: 90px;
   @include dFlex($jc: space-between, $ai: center, $fd: column, $g: 20px);  
