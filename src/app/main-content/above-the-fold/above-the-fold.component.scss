@@ -6,121 +6,41 @@
 }
 
 .picture-container {
-  // background: url('../../../assets/img/vector-mobile.png') no-repeat;
-  // background-size: contain;
-  // position: relative;
-  background-color: gold;
-  // @include dFlex($jc: center, $ai: flex-start, $fd: column, $g: 0px);
+  position: relative;
+  width: 100%;
+  height: auto;
+}
 
-  // #background-shadow {
-  //   position: absolute;
-  //   width: 100%;
-  //   top: 300px;
-  //   z-index: 0;
-  //   overflow: hidden;
-  // }
-  #shadow-character-picture {
-    background-color: pink;
-    width: 110%;
-    height: auto;
-    top: 300px;
-    z-index: 0;
-    overflow: visible;
-    position: absolute;
-  }
+.image-wrapper {
+  position: relative;
+  width: 100%;
+}
 
-  // #hero-character-picture{
-  //   position: absolute;
-  //   width: 100%;
-  //   overflow: hidden;
-  // }
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
+.image3 {
+  position: absolute;
+  bottom: -43%;
+}
+
+#shadow-character-picture{
+  position: absolute;
+    top: 0;
+    z-index: -1;
 }
 
 .whoAmI{  
   width: 100%;
-  margin-top: 90px;
+  z-index: 1;  
   @include dFlex($jc: space-between, $ai: center, $fd: column, $g: 20px);  
   #whoAmI-picture{
     width: 90%;
   }
 }
-
-// .atf-top{
-//   @include dFlex($jc: center, $ai: flex-start, $fd: column, $g: 0px);
-//   position: relative;
-
-//   img{
-//     position: absolute;
-//     top: 290px;
-//   }
-
-// }
-
-// .atf {
-//   position: relative;
-//   width: 100%;
-//   height: 1000px;
-//   @include dFlex($jc: center, $ai: flex-start, $fd: row, $g: 0px);
-
-//   .picture-container,
-//   .whoAmI {
-//     width: 50%;
-//     height: 100%;
-//   }
-
-//   .picture-container {
-//     position: relative;
-
-//     img {
-//       width: 100%;
-//       position: absolute;
-//       top: 10px;
-//     }
-
-//     #shadow-character-picture{
-//       top: 120px;
-//       left: -80px;
-//       width: 120%;
-//     }
-
-//   }
-
-//   .whoAmI {
-//     @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
-//     margin-right: 133px;
-//     gap: 60px;
-//     position: relative;
-
-//     img {
-//       width: 110%;
-//       position: absolute;
-//       top: 200px;
-//     }
-
-//     .contact{
-//       top: 40%;
-//       position: absolute;
-//     }
-
-//   }
-// }
-
-// .atf-contact{
-//   // background-color: blue;
-//   //position: absolute;
-//   //top: 390px;
-//   width: 100%;
-//   z-index: 1;
-//   overflow-y: visible;
-//   position: relative;
-// }
-
-// @media (min-width: 992px) and (max-width: 1439px){
-//   .contact{
-//     top: 34% !important;
-//   }
-// }
 
 // @media (max-width: 992px) {
 //   .atf {
