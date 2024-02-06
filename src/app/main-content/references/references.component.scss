@@ -4,7 +4,7 @@
   width: 100%;
   margin-top: 40px;
   position: relative;
-  @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 42px);  
+  @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 42px);
 
   .social-icon {
     width: 30px !important;
@@ -13,5 +13,11 @@
     &:hover {
       transform: scale(1.2);
     }
+  }
+}
+
+@media (max-height: 700px) {
+  .reference-icons {    
+    margin-top: 18px;
   }
 }

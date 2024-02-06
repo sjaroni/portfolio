@@ -22,7 +22,7 @@
   display: block;
 }
 
-.image3 {
+.bottom {
   position: absolute;
   bottom: -42%;
 }
@@ -39,6 +39,19 @@
   @include dFlex($jc: space-between, $ai: center, $fd: column, $g: 20px);  
   #whoAmI-picture{
     width: 90%;
+  }
+}
+
+@media (max-height: 700px) {
+  .atf{
+    gap: 8px;
+  }
+  .whoAmI {    
+    width: 80%;
+    gap: 8px;
+  }
+  .btn{
+    width: 20%;
   }
 }
 

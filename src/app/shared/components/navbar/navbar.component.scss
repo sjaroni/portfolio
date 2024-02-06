@@ -7,7 +7,7 @@ nav {
   position: sticky;
   z-index: 999;
   background-color: #141d2f;
-  overflow: visible; 
+  overflow: visible;
   @include dFlex($jc: center, $ai: center, $fd: row, $g: 0px);
 
   #header-menu {
@@ -39,7 +39,7 @@ nav {
   font-style: normal;
   font-weight: 400;
   line-height: 120%;
-  @include dFlex($jc: flex-end, $ai: center, $fd: row, $g: 29px); 
+  @include dFlex($jc: flex-end, $ai: center, $fd: row, $g: 29px);
 }
 
 #menuMobile {
@@ -48,22 +48,22 @@ nav {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 100vh;  
+  height: 100vh;
   width: 100%;
   font-size: 23px;
   background-color: #141d2f;
   opacity: 0.8;
-  z-index: 1;  
+  z-index: 1;
   @include dFlex($jc: center, $ai: center, $fd: column, $g: 29px);
   animation: slideIn 125ms ease-in-out;
 
-  .navLink{
+  .navLink {
     @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 29px);
-  }  
+  }
 }
 
 .navLinkContent {
-  @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 0px);    
+  @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 0px);
 }
 
 a {
@@ -94,31 +94,37 @@ a {
 }
 
 .hamburgerMenuLine {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   height: 2px;
   width: 32px;
   border-radius: 16px;
 }
 
 @media (max-width: 992px) {
-
-  .menu-system{
+  .menu-system {
     display: none;
-  }  
+  }
 
   #header-menu {
     width: 100% !important;
     padding: 37px 25px;
   }
-
 }
 
 @media (min-width: 993px) {
   #menuMobile {
-      display: none;
+    display: none;
   }
-  
+
   .hamburgerMenu {
-      display: none;
-  }  
+    display: none;
+  }
 }
+
+@media (max-height: 700px) {
+  nav {    
+    height: 64px;
+  }
+}
+
+// höhe kleiner 700 dann header-menü kleiner
