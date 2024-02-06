@@ -3,7 +3,7 @@
 .reference-icons {
   width: 100%;
   margin-top: 40px;
-  position: absolute;
+  position: relative;
   @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 42px);  
 
   .social-icon {
