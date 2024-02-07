@@ -9,4 +9,22 @@
   <div class="intro">
     I have grown my frontend developments skills that have allowed me to create different real projects.
   </div>
+
+
+  <!-- <div class="applications"
+  (click)="editPlayer(i)"
+  *ngFor="let player of game.players; let i = index"
+  [ngStyle]="{ 'top.px ': 20 + i * 65 }"
+  [playerActive]="i == game.currentPlayer"
+  [name]="player"
+  [image]="game.playerImages[i]"
+  class="player-position">
+    test
+  </div> -->
+
+  <div class="applications"  
+  *ngFor="let application of applications; let i = index"
+  [ngStyle]="{ 'top.px ': 20 + i * 65 }">
+    test
+  </div>
 </div>
