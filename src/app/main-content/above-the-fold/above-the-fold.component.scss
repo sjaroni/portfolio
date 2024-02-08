@@ -1,65 +1,61 @@
 @import "../../../styles/mixins.scss";
 
-.atf {  
+.atf {
   @include dFlex($jc: space-evenly, $ai: center, $fd: column, $g: 20px);
   position: relative;
-}
 
-.picture-container {
-  position: relative;
-  width: 100%;
-  height: auto;
-}
+  .picture-container {
+    position: relative;
+    width: 100%;
+    height: auto;
 
-.image-wrapper {
-  position: relative;
-  width: 100%;
-}
+    .image-wrapper {
+      position: relative;
+      width: 100%;
 
-.image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
+      #shadow-character-picture {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+      }
+    }
+    .bottom {
+      position: absolute;
+      bottom: -42.3%;
+    }
+  }
 
-.image-overlay {
-  width: 100%;
-  height: auto;
-  display: block;
-  position: absolute;
-  top: 0;
-  z-index: 3;
-}
+  .image,
+  .image-overlay {
+    width: 100%;
+    display: block;
+  }
 
-.bottom {
-  position: absolute;
-  bottom: -42%;
-}
-
-#shadow-character-picture{
-  position: absolute;
+  .image-overlay {
+    position: absolute;
     top: 0;
-    z-index: -1;
+    z-index: 3;
+  }
 }
 
-.whoAmI{  
+.whoAmI {
   width: 100%;
-  z-index: 1;  
-  @include dFlex($jc: space-between, $ai: center, $fd: column, $g: 20px);  
-  #whoAmI-picture{
+  z-index: 1;
+  @include dFlex($jc: space-between, $ai: center, $fd: column, $g: 20px);
+  #whoAmI-picture {
     width: 90%;
   }
 }
 
 @media (max-height: 700px) {
-  .atf{
+  .atf {
     gap: 8px;
   }
-  .whoAmI {    
+  .whoAmI {
     width: 80%;
     gap: 8px;
   }
-  .btn{
+  .btn {
     width: 20%;
   }
 }
