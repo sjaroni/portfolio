@@ -2,6 +2,7 @@
 
 .content {
   @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 25px);
+  position: relative;  
 
   .skills {
     width: 100%;
@@ -17,19 +18,47 @@
       margin-block-start: 0;
       margin-block-end: 0;
     }
-
   }
-  .intro {    
-    text-align: right;
-    padding: 0 25px;
 
+  .intro,
+  .applications {
+    padding: 0 25px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .intro {
+    text-align: right;
     font-weight: 400;
     font-size: 16px;
     line-height: 19.2px;
+    padding-bottom: 24px;
+  }
+
+  .applications {    
+    @include dFlex($jc: space-between, $ai: flex-start, $fd: row, $g: 0px);    
+    flex-wrap: wrap;
+    
+    .application {
+      @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 10px);
+      width: clamp(41px, 70%, 77px);
+      flex: 0 0 calc(33.333% - 22px);
+      padding: 24px 0;
+
+      span{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16.8px;
+        color: #ffffff;    
+        text-align: center;  
+      }
+    }
   }
 }
-@media (max-height: 700px) {
-  .reference-icons {
-    margin-top: 18px;
-  }
+
+.shadow{
+  position: absolute;
+  bottom: -35%;
+  left: 0;
+  z-index: -1;
 }

@@ -7,24 +7,32 @@
     </svg>
   </div>
   <div class="intro">
-    I have grown my frontend developments skills that have allowed me to create different real projects.
+    I have grown my frontend developments skills that have allowed me to create
+    different real projects.
   </div>
-
-
-  <!-- <div class="applications"
-  (click)="editPlayer(i)"
-  *ngFor="let player of game.players; let i = index"
-  [ngStyle]="{ 'top.px ': 20 + i * 65 }"
-  [playerActive]="i == game.currentPlayer"
-  [name]="player"
-  [image]="game.playerImages[i]"
-  class="player-position">
-    test
+  
+  <!-- <div
+    class="applications"
+    (mouseenter)="hovered = true"
+    (mouseleave)="deleteHovered()"
+    *ngFor="let application of applications; let i = index"
+    class="player-position"
+    [ngStyle]="{ 'top.px ': 20 + i * 65 }"
+    >
+    <img [src]="application.icon" alt="{{ application.name }} icon" />
+    {{ application.name }}
   </div> -->
-
-  <div class="applications"  
-  *ngFor="let application of applications; let i = index"
-  [ngStyle]="{ 'top.px ': 20 + i * 65 }">
-    test
+  
+  <div class="applications">
+    <div
+    class="application"      
+    *ngFor="let application of applications; let i = index">
+    <img [src]="application.icon" alt="{{ application.name }} icon" />
+    <span>
+      {{ application.name }}
+    </span>
   </div>
+</div>
+<button class="btn" href="#contact">Get in touch</button>
+<img class="shadow" src="./assets/img/my-skills/skills-shadow.svg">
 </div>
