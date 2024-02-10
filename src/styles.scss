@@ -54,24 +54,26 @@ body {
   src: url("./assets/fonts/poppins-v20-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
-::-webkit-scrollbar{
-  width: 10px;
+*{
+  scrollbar-width: thin;
+  scrollbar-color: #00BEE8 #dddddd00;
 }
 
-::-webkit-scrollbar-thumb{
-  background-color: #141d2f;
-  border-radius: 4px;
+::-webkit-scrollbar {
+  width: 4px;
+  height: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4B47FF;
-  border-radius: 4px;
-
-  &:hover{
-    background: #00BEE8;
-  }
-
+  background-color: #00BEE8;
+  border-radius: 2px;  
 }
+
+::-webkit-scrollbar-track {
+  background-color: #00000000;
+  border: 1px solid #00000000;
+}
+
 
 app-root{
   width: 100%;
