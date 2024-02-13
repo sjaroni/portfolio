@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Applications } from '../../interfaces/applications';
+import { Applications } from '../../shared/interfaces/applications.interface';
 import { SingleApplicationComponent } from './single-application/single-application.component';
 
 @Component({
