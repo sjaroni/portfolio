@@ -1,0 +1,44 @@
+@import "../../../../styles/mixins.scss";
+
+.content{
+  @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
+  position: relative;
+  
+  .project-img {
+    @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);    
+    img{
+      width: 75%;
+      height: auto;
+    }
+  }
+
+  .project-description{
+    @include dFlex($jc: center, $ai: center, $fd: column, $g: 35px);
+    width: 100%;
+
+    .title{
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38.4px;
+      color: #4B47FF;
+    }
+
+    .stack{
+      text-align: center;
+      font-weight: 400;
+      font-size: 23px;
+      line-height: 27.6px;
+      color: #00BEE8;
+    }
+
+    .description{
+      text-align: center;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 19.2px;
+      color: #FFFFFF;
+    }
+
+  }
+
+}

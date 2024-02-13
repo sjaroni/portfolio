@@ -1,7 +1,7 @@
 export interface Projects {
   id: number;
   img: string;
-  name: string;
+  title: string;
   stack: string;
   description: string;
   linkTryItOut: string;

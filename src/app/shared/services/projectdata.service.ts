@@ -11,8 +11,8 @@ export class ProjectdataService {
   projects: Projects[] = [
     {
       id: 0,
-      img: './assets/img/my-skills/angular.svg',
-      name: 'Join',
+      img: 'join.png',
+      title: 'Join',
       stack: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       linkTryItOut: '#1',
@@ -20,8 +20,8 @@ export class ProjectdataService {
     },
     {
       id: 1,
-      img: './assets/img/my-skills/angular.svg',
-      name: 'Game',
+      img: 'join.png',
+      title: 'Game',
       stack: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       linkTryItOut: '#1',
@@ -29,8 +29,8 @@ export class ProjectdataService {
     },
     {
       id: 2,
-      img: './assets/img/my-skills/angular.svg',
-      name: 'Test',
+      img: 'join.png',
+      title: 'Test',
       stack: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       linkTryItOut: '#1',

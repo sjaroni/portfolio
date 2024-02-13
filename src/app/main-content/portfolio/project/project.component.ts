@@ -12,7 +12,7 @@ export class ProjectComponent {
   @Input()project = {
     id: 0,
     img: './assets/img/my-skills/angular.svg',
-    name: 'Join',
+    title: 'Join',
     stack: 'Angular | TypeScript | HTML | CSS | Firebase',
     description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
     linkTryItOut: '#1',

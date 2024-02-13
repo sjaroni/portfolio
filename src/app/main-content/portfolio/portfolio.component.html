@@ -3,13 +3,12 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="8">
       <rect x="2" y="2" width="100%" height="4" fill="#4b47ff" />
     </svg>
-
     <h1>Portfolio</h1>
-
     <svg xmlns="http://www.w3.org/2000/svg" width="75px" height="8">
       <rect x="2" y="2" width="100%" height="4" fill="#4b47ff" />
     </svg>
   </div>
+  
   <div class="intro">
     This page is a sample of my work - please feel free to try them out.
   </div>
@@ -17,9 +16,6 @@
   <div class="projectlist">
     @for(project of projectdata.projects; track project.id; let index = $index){
       <app-project [project]="project"></app-project>
-    }
-    
+    }    
   </div>
-
-
 </div>
