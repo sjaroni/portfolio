@@ -1,7 +1,7 @@
 <div class="content">
   <div class="skills">
     <h1>My skills</h1>
-    
+
     <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="8">
       <rect x="2" y="2" width="100%" height="4" fill="#4b47ff" />
     </svg>
@@ -10,29 +10,17 @@
     I have grown my frontend developments skills that have allowed me to create
     different real projects.
   </div>
-  
-  <!-- <div
-    class="applications"
-    (mouseenter)="hovered = true"
-    (mouseleave)="deleteHovered()"
-    *ngFor="let application of applications; let i = index"
-    class="player-position"
-    [ngStyle]="{ 'top.px ': 20 + i * 65 }"
-    >
-    <img [src]="application.icon" alt="{{ application.name }} icon" />
-    {{ application.name }}
-  </div> -->
-  
+
   <div class="applications">
-    <div
-    class="application"      
-    *ngFor="let application of applications; let i = index">
-    <img [src]="application.icon" alt="{{ application.name }} icon" />
-    <span>
-      {{ application.name }}
-    </span>
+    @for(application of applications; track application.name; let index =
+    $index){
+    <app-single-application
+      class="single-application"
+      [singleApplication]="application"
+    ></app-single-application>
+    }
   </div>
-</div>
-<button class="btn" href="#contact">Get in touch</button>
-<img class="shadow" src="./assets/img/my-skills/skills-shadow.svg">
+
+  <button class="btn" href="#contact">Get in touch</button>
+  <img class="shadow" src="./assets/img/my-skills/skills-shadow.svg" />
 </div>

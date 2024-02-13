@@ -1,0 +1,8 @@
+@import "../../../../styles/mixins.scss";
+
+.application {
+  @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 10px);
+  width: clamp(41px, 70%, 77px);
+  flex: 0 0 calc(33.333% - 22px);
+  padding: 24px 0;
+}
