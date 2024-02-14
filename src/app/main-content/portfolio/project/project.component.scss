@@ -1,8 +1,8 @@
 @import "../../../../styles/mixins.scss";
-
 .content{
   @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
   position: relative;
+  
   
   .project-img {
     @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);    
@@ -16,6 +16,17 @@
     @include dFlex($jc: center, $ai: center, $fd: column, $g: 35px);
     width: 100%;
 
+    .title,
+    .stack,
+    .description {
+      text-align: center;
+    }
+
+    .stack,
+    .description {
+      font-weight: 400;
+    }
+
     .title{
       font-weight: 700;
       font-size: 32px;
@@ -24,21 +35,44 @@
     }
 
     .stack{
-      text-align: center;
-      font-weight: 400;
       font-size: 23px;
       line-height: 27.6px;
       color: #00BEE8;
     }
 
     .description{
-      text-align: center;
-      font-weight: 400;
       font-size: 16px;
       line-height: 19.2px;
       color: #FFFFFF;
     }
 
-  }
+    .buttons{
+      position: relative;
+      display: flex;
+      gap: 51px;
 
+      .btn-secondary:nth-child(1){
+        @include btn-secondary($h: 58px, $p: 15px 30px, $bc: #4B47FF, $c: #4B47FF, $fw: 400, $lh: 27.6px, $fs: 23px, $hc: #00BEE8, $ph: 15px 30px);
+        &:active{
+          background-color: #FFFFFF;
+          color: #00BEE8;
+        }
+      }
+      .btn-secondary:nth-child(2){
+        @include btn-secondary($h: 58px, $p: 15px 30px, $bc: #00BEE8,$c: transparent, $fw: 400, $lh: 27.6px, $fs: 23px, $hc: #00BEE8, $ph: 15px 30px);
+        
+        &:active{
+          background-color: #FFFFFF;
+          color: #00BEE8;
+        }
+      }
+    }    
+  }  
+}
+
+.shadow{
+  position: absolute;
+  top: -35%;
+  right: -25px;
+  z-index: -1;
 }

@@ -1,4 +1,7 @@
 <div class="content">
+  @if(project.id == 2){  
+    <img class="shadow" src="./assets/img/projects/project-shadow.svg" />
+  }
   <div class="project-img">
     <img src="./assets/img/projects/{{ project.img }}" alt="">
   </div>
@@ -6,6 +9,11 @@
     <div class="title">{{ project.title }}</div>
     <div class="stack">{{ project.stack }}</div>
     <div class="description">{{ project.description }}</div>
-    <div>BUTTONS</div>
+    <div class="buttons">
+
+      <button class="btn-secondary" href="#contact">Live test</button>
+      <button class="btn-secondary" href="#contact">GitHub</button>
+
+    </div>
   </div>
 </div>

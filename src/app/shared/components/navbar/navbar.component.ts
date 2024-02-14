@@ -25,8 +25,7 @@ export class NavbarComponent {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  clickedLink(fragment: string, event: Event): void {
-    event.preventDefault();
+  clickedLink(fragment: string, event: Event): void {    
     this.deactivateLinks();
     this.activateLink(fragment);
   }

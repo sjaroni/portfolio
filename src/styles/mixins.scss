@@ -36,3 +36,31 @@
     text-align: center;
   }
 }
+
+@mixin btn-secondary($h: 49px, $p: 15px 30px, $bc: #00BEE8, $c: #00BEE8, $fw: 400, $lh: 19.2px, $fs: 16px, $hc: #4B47FF, $ph: 20px 40px) {  
+  font-family: 'Poppins';
+  height: $h;  
+  border-radius: 10px;
+  padding: $p;
+  border: 1px solid $bc;
+  background-color: $c;
+  font-weight: $fw;
+  line-height: $lh;
+  font-size: $fs;
+  color: #FFFFFF;
+  text-align: center;
+  cursor: pointer;  
+  width: max-content !important;
+  transition: all 100ms ease-in-out;
+  gap: 10px;
+
+  &:hover{
+    width: calc(100% + 20px);
+    font-size: $fs;
+    gap: 10px;
+    background-color: $hc;
+    border: 1px solid $hc;
+    padding: $ph !important;
+    text-align: center;
+  }
+}
