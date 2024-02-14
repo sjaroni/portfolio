@@ -23,6 +23,11 @@
   width: max-content !important;
   transition: all 125ms ease-in-out;
   gap: 10px;
+  
+  a {
+    color: unset;
+    text-decoration: none;
+  }
 
   &:hover{
     height: calc($h + 10px);
@@ -53,6 +58,11 @@
   width: max-content !important;
   transition: all 100ms ease-in-out;
   gap: 10px;
+
+  a {
+    color: unset;
+    text-decoration: none;
+  }
 
   &:hover{
     width: calc(100% + 20px);

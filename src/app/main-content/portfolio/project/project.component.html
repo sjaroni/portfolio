@@ -11,9 +11,12 @@
     <div class="description">{{ project.description }}</div>
     <div class="buttons">
 
-      <button class="btn-secondary" href="#contact">Live test</button>
-      <button class="btn-secondary" href="#contact">GitHub</button>
-
+      <button class="btn-secondary">
+        <a href="{{ project.linkTryItOut }}" target="_blank">Live test</a>
+      </button>
+      <button class="btn-secondary">
+        <a href="{{ project.linkGitHub }}" target="_blank">GitHub</a>
+      </button>
     </div>
   </div>
 </div>

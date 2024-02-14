@@ -14,7 +14,8 @@ import { ReferencesComponent } from './references/references.component';
     AboutMeComponent,
     MySkillsComponent,
     PortfolioComponent,
-    ContactComponent, ],
+    ContactComponent,
+   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss'
 })

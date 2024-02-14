@@ -4,6 +4,7 @@
 nav {
   height: 109px;
   top: 0;
+  position: -webkit-sticky;
   position: sticky;
   z-index: 999;
   background-color: #141d2f;

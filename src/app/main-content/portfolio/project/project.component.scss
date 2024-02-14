@@ -76,3 +76,9 @@
   right: -25px;
   z-index: -1;
 }
+
+@media (max-width: 390px) {
+  .buttons {    
+    gap: 30px !important;
+  }  
+}

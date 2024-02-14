@@ -15,8 +15,8 @@ export class ProjectdataService {
       title: 'Join',
       stack: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
-      linkTryItOut: '#1',
-      linkGitHub: '#1',
+      linkTryItOut: 'https://www.google.de',
+      linkGitHub: 'https://www.vbohz.de',
     },
     {
       id: 1,
