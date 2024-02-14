@@ -4,6 +4,13 @@
   @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 25px);
   position: relative;  
 
+  .shadow{
+    position: absolute;
+    top: -35%;
+    right: 0;
+    z-index: -1;
+  }
+
   .contact {
     width: 100%;
     margin-top: 154px;
@@ -42,16 +49,11 @@
       span{
         font-weight: 800;
       }
-
     }
-
-
   }
 }
 
-.shadow{
-  position: absolute;
-  bottom: -35%;
-  left: 0;
-  z-index: -1;
+app-contact-form{
+  width: 100%;
+  max-width: 1440px;
 }

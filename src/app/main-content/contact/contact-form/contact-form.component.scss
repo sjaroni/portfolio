@@ -1,0 +1,51 @@
+@import "../../../../styles/mixins.scss";
+
+form {
+  @include dFlex($jc: flex-start, $ai: center, $fd: column, $g: 32px);
+  box-sizing: border-box;  
+  width: 100%;
+  padding: 0 25px;
+
+  input[type=text],input[type=email], textarea {
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px #4B47FF solid ;
+    background-color: transparent;
+    color: #ffffff;
+    padding: 15px 25px;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Poppins';
+    &::placeholder{
+      color: #ffffff;
+    }
+
+    &:hover{
+      border: 1px #00BEE8 solid ;
+    }
+
+    &:active,
+    &:focus{
+      border: 1px #E61C40 solid ;
+      caret-color: transparent;
+    }
+
+  }  
+
+  textarea{
+    height: 162px;
+  }
+
+  :focus-visible{
+    outline: none;
+  }
+
+  .required{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16.8px;
+    color: #E61C40;
+  }
+
+}

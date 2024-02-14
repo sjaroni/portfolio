@@ -38,5 +38,11 @@ export class ContactFormComponent {
       sendButton.disabled = false;
   
     }
+
+    // Funktion noch erweitern um die anderen Felder!
+    changePlaceholder(newPlaceholder: string): void {
+      const nameField = document.querySelector('input[name="name"]') as HTMLInputElement;
+      nameField.placeholder = newPlaceholder;
+    }
   
 }

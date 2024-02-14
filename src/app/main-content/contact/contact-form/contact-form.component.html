@@ -1,5 +1,46 @@
-<form (submit)="sendMail()" ngNativeValidate #myForm>
-  <input required type="text" name="name" #nameField>
-  <input required type="text" name="message" #messageField>
-  <button #sendButton>Senden</button>
+<form (submit)="sendMail()" autocomplete="off" ngNativeValidate #myForm>
+  
+  <div class="name-box">
+    <input
+    placeholder="Your name"
+    required
+    type="text"
+    name="name"
+    #nameField
+    (focus)="changePlaceholder('|')"
+    (blur)="changePlaceholder('Your name')"
+    />
+    <span class="required">Your name is required</span>
+  </div>
+
+  <div class="mail-box">
+    <input 
+    placeholder="Your email" 
+    required 
+    type="email" 
+    name="mail" 
+    #mailField 
+    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+    (focus)="changePlaceholder('|')"
+    (blur)="changePlaceholder('Your name')"
+    />
+    <span class="required">Your email is required</span>
+  </div>
+
+  <div class="message-box">
+    <textarea
+    placeholder="Your message"
+    required
+    type="text"
+    name="message"
+    #messageField
+    (focus)="changePlaceholder('|')"
+    (blur)="changePlaceholder('Your message')"
+    ></textarea>
+    <span class="required">Your message is empty</span>
+  </div>
+
+  <input type="checkbox" name="privacy-policy" />
+  <button #sendButton>Send message :)</button>
+
 </form>
