@@ -9,7 +9,7 @@ form {
   .form-box{
     position: relative;
     width: 100%;
-    @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 10px);
+    @include dFlex($jc: space-between, $ai: flex-start, $fd: column, $g: 10px);
 
     .input-with-icon{
       @include dFlex($jc: space-between, $ai: flex-start, $fd: row, $g: 0px);
@@ -19,7 +19,7 @@ form {
       img{
           position: absolute;
           right: 25px;
-          top: 30px;
+          top: 20px;
           transform: translateY(-50%);
           width: 25px;
           height: 25px;
@@ -29,10 +29,10 @@ form {
 
   }
 
-
   input[type=text],input[type=email], textarea {    
     box-sizing: border-box;
     width: 100%;
+    height: 40px;
     padding-block: 0;
     padding-inline: 0;
     border-radius: 10px;
