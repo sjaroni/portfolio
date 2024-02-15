@@ -1,11 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
   standalone: true,
   imports: [ 
+    CommonModule,
     FormsModule,
     ReactiveFormsModule
   ],
@@ -13,19 +15,21 @@ import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent {
- 
+  
+
 http = inject(HttpClient);
 
- contactData = {
+contactData = {
     name: "",
     email: "",
     message: "",
  }
+ 
 
  mailTest = true;
 
  post = {
-   endPoint: 'https://deineDomain.de/sendMail.php',
+   endPoint: 'https://stefan-jaroni.com/sendMail.php',
    body: (payload: any) => JSON.stringify(payload),
    options: {
      headers: {
@@ -53,16 +57,5 @@ http = inject(HttpClient);
      ngForm.resetForm();
    }
  }
-
-    // Funktion noch erweitern um die anderen Felder!
-    changePlaceholder(field: string, newPlaceholder: string): void {
-      
-      
-      //console.log(field);
-
-      //const nameField = document.querySelector('input[name="name"]') as HTMLInputElement;
-      //const nameField = document.querySelector(field) as HTMLInputElement;
-      //nameField.placeholder = newPlaceholder;
-    }
   
 }

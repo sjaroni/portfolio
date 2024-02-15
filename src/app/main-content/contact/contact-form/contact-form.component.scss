@@ -6,11 +6,29 @@ form {
   width: 100%;
   padding: 0 25px;
 
-  .name-box,
-  .mail-box,
-  .message-box{
+  .form-box{
+    position: relative;
     width: 100%;
+    @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 10px);
+
+    .input-with-icon{
+      @include dFlex($jc: space-between, $ai: flex-start, $fd: row, $g: 0px);
+      width: 100%;
+      position: relative;
+
+      img{
+          position: absolute;
+          right: 25px;
+          top: 30px;
+          transform: translateY(-50%);
+          width: 25px;
+          height: 25px;
+      }
+
+    }
+
   }
+
 
   input[type=text],input[type=email], textarea {    
     box-sizing: border-box;
@@ -25,18 +43,19 @@ form {
     font-weight: 400;
     font-size: 16px;
     font-family: 'Poppins';
+    cursor: pointer;
+    
     &::placeholder{
       color: #ffffff;
     }
-
     &:hover{
       border: 1px #00BEE8 solid ;
-    }
-
-    &:active,
+    }    
     &:focus{
-      border: 1px #E61C40 solid ;
-      caret-color: transparent;
+      border: 1px #E61C40 solid;      
+    }
+    &:valid{      
+      border: 1px #70E61C solid ;
     }
 
   }  
