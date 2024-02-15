@@ -1,5 +1,6 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Component, inject } from '@angular/core';
+import { FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-form',
@@ -12,37 +13,56 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   styleUrl: './contact-form.component.scss'
 })
 export class ContactFormComponent {
-  @ViewChild('myForm') myForm!: ElementRef;
-  @ViewChild('nameField') nameField!: ElementRef;
-  @ViewChild('messageField') messageField!: ElementRef;
-  @ViewChild('sendButton') sendButton!: ElementRef;
-  
-    sendMail(){
-  
-  
-      // Ladeanimation
-  
-      console.log('Sending Mail', this.myForm);
-      let nameField = this.nameField.nativeElement;
-      let messageField = this.messageField.nativeElement;
-      let sendButton = this.sendButton.nativeElement;
-  
-      nameField.disabled = true;
-      messageField.disabled = true;
-      sendButton.disabled = true;
-  
-      // senden // auslagern
-  
-      nameField.disabled = false;
-      messageField.disabled = false;
-      sendButton.disabled = false;
-  
-    }
+ 
+http = inject(HttpClient);
+
+ contactData = {
+    name: "",
+    email: "",
+    message: "",
+ }
+
+ mailTest = true;
+
+ post = {
+   endPoint: 'https://deineDomain.de/sendMail.php',
+   body: (payload: any) => JSON.stringify(payload),
+   options: {
+     headers: {
+       'Content-Type': 'text/plain',
+       responseType: 'text',
+     },
+   },
+ };
+
+ onSubmit(ngForm: NgForm) {
+   if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+     this.http.post(this.post.endPoint, this.post.body(this.contactData))
+       .subscribe({
+         next: (response) => {
+
+           ngForm.resetForm();
+         },
+         error: (error) => {
+           console.error(error);
+         },
+         complete: () => console.info('send post complete'),
+       });
+   } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
+
+     ngForm.resetForm();
+   }
+ }
 
     // Funktion noch erweitern um die anderen Felder!
-    changePlaceholder(newPlaceholder: string): void {
-      const nameField = document.querySelector('input[name="name"]') as HTMLInputElement;
-      nameField.placeholder = newPlaceholder;
+    changePlaceholder(field: string, newPlaceholder: string): void {
+      
+      
+      //console.log(field);
+
+      //const nameField = document.querySelector('input[name="name"]') as HTMLInputElement;
+      //const nameField = document.querySelector(field) as HTMLInputElement;
+      //nameField.placeholder = newPlaceholder;
     }
   
 }
