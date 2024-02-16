@@ -2,77 +2,103 @@
 
 form {
   @include dFlex($jc: flex-start, $ai: center, $fd: column, $g: 32px);
-  box-sizing: border-box;  
+  box-sizing: border-box;
   width: 100%;
   padding: 0 25px;
 
-  .form-box{
+  .form-box {
     position: relative;
     width: 100%;
     @include dFlex($jc: space-between, $ai: flex-start, $fd: column, $g: 10px);
 
-    .input-with-icon{
+    .input-with-icon {
       @include dFlex($jc: space-between, $ai: flex-start, $fd: row, $g: 0px);
       width: 100%;
       position: relative;
 
-      img{
-          position: absolute;
-          right: 25px;
-          top: 20px;
-          transform: translateY(-50%);
-          width: 25px;
-          height: 25px;
+      img {
+        position: absolute;
+        right: 25px;
+        top: 20px;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px;
       }
-
     }
-
   }
 
-  input[type=text],input[type=email], textarea {    
+  input[type="text"],
+  input[type="email"],
+  textarea {
     box-sizing: border-box;
     width: 100%;
     height: 40px;
     padding-block: 0;
     padding-inline: 0;
     border-radius: 10px;
-    border: 1px #4B47FF solid ;
+    border: 1px #4b47ff solid;
     background-color: transparent;
     color: #ffffff;
     padding: 15px 25px;
     font-weight: 400;
     font-size: 16px;
-    font-family: 'Poppins';
+    font-family: "Poppins";
     cursor: pointer;
-    
-    &::placeholder{
+
+    &::placeholder {
       color: #ffffff;
     }
-    &:hover{
-      border: 1px #00BEE8 solid ;
-    }    
-    &:focus{
-      border: 1px #E61C40 solid;      
+    &:hover {
+      border: 1px #00bee8 solid;
     }
-    &:valid{      
-      border: 1px #70E61C solid ;
+    &:focus {
+      border: 1px #e61c40 solid;
     }
+    &:valid {
+      border: 1px #70e61c solid;
+    }
+  }
 
-  }  
-
-  textarea{
+  textarea {
     height: 162px;
   }
 
-  :focus-visible{
+  :focus-visible {
     outline: none;
   }
 
-  .required{
+  .required {
     font-weight: 400;
     font-size: 14px;
     line-height: 16.8px;
-    color: #E61C40;
+    color: #e61c40;
+  }
+}
+
+.privacy-policy {
+  @include dFlex($jc: flex-start, $ai: flex-start, $fd: row, $g: 8px);
+
+  /* Standard-Stil für die Checkbox */
+  input[type="checkbox"] {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #00bee8; /* Rahmenfarbe */
+    outline: none; /* Entfernt den Standard-Umriss */
+  }
+
+  /* Stil für den Hover-Zustand der Checkbox */
+  input[type="checkbox"]:hover {
+    background-color: yellow; /* Hintergrundfarbe beim Hovern */
+  }
+
+  .custom-checkbox {
+    display: none; /* Verstecke die Standard-Checkbox */
+  }
+  
+  .checkbox-icon {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
   }
 
 }

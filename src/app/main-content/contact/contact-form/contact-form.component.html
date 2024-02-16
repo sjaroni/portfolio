@@ -60,15 +60,20 @@
 
   <div class="form-box">
     <div class="privacy-policy">
-      <input type="checkbox" name="privacy-policy" />  
+      <input type="checkbox" [(ngModel)]="isChecked" name="privacy-policy" class="custom-checkbox">
+      <span class="checkbox-icon">
+        <!-- <img (click)="toggleCheckbox()" [src]="isChecked ? './assets/img/contact/checkbox_checked.svg' : './assets/img/contact/checkbox_default.svg'" alt=""> -->
+        <img (mouseover)="handleHover(true)" (mouseout)="handleHover(false)" 
+       (click)="toggleCheckbox()" 
+       [src]="isChecked ? (isHovered ? './assets/img/contact/checkbox_checked_hover.svg' : './assets/img/contact/checkbox_checked.svg') : (isHovered ? './assets/img/contact/checkbox_default_hover.svg' : './assets/img/contact/checkbox_default.svg')" 
+       alt="">
+      </span>
+
+
+
       <span>I've read the privacy policy and agree to the processing of my data as outlined.</span>
     </div>
     <span>Please accept the privacy policy.</span>
-    <input type="submit" value="Send message :)">
+    <input [disabled]="!isChecked" type="submit" value="Send message">
   </div>
-
-
-
-  
-
 </form>
