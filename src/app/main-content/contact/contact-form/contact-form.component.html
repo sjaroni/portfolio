@@ -1,79 +1,131 @@
-<form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" autocomplete="off">
-  
+<form
+  (ngSubmit)="onSubmit(contactForm)"
+  #contactForm="ngForm"
+  autocomplete="off"
+>
   <div class="form-box">
     <div class="input-with-icon">
       <input
-      placeholder="Your name"   
-      required
-      type="text"
-      name="name"    
-      minlength="3"
-      #name="ngModel"
-      [(ngModel)]="contactData.name"
-      [ngStyle]="!name.valid && name.touched && !name.disabled ? { 'border': '1px #E61C40 solid' } : { }"
-      />      
-      <img *ngIf="name.touched" [src]="name.valid ? './assets/img/contact/done.svg' : './assets/img/contact/error.svg'" alt="icon">
+        placeholder="Your name"
+        required
+        type="text"
+        name="name"
+        minlength="3"
+        #name="ngModel"
+        [(ngModel)]="contactData.name"
+        [ngStyle]="
+          !name.valid && name.touched && !name.disabled
+            ? { border: '1px #E61C40 solid' }
+            : {}
+        "
+      />
+      <img
+        *ngIf="name.touched"
+        [src]="
+          name.valid
+            ? './assets/img/contact/done.svg'
+            : './assets/img/contact/error.svg'
+        "
+        alt="icon"
+      />
     </div>
     @if (!name.valid && name.touched && !name.disabled){
-      <span class="required">Your name is required</span>
-    }    
-  </div>
-
-  <div class="form-box">
-    <div class="input-with-icon">
-      <input 
-      placeholder="Your email" 
-      required 
-      type="email" 
-      name="email"
-      #email="ngModel"
-      [(ngModel)]="contactData.email"
-      [ngStyle]="!email.valid && email.touched && !email.disabled ? { 'border': '1px #E61C40 solid' } : { }"
-      pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"    
-      />
-      <img *ngIf="email.touched" [src]="email.valid ? './assets/img/contact/done.svg' : './assets/img/contact/error.svg'" alt="icon">
-    </div>
-    @if (!email.valid && email.touched && !email.disabled){
-      <span class="required">Your email is required</span>
+    <span class="required">Your name is required</span>
     }
   </div>
 
   <div class="form-box">
     <div class="input-with-icon">
-
-      <textarea
-      placeholder="Your message"
-      required
-      type="text"
-      name="message"
-      minlength="10"
-      #message="ngModel"
-      [(ngModel)]="contactData.message"
-      [ngStyle]="!message.valid && message.touched && !message.disabled ? { 'border': '1px #E61C40 solid' } : { }"
-      ></textarea>
-      <img *ngIf="message.touched" [src]="message.valid ? './assets/img/contact/done.svg' : './assets/img/contact/error.svg'" alt="icon">
+      <input
+        placeholder="Your email"
+        required
+        type="email"
+        name="email"
+        #email="ngModel"
+        [(ngModel)]="contactData.email"
+        [ngStyle]="
+          !email.valid && email.touched && !email.disabled
+            ? { border: '1px #E61C40 solid' }
+            : {}
+        "
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+      />
+      <img
+        *ngIf="email.touched"
+        [src]="
+          email.valid
+            ? './assets/img/contact/done.svg'
+            : './assets/img/contact/error.svg'
+        "
+        alt="icon"
+      />
     </div>
-    @if (!message.valid && message.touched && !message.disabled){      
-      <span class="required">Your message is empty</span>
+    @if (!email.valid && email.touched && !email.disabled){
+    <span class="required">Your email is required</span>
+    }
+  </div>
+
+  <div class="form-box">
+    <div class="input-with-icon">
+      <textarea
+        placeholder="Your message"
+        required
+        type="text"
+        name="message"
+        minlength="10"
+        #message="ngModel"
+        [(ngModel)]="contactData.message"
+        [ngStyle]="
+          !message.valid && message.touched && !message.disabled
+            ? { border: '1px #E61C40 solid' }
+            : {}
+        "
+      ></textarea>
+      <img
+        *ngIf="message.touched"
+        [src]="
+          message.valid
+            ? './assets/img/contact/done.svg'
+            : './assets/img/contact/error.svg'
+        "
+        alt="icon"
+      />
+    </div>
+    @if (!message.valid && message.touched && !message.disabled){
+    <span class="required">Your message is empty</span>
     }
   </div>
 
   <div class="form-box">
     <div class="privacy-policy">
-      <input type="checkbox" [(ngModel)]="isChecked" name="privacy-policy" class="custom-checkbox">
+      <input
+        type="checkbox"
+        [(ngModel)]="isChecked"
+        name="privacy-policy"
+        class="custom-checkbox"
+      />
       <span class="checkbox-icon">
-        <!-- <img (click)="toggleCheckbox()" [src]="isChecked ? './assets/img/contact/checkbox_checked.svg' : './assets/img/contact/checkbox_default.svg'" alt=""> -->
-        <img (mouseover)="handleHover(true)" (mouseout)="handleHover(false)" 
-       (click)="toggleCheckbox()" 
-       [src]="isChecked ? (isHovered ? './assets/img/contact/checkbox_checked_hover.svg' : './assets/img/contact/checkbox_checked.svg') : (isHovered ? './assets/img/contact/checkbox_default_hover.svg' : './assets/img/contact/checkbox_default.svg')" 
-       alt="">
+        <img
+          (mouseover)="handleHover(true)"
+          (mouseout)="handleHover(false)"
+          (click)="toggleCheckbox()"
+          [src]="
+            isChecked
+              ? isHovered
+                ? './assets/img/contact/checkbox_checked_hover.svg'
+                : './assets/img/contact/checkbox_checked.svg'
+              : isHovered
+              ? './assets/img/contact/checkbox_default_hover.svg'
+              : './assets/img/contact/checkbox_default.svg'
+          "
+          alt=""
+        />
       </span>
 
-
-
-      <span>I've read the privacy policy and agree to the processing of my data as outlined.</span>
+      <span>I've read the <a href="#" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.</span>
     </div>
-    <span>Please accept the privacy policy.</span>
-    <input [disabled]="!isChecked" type="submit" value="Send message">
+    <span class="required">Please accept the privacy policy.</span>
+    <!-- <button class="btn"><a href="#contact">Get in touch</a></button> -->
+    <input [ngClass]="{'btnDisabled': !isChecked, 'btn': isChecked}" [disabled]="!isChecked" type="submit" value="Send message :)" />
   </div>
 </form>
