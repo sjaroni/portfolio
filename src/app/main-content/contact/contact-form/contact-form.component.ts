@@ -21,6 +21,7 @@ export class ContactFormComponent {
   
   isChecked: boolean = false;
   isHovered: boolean = false;
+  checkboxCounter: number = 0;
 
   mailTest = true;
 
@@ -60,5 +61,6 @@ export class ContactFormComponent {
 
   toggleCheckbox() {
     this.isChecked = !this.isChecked;
+    this.checkboxCounter++;
   }
 }

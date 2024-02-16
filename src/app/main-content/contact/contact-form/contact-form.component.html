@@ -100,6 +100,7 @@
     <div class="privacy-policy">
       <input
         type="checkbox"
+        #checkbox="ngModel"
         [(ngModel)]="isChecked"
         name="privacy-policy"
         class="custom-checkbox"
@@ -124,8 +125,7 @@
 
       <span>I've read the <a href="#" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.</span>
     </div>
-    <span class="required">Please accept the privacy policy.</span>
-    <!-- <button class="btn"><a href="#contact">Get in touch</a></button> -->
-    <input [ngClass]="{'btnDisabled': !isChecked, 'btn': isChecked}" [disabled]="!isChecked" type="submit" value="Send message :)" />
+      <span [hidden]="isChecked || checkboxCounter < 2" class="required">Please accept the privacy policy.</span>
   </div>
+  <input [ngClass]="{'btnDisabled': !isChecked, 'btn': isChecked}" [disabled]="!isChecked" type="submit" value="Send message :)" />
 </form>

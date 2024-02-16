@@ -25,6 +25,11 @@ form {
         height: 25px;
       }
     }
+
+    .hidden{
+      display: none;
+    }
+
   }
 
   input[type="text"],
@@ -78,21 +83,8 @@ form {
 .privacy-policy {
   @include dFlex($jc: flex-start, $ai: flex-start, $fd: row, $g: 8px);
 
-  /* Standard-Stil für die Checkbox */
-  input[type="checkbox"] {
-    width: 24px;
-    height: 24px;
-    border: 2px solid #00bee8; /* Rahmenfarbe */
-    outline: none; /* Entfernt den Standard-Umriss */
-  }
-
-  /* Stil für den Hover-Zustand der Checkbox */
-  input[type="checkbox"]:hover {
-    background-color: yellow; /* Hintergrundfarbe beim Hovern */
-  }
-
   .custom-checkbox {
-    display: none; /* Verstecke die Standard-Checkbox */
+    display: none;
   }
   
   .checkbox-icon {
@@ -118,5 +110,4 @@ form {
       text-decoration: underline;
     }
   }
-
 }
