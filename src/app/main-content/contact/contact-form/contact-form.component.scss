@@ -118,8 +118,22 @@ form {
   padding: 0 25px;
   box-sizing: border-box;
 
-  .button_up {
-    width: 39px;
-    height: 39px;
+  #button_up path {
+    fill: #FFFFFF;
+    transition: fill 0.3s;
   }
+  
+  #button_up:hover path {
+    fill: #00BEE8;
+  }
+
+  #button_up_rect {
+    stroke: #FFFFFF;
+    transition: stroke 0.3s;
+  }
+  
+  #button_up:hover #button_up_rect {
+    stroke: #00BEE8;
+  }
+
 }
