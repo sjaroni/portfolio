@@ -26,10 +26,9 @@ form {
       }
     }
 
-    .hidden{
+    .hidden {
       display: none;
     }
-
   }
 
   input[type="text"],
@@ -86,28 +85,41 @@ form {
   .custom-checkbox {
     display: none;
   }
-  
+
   .checkbox-icon {
     display: inline-block;
     vertical-align: middle;
     cursor: pointer;
   }
-  
-  span{
+
+  span {
     font-weight: 400;
     font-size: 14px;
     line-height: 16.8px;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
-
-  a{
-    color: #9747FF;
+  a {
+    color: #9747ff;
     cursor: pointer;
     text-decoration: none;
-    
-    &:hover{
+
+    &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+.navigation {
+  @include dFlex($jc: flex-end, $ai: center, $fd: row, $g: 0px);
+  margin-top: 30px;
+  height: 39px;
+  width: 100%;
+  padding: 0 25px;
+  box-sizing: border-box;
+
+  .button_up {
+    width: 39px;
+    height: 39px;
   }
 }

@@ -123,9 +123,25 @@
         />
       </span>
 
-      <span>I've read the <a href="#" target="_blank">privacy policy</a> and agree to the processing of my data as outlined.</span>
+      <span
+        >I've read the <a href="#" target="_blank">privacy policy</a> and agree
+        to the processing of my data as outlined.</span
+      >
     </div>
-      <span [hidden]="isChecked || checkboxCounter < 2" class="required">Please accept the privacy policy.</span>
+    <span [hidden]="isChecked || checkboxCounter < 2" class="required"
+      >Please accept the privacy policy.</span
+    >
   </div>
-  <input [ngClass]="{'btnDisabled': !isChecked, 'btn': isChecked}" [disabled]="!isChecked" type="submit" value="Send message :)" />
+  <input
+    [ngClass]="{ btnDisabled: !isChecked, btn: isChecked }"
+    [disabled]="!isChecked"
+    type="submit"
+    value="Send message :)"
+  />
 </form>
+
+<div class="navigation">
+  <a href="#">
+    <img class="button_up" src="./assets/img/contact/button_up.svg" alt="" />
+  </a>
+</div>
