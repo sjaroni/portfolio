@@ -16,18 +16,13 @@ nav {
     @include dFlex($jc: space-between, $ai: center, $fd: row, $g: 0px);
 
     .logoBox {
-      display: flex;
-      align-items: center;
+      @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 2px);
       a {
         text-decoration: none;
         color: #ffffff;
         font-size: 36px;
         line-height: 28px;
         font-weight: 500;
-      }
-      .logo {
-        height: 60px;
-        cursor: pointer;
       }
     }
   }

@@ -41,6 +41,7 @@
 .whoAmI {
   width: 100%;
   z-index: 1;
+  margin-bottom: 40px;
   @include dFlex($jc: space-between, $ai: center, $fd: column, $g: 20px);
   #whoAmI-picture {
     width: 90%;

@@ -6,30 +6,34 @@
   padding: 0 25px;
   height: 380px;
   margin-top: 49px;
-  border-top: 4px #00BEE8 solid;
-  background-color: #141D2F;
-  @include dFlex($jc: flex-start, $ai: center, $fd: column, $g: 0px);
+  border-top: 4px #00bee8 solid;
+  background-color: #141d2f;
+  @include dFlex($jc: space-evenly, $ai: center, $fd: column, $g: 0px);
 
   .logoBoxFooter {
-    box-sizing: border-box;    
-    width: 100%;
-    height: 106px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: green;
+    width: 120px;
+    height: 80px;
+    @include dFlex($jc: flex-end, $ai: flex-start, $fd: column, $g: 2px);
+    a {
+      text-decoration: none;
+      color: #FFFFFF;
+      font-size: 36px;
+      line-height: 28px;
+      font-weight: 500;
+    }
   }
 
-  .copyright{
+  .copyright {
     font-weight: 400;
     font-size: 23px;
     line-height: 27.6px;
   }
 
-  .imprint{
-    background-color: red;
+  .imprint {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #FFFFFF;
+    text-decoration: none;
   }
-
-  
-
 }
