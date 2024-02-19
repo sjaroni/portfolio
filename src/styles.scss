@@ -10,15 +10,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #141d2f; //**ANCHOR - Welcher Hintergrund?
-  //background-color: #000000;
+  background-color: #141d2f;
   color: white;
   font-family: "Poppins";
   @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
-
-  outline: 1px solid;
-  outline-color: red;
-
 }
 
 /* poppins-200 - latin */

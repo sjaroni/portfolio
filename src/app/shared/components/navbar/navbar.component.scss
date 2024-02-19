@@ -122,3 +122,21 @@ a {
     height: 64px;
   }
 }
+
+.logoBox svg:first-child {
+  transform: translateX(800%);
+  opacity: 0;
+  animation: slideFromRight 0.5s ease-in-out 0.25s forwards;
+}
+
+.logoBox a {
+  transform: translateX(400%);
+  opacity: 0;
+  animation: slideFromRight 0.5s ease-in-out 0.375s forwards;
+}
+
+.logoBox svg:last-child {
+  transform: translateX(-100%);
+  opacity: 0;
+  animation: slideFromLeft 0.5s ease-in-out 0.5s forwards;
+}

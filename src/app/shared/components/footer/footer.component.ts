@@ -8,6 +8,6 @@ import { ReferencesComponent } from '../../../main-content/references/references
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })
-export class FooterComponent {
-  parentComponentName = 'xParentComponent';
+export class FooterComponent {  
+  isHovered: boolean = false;
 }

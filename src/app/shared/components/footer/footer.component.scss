@@ -29,11 +29,25 @@
     line-height: 27.6px;
   }
 
-  .imprint {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 19px;
-    color: #FFFFFF;
-    text-decoration: none;
+  .imprintBox {    
+    @include dFlex($jc: flex-end, $ai: flex-start, $fd: column, $g: 2px);
+    
+    a {    
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.2px;
+      color: #FFFFFF;
+      text-decoration: none;
+    }
+
+    #imprintLine {
+      display: none;
+  
+      &:hover,
+      &.active {
+          display: inline;
+      }
+  }
+
   }
 }
