@@ -61,10 +61,15 @@
   }
 }
 
-// @media (max-width: 992px) {
-//   .atf {
-//     width: calc(100% - 50px);
-//     padding: 0 25px;
-//     @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 0px);
-//   }
-// }
+@media (min-width: 993px) {
+  .atf {
+    width: 100%;
+    @include dFlex($jc: center, $ai: center, $fd: row, $g: 0px);
+  }
+
+  .whoAmI{
+    margin-right: 60px;
+    overflow-y: visible;
+  }
+
+}
