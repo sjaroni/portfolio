@@ -13,10 +13,62 @@
       transform: scale(1.2);
     }
   }
+
+  .email_address,
+  .scroll {
+    display: none;
+  }
+
 }
 
 @media (max-height: 700px) {
   .reference-icons {    
     margin-top: 18px;
   }
+}
+
+@media (min-width: 993px) {
+  .reference-icons{
+    @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 42px);
+    width: 100%;
+    overflow-x: visible;
+  }
+
+  .email_address{
+    display: block !important;
+    font-size: 23px;
+    line-height: 27.6px;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-decoration: none;
+    flex-wrap: nowrap;
+    z-index: 90;
+    width: 60%;
+  }
+
+  svg {
+    width: 100px !important;
+  }
+
+  .scroll {    
+    @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 3px);
+    rotate: 90deg;
+    position: absolute;
+    top: -70px;
+    right: 25px;    
+
+    span{
+      font-weight: 400;
+      font-size: 23px;
+      line-height: 27.6px;
+      color: #FFFFFF;      
+    }
+
+    img {
+      rotate: -90deg;
+    }
+
+  }
+
+
 }

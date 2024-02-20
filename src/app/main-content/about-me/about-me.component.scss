@@ -44,4 +44,72 @@
       }
     }
   }
+
+  .about_me_picture{
+    display: none;
+  }
+
+}
+
+
+@media (min-width: 993px) {
+
+  .content{
+    @include dFlex($jc: space-between, $ai: flex-end, $fd: row, $g: 149px);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 100px;
+  }
+
+  .about_me{
+    width: 100%;    
+
+    h1{
+      font-weight: 700;
+      font-size: 90px;
+      line-height: 108px;
+    }
+
+  }
+
+  .about_me_picture{    
+    @include dFlex($jc: flex-end, $ai: center, $fd: row, $g: 0px);
+    width: 100%;
+
+    img{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 4px solid #00BEE8;
+      z-index: 1;
+      background-color: #141d2f;
+    }
+
+    svg{
+      position: absolute;
+      right: 0;      
+      overflow: hidden;
+    }
+
+  }
+
+  .image {
+    padding-left: 20px;
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .content{
+    gap: 25px;
+
+    h1{
+      font-size: 60px;
+      line-height: 78px;
+    }
+
+  }
+
+
+
 }

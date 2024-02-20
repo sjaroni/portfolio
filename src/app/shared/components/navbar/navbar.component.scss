@@ -98,7 +98,7 @@ a {
 
 @media (max-width: 992px) {
   .menu-system {
-    display: none;
+    display: none !important;
   }
 
   #header-menu {
@@ -109,11 +109,11 @@ a {
 
 @media (min-width: 993px) {
   #menuMobile {
-    display: none;
+    display: none !important;
   }
 
   .hamburgerMenu {
-    display: none;
+    display: none !important;
   }
 }
 
