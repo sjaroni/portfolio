@@ -4,6 +4,11 @@
   @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 25px);
   position: relative;  
 
+
+  #btnSkillsDesktop{
+    display: none;
+  }
+
   .skills {
     width: 100%;
     margin-top: 154px;
@@ -35,7 +40,7 @@
     padding-bottom: 24px;
   }
 
-  .applications {    
+  .applications {
     @include dFlex($jc: space-between, $ai: flex-start, $fd: row, $g: 0px);    
     flex-wrap: wrap;
     flex: 0 0 calc(33.333% - 22px);
@@ -54,4 +59,53 @@
   bottom: -35%;
   left: 0;
   z-index: -1;
+}
+
+@media (min-width: 993px) {
+  .content {    
+    @include dFlex($jc: space-between, $ai: center, $fd: row-reverse, $g: 25px);    
+    margin-top: 278px;
+    box-sizing: border-box;
+    padding: 0 50px;
+
+    .skills_desktop {
+      width: 38%;      
+      position: relative;
+      margin-right: 25px;
+      @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 34px);
+
+
+      .skills{
+        margin-top: 0;
+
+        h1{
+          font-weight: 700;
+          font-size: 90px;
+          line-height: 108px;
+        }
+      }
+
+    }
+    
+    .applications {
+      @include dFlex($jc: space-between, $ai: flex-start, $fd: row, $g: 0px);
+      padding: 0;
+      width: 100%;
+      flex-wrap: wrap;
+      flex: 1;
+      
+      .single-application {        
+        flex: 1 0 21%;
+      }
+    }
+
+    #btnSkillsDesktop{
+      display: inline;
+    }
+    
+    #btnSkillsMobile{
+      display: none;
+    }
+  }
+
 }
