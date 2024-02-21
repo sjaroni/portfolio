@@ -1,8 +1,7 @@
 @import "../../../../styles/mixins.scss";
 .content{
   @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
-  position: relative;
-  
+  position: relative;  
   
   .project-img {
     @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);    

@@ -4,6 +4,7 @@
   width: 100%;  
   position: relative;
   @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 42px);
+  z-index: 1;
 
   .social-icon {
     width: 30px !important;
@@ -32,6 +33,9 @@
     @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 42px);
     width: 100%;
     overflow-x: visible;
+    padding-top: 94px;
+    padding-bottom: 100px;
+    
   }
 
   .email_address{
@@ -41,8 +45,7 @@
     font-weight: 400;
     color: #FFFFFF;
     text-decoration: none;
-    flex-wrap: nowrap;
-    z-index: 90;
+    flex-wrap: nowrap;    
     width: 60%;
   }
 

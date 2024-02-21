@@ -6,12 +6,16 @@
         <img class="image" id="shadow-character-picture" src="./assets/img/atf/profile-shadow.svg">      
         <img class="image-overlay" src="./assets/img/atf/profile-overlay.png" />
     </div>
-    <img class="image bottom" id="background-shadow" src="./assets/img/atf/vector-mobile.svg">   
-    </div>
-
+    @if(imagePath == 'mobile'){
+    <img class="image bottom" id="background-shadow" src="./assets/img/atf/vector-mobile.svg">
+    }
+  </div>
+  
   <div class="whoAmI">
     <img id="whoAmI-picture" src="./assets/img/atf/whoami.png" />    
     <button class="btn"><a href="#contact">Let's talk!</a></button>
   </div>
-
+  @if(imagePath == 'desktop'){
+    <img class="image bottom" id="background-shadow" src="./assets/img/atf/vector.svg">
+  }
 </section>

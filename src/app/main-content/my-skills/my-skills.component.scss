@@ -5,6 +5,10 @@
   position: relative;  
 
 
+  .skills_desktop {        
+    @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 25px);
+  }
+
   #btnSkillsDesktop{
     display: none;
   }
@@ -23,6 +27,11 @@
       margin-block-start: 0;
       margin-block-end: 0;
     }
+
+    svg{
+      width: 20px;
+    }
+
   }
 
   .intro,
@@ -58,7 +67,7 @@
   position: absolute;
   bottom: -35%;
   left: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 @media (min-width: 993px) {
@@ -69,20 +78,27 @@
     padding: 0 50px;
 
     .skills_desktop {
-      width: 38%;      
-      position: relative;
+      width: 38%;
       margin-right: 25px;
       @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 34px);
 
 
       .skills{
         margin-top: 0;
-
+        position: relative;
         h1{
           font-weight: 700;
           font-size: 90px;
           line-height: 108px;
+          padding-right: 25px;
         }
+      }
+
+      svg{
+        position: absolute;
+        right: -75px;
+        width: 58px;        
+        overflow: hidden;
       }
 
     }
