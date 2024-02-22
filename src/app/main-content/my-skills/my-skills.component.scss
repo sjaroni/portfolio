@@ -3,7 +3,7 @@
 .content {
   @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 25px);
   position: relative;  
-
+  background-color: #141d2f;  
 
   .skills_desktop {        
     @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 25px);
@@ -67,13 +67,13 @@
   position: absolute;
   bottom: -35%;
   left: 0;
-  z-index: 0;
+  z-index: 1;
 }
 
 @media (min-width: 993px) {
   .content {    
     @include dFlex($jc: space-between, $ai: center, $fd: row-reverse, $g: 25px);    
-    margin-top: 278px;
+    padding-top: 278px;
     box-sizing: border-box;
     padding: 0 50px;
 

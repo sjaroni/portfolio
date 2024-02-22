@@ -2,7 +2,8 @@
 
 .content {
   @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 25px);
-  position: relative;  
+  position: relative;
+  background-color: #141d2f;
 
   .portfolio {
     width: 100%;

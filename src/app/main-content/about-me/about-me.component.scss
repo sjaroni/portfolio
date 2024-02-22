@@ -3,12 +3,13 @@
 .content {
   position: relative;
   padding: 0 25px;
+  background-color: #141d2f;
 
   .shadow{
     position: absolute;
     top: -20%;
     right: 0;
-    z-index: 0;
+    z-index: 1;
   }
 
   h1 {

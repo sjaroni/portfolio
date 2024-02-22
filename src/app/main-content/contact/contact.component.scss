@@ -2,7 +2,12 @@
 
 .content {
   @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 25px);
-  position: relative;  
+  position: relative;
+  background-color: #141d2f;
+
+  .contact_desktop{
+    padding-bottom: 49px;
+  }
 
   .shadow{
     position: absolute;
@@ -40,7 +45,8 @@
     width: 100%;
     box-sizing: border-box;
     text-align: left;
-    color: #ffffff;    
+    color: #ffffff;
+    margin-bottom: 25px;
 
     .title{
       font-weight: 700;
@@ -85,6 +91,7 @@ app-contact-form{
     .contact_desktop{
       @include dFlex($jc: flex-start, $ai: flex-start, $fd: row, $g: 150px);
       padding: 0 100px;
+      padding-bottom: 49px;
 
       .intro{
         padding: 0;
