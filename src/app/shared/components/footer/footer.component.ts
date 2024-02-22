@@ -9,5 +9,14 @@ import { ReferencesComponent } from '../../../main-content/references/references
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {  
+
+  showImprint: boolean = false;
+
+  ngOnInit(): void {
+    if (window.matchMedia("(max-width: 992px)").matches) {
+      this.showImprint = true;
+    }
+  }
+
   isHovered: boolean = false;
 }

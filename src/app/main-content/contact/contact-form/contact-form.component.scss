@@ -121,32 +121,50 @@ form {
   box-sizing: border-box;
 
   #button_up path {
-    fill: #FFFFFF;
+    fill: #ffffff;
     transition: fill 0.3s;
   }
-  
+
   #button_up:hover path {
-    fill: #00BEE8;
+    fill: #00bee8;
   }
 
   #button_up_rect {
-    stroke: #FFFFFF;
+    stroke: #ffffff;
     transition: stroke 0.3s;
   }
-  
-  #button_up:hover #button_up_rect {
-    stroke: #00BEE8;
-  }
 
+  #button_up:hover #button_up_rect {
+    stroke: #00bee8;
+  }
 }
 
-
-@media (min-width: 993px){
-  form{
+@media (min-width: 993px) {
+  form {
     padding: 0;
-    
+
+    input[type="text"],
+    input[type="email"]{
+      height: 50px;
+    }
+
+    textarea {
+      height: 202px;
+    }
+
+    .btnDisabled{
+      height: 58px;
+      font-size: 23px;
+      line-height: 27.6px;
+    }
+
   }
   .navigation {
     padding: 0;
   }
+
+  .privacy-policy {
+    @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 8px);
+  }
+
 }
