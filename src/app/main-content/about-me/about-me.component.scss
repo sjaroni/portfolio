@@ -61,19 +61,19 @@
 @media (min-width: 993px) {
 
   .content{
-    @include dFlex($jc: space-between, $ai: flex-end, $fd: row, $g: 149px);
+    @include dFlex($jc: space-between, $ai: flex-end, $fd: row, $g: 0px);
     width: 100%;
     box-sizing: border-box;
     padding: 0 100px;
 
     .shadow{      
-      z-index: 0;
+      z-index: 1;
     }
 
   }
 
   .about_me{
-    width: 100%;    
+    width: 38%;    
 
     h1{
       font-weight: 700;
@@ -84,12 +84,14 @@
   }
 
   .about_me_picture{    
-    @include dFlex($jc: flex-end, $ai: center, $fd: row, $g: 0px);
-    width: 100%;
+    @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 0px);
+    width: 50%;
 
     img{
-      width: 100%;
-      height: 100%;
+      // width: 100%;
+      // height: 100%;
+      width: 453px;
+      height: 453px;
       border-radius: 50%;
       border: 4px solid #00BEE8;
       z-index: 1;

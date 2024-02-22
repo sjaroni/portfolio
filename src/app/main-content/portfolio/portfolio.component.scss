@@ -53,3 +53,29 @@ app-project{
   width: 100%;
   max-width: 1440px;
 }
+
+@media (min-width: 993px){
+  .content{    
+    
+    .portfolio{
+      h1{
+        font-weight: 700;
+        font-size: 90px;
+        line-height: 108px;
+        padding: 0 36px;
+      }
+
+      #svg_left{
+        width: 109px;
+      }
+      #svg_right{
+        width: 484px;
+      }
+    }
+
+    .intro{      
+      text-align: center;
+    }
+
+  }
+}

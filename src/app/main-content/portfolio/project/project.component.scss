@@ -81,3 +81,34 @@
     gap: 30px !important;
   }  
 }
+
+
+@media (min-width: 993px){
+  
+  .content{
+    @include dFlex($jc: center, $ai: center, $fd: row, $g: 35px);
+    padding: 0 50px;
+
+    .project-img{
+      width: 51%;
+    }
+
+    .project-description{
+      @include dFlex($jc: center, $ai: flex-start, $fd: column, $g: 35px);
+      width: 40%;
+
+      .stack,
+      .description{
+        text-align: left;
+        word-wrap: break-word;
+      }
+
+      .buttons{        
+        gap: 86px;
+      }
+
+
+    }
+
+  }
+}
