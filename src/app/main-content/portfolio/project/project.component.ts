@@ -20,4 +20,13 @@ export class ProjectComponent {
     linkGitHub: '#1',
   };
 
+  @Input() isNotMobile: any = true;
+
+  ngOnInit(): void {
+    if (window.matchMedia("(max-width: 992px)").matches) {
+      this.isNotMobile = false;
+    }
+  }
+
+
 }

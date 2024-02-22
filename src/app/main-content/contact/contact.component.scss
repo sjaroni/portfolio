@@ -114,3 +114,14 @@ app-contact-form{
   }
 
 }
+
+@media (min-width: 993px) and (max-width: 1024px) {
+  .content{     
+      .contact{
+        h1{
+          font-size: 60px;
+          line-height: 78px;
+        }
+      }    
+  }
+}

@@ -2,13 +2,16 @@
 
 .reference-icons {
   width: 100%;  
-  position: relative;
   @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 42px);
   z-index: 1;
 
+  a{
+    z-index: 10;
+  }
+
   .social-icon {
     width: 30px !important;
-    cursor: pointer;
+    cursor: pointer;    
 
     &:hover {
       transform: scale(1.2);
@@ -24,7 +27,7 @@
 
 @media (max-height: 700px) {
   .reference-icons {    
-    margin-top: 18px;
+    padding-top: 18px;
   }
 }
 
@@ -32,10 +35,8 @@
   .reference-icons{
     @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 42px);
     width: 100%;
-    overflow-x: visible;
-    padding-top: 94px;
-    padding-bottom: 100px;
-    
+    position: relative;
+    overflow-x: visible;    
   }
 
   .email_address{
@@ -54,10 +55,10 @@
   }
 
   .scroll {    
-    @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 3px);
+    @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 8px);
     rotate: 90deg;
     position: absolute;
-    top: 0px;
+    top: -75px;
     right: 25px;    
 
     span{
@@ -72,6 +73,4 @@
     }
 
   }
-
-
 }

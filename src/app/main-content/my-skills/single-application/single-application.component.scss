@@ -6,6 +6,12 @@
   flex: 0 0 calc(33.333% - 22px);
   padding: 24px 0;
 
+  position: relative;
+
+  transition-property: padding, gap;
+  transition-duration: 100ms;
+  transition-timing-function: ease-in;
+
   span{
     font-weight: 700;
     font-size: 14px;
@@ -14,4 +20,23 @@
     text-align: center;  
   }
 
+  &:hover{
+    animation-name: hoverAnimation;
+    animation-duration: 100ms;
+    animation-delay: 1ms;
+    animation-fill-mode: forwards;
+  }
+
+
+}
+
+@keyframes hoverAnimation {
+  from {
+    padding: 0;
+    gap: 0;
+  }
+  to {
+    padding: 5px 0;
+    gap: 30px;
+  }
 }

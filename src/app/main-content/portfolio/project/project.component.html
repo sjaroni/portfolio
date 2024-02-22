@@ -1,6 +1,4 @@
-<div class="content" 
-[ngStyle]="{'flex-direction': project.id % 2 === 0 ? 'row' : 'row-reverse'}"
->
+<div class="content" [ngStyle]="isNotMobile && {'flex-direction': project.id % 2 === 0 ? 'row' : 'row-reverse'}" >
   @if(project.id == 2){  
     <img class="shadow" src="./assets/img/projects/project-shadow.svg" />
   }
@@ -8,14 +6,14 @@
     <img src="./assets/img/projects/{{ project.img }}" alt="">
   </div>
   <div class="project-description"  
-  [ngStyle]="{'align-items': project.id % 2 === 0 ? 'flex-start' : 'flex-end'}"
+  [ngStyle]="isNotMobile && {'align-items': project.id % 2 === 0 ? 'flex-start' : 'flex-end'}"
   >    
-    <div class="title">{{ project.title }}</div>
+    <div class="title">{{ project.title }} </div>
     <div class="stack"
-    [ngStyle]="{'text-align': project.id % 2 === 0 ? 'left' : 'right'}"
+    [ngStyle]="isNotMobile && {'text-align': project.id % 2 === 0 ? 'left' : 'right'}"
     >{{ project.stack }}</div>
     <div class="description"
-    [ngStyle]="{'text-align': project.id % 2 === 0 ? 'left' : 'right'}"
+    [ngStyle]="isNotMobile && {'text-align': project.id % 2 === 0 ? 'left' : 'right'}"
     >{{ project.description }}</div>
     <div class="buttons">
 

@@ -73,9 +73,8 @@
 @media (min-width: 993px) {
   .content {    
     @include dFlex($jc: space-between, $ai: center, $fd: row-reverse, $g: 25px);    
-    padding-top: 278px;
-    box-sizing: border-box;
-    padding: 0 50px;
+    box-sizing: border-box;    
+    padding: 278px 50px 0 50px;
 
     .skills_desktop {
       width: 38%;
@@ -124,4 +123,17 @@
     }
   }
 
+}
+
+@media (min-width: 993px) and (max-width: 1024px) {
+  .content{    
+    .skills_desktop{
+      .skills{
+        h1{
+          font-size: 60px;
+          line-height: 78px;
+        }
+      }
+    }
+  }
 }

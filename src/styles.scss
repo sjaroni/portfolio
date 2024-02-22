@@ -5,13 +5,16 @@ html{
   scroll-behavior: smooth;
   overflow-x: hidden;  
   background-color: #000000;
+
+  outline: 1px solid;
+  outline-color: red;
+
 }
 
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  //background-color: #141d2f;
+  box-sizing: border-box;  
   background-color: #000000;
   color: white;
   font-family: "Poppins";

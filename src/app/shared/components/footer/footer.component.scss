@@ -4,7 +4,7 @@
 .content {
   position: relative;
   padding: 0 25px;
-  height: 380px;  
+  height: 380px;
   border-top: 4px #00bee8 solid;
   background-color: #141d2f;
   @include dFlex($jc: space-evenly, $ai: center, $fd: column, $g: 0px);
@@ -55,6 +55,7 @@
   .content{
     @include dFlex($jc: space-between, $ai: center, $fd: row, $g: 0px);
     padding: 0 100px;
+    height: 291px;
 
     .logoBoxFooter,
     .copyright{

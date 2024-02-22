@@ -80,3 +80,17 @@ app-project{
 
   }
 }
+
+@media (min-width: 993px) and (max-width: 1024px) {
+  .content{     
+      .portfolio{
+        h1{
+          font-size: 60px;
+          line-height: 78px;
+        }
+        #svg_right{
+          width: 350px;
+        }
+      }    
+  }
+}
