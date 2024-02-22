@@ -64,3 +64,40 @@ app-contact-form{
   width: 100%;
   max-width: 1440px;
 }
+
+@media (min-width: 993px){
+  .content{
+
+    .contact{
+
+      svg{
+        width: 50px;
+      }
+
+      h1{
+        font-weight: 700;
+        font-size: 90px;
+        line-height: 108px;
+        padding: 0 36px;
+      }
+    }
+
+    .contact_desktop{
+      @include dFlex($jc: flex-start, $ai: flex-start, $fd: row, $g: 150px);
+      padding: 0 100px;
+
+      .intro{
+        padding: 0;
+        width: 39%;
+      }
+
+    }
+
+  }
+
+
+  app-contact-form{
+    width: 50%;    
+  }
+
+}

@@ -139,3 +139,14 @@ form {
   }
 
 }
+
+
+@media (min-width: 993px){
+  form{
+    padding: 0;
+    
+  }
+  .navigation {
+    padding: 0;
+  }
+}
