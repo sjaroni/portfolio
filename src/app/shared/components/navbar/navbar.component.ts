@@ -76,7 +76,7 @@ export class NavbarComponent {
     lineTop.style.transform = 'translateY(12px) rotate(-45deg)';
 
     lineMiddle.style.animation = 'fadeOut 125ms';
-    lineMiddle.style.backgroundColor = 'rgba(254, 254, 254 , 0)';
+    lineMiddle.style.backgroundColor = 'rgba(0, 190, 232 , 0)';
 
     lineBottom.style.animation = 'rotateBottom 125ms';
     lineBottom.style.transform = 'translateY(-8px) rotate(45deg)';
@@ -98,7 +98,7 @@ export class NavbarComponent {
     lineTop.style.transform = 'translateY(0px) rotate(0deg)';
 
     lineMiddle.style.animation = 'fadeIn 125ms';
-    lineMiddle.style.backgroundColor = 'rgba(255, 255, 255 , 1)';
+    lineMiddle.style.backgroundColor = 'rgba(0, 190, 232 , 1)';
 
     lineBottom.style.animation = 'rotateBackBottom 125ms';
     lineBottom.style.transform = 'translateY(0px) rotate(0deg)';
