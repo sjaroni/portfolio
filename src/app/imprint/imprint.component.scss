@@ -1,3 +1,21 @@
+*{
+  background-color: #141d2f;
+  box-sizing: border-box;
+}
+
 .impressum{
-  padding: 0 25px;
+  padding: 25px;
+  word-wrap: break-word;
+  
+  h1{
+
+     margin-block-start: 0;
+     margin-block-end: 0;
+   }
+}
+
+@media (min-width: 993px){
+  .impressum{    
+    padding: 25px 100px;
+  }
 }

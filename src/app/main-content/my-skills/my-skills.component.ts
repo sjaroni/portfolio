@@ -29,5 +29,7 @@ export class MySkillsComponent {
     { name: 'Material design', icon: './assets/img/my-skills/material.svg' },
     { name: 'Rest-Api', icon: './assets/img/my-skills/api.svg' },
     { name: 'Scrum', icon: './assets/img/my-skills/scrum.svg' },
+    { name: '', icon: '' },
+    { name: '', icon: '' },
   ];
 }

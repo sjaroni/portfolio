@@ -1,4 +1,15 @@
+*{
+  background-color: #141d2f;
+  box-sizing: border-box;
+}
+
 .content{
-  padding: 0 25px;
+  padding: 25px;
   word-wrap: break-word;
+}
+
+@media (min-width: 993px){
+  .content{    
+    padding: 25px 100px;
+  }
 }
