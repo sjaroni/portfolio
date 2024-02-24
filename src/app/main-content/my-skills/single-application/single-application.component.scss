@@ -4,7 +4,7 @@
   @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 10px);
   width: clamp(41px, 70%, 77px);
   flex: 0 0 calc(33.333% - 22px);
-  padding: 24px 0;
+  padding-top: 24px;
 
   position: relative;
 
@@ -25,18 +25,5 @@
     animation-duration: 100ms;
     animation-delay: 1ms;
     animation-fill-mode: forwards;
-  }
-
-
-}
-
-@keyframes hoverAnimation {
-  from {
-    padding: 0;
-    gap: 0;
-  }
-  to {
-    padding: 5px 0;
-    gap: 30px;
   }
 }

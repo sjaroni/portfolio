@@ -87,3 +87,15 @@
     opacity: 1;
   }
 }
+
+@keyframes hoverAnimation {
+  from {    
+    //padding: 24px 0;
+    gap: 10px;
+  }
+  to {    
+    gap: 34px;
+    padding: 0 24px;
+  }
+}
+
