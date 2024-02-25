@@ -3,7 +3,7 @@
 .content {
   position: relative;
   padding: 0 25px;
-  background-color: #141d2f;
+  background-color: #141d2f;  
 
   .shadow{
     position: absolute;
@@ -119,7 +119,7 @@
 
 }
 
-@media (min-width: 993px) and (max-width: 1024px) {
+@media (min-width: 993px) and (max-width: 1390px) {
   .content{
     gap: 25px;
 
