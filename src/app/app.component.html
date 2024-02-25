@@ -1,3 +1,10 @@
+@if(isLandscapeOrientation){
+<div id="orientationMessage">
+  <h2>Please turn your device</h2>
+  <img src="assets/img/rotateScreen.png" />
+</div>
+} @else {
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
+}

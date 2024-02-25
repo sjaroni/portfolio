@@ -5,23 +5,23 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './about-me.component.html',
-  styleUrl: './about-me.component.scss'
+  styleUrl: './about-me.component.scss',
 })
-
 export class AboutMeComponent {
-
-  constructor(){
+  constructor() {
     this.calculateYears();
   }
 
   startYear = 2003;
   howManyYearsInIt: number = 0;
 
-  calculateYears(){
+  calculateYears() {
     let currentDate = new Date();
     let currentYear = currentDate.getFullYear();
     let currentMonth = currentDate.getMonth();
-    this.howManyYearsInIt = currentMonth < 7 ? this.howManyYearsInIt = currentYear - this.startYear - 1 : this.howManyYearsInIt = currentYear - this.startYear;    
+    this.howManyYearsInIt =
+      currentMonth < 7
+        ? (this.howManyYearsInIt = currentYear - this.startYear - 1)
+        : (this.howManyYearsInIt = currentYear - this.startYear);
   }
-
 }

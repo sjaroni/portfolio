@@ -10,16 +10,35 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
   selector: 'app-root',
   standalone: true,
   imports: [
-    CommonModule, 
+    CommonModule,
     RouterOutlet,
     NavbarComponent,
-    MainContentComponent, 
+    MainContentComponent,
     FooterComponent,
     ImprintComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'portfolio';
+  isLandscapeOrientation: boolean = false;
+
+  ngOnInit(): void {    
+    this.isLandscapeOrientation = this.checkMobileOrientation();
+  }
+
+  checkMobileOrientation(){
+    if (
+      window.matchMedia('(orientation: landscape)').matches &&
+      window.matchMedia('(min-width: 320px)').matches &&
+      window.matchMedia('(max-width: 900px)').matches &&
+      window.innerWidth > window.innerHeight
+    ) {      
+      return true;
+    } else {      
+      return false;
+    }
+  }
+
 }
