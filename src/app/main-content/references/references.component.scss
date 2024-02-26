@@ -59,13 +59,14 @@
     rotate: 90deg;
     position: absolute;
     top: -75px;
-    right: 25px;    
+    right: 25px;
+    animation: bounce 2s infinite alternate;
 
     span{
       font-weight: 400;
       font-size: 23px;
       line-height: 27.6px;
-      color: #FFFFFF;      
+      color: #FFFFFF;  
     }
 
     img {

@@ -99,3 +99,20 @@
   }
 }
 
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    top: 0;
+  }
+  40% {
+    top: 15px; /* Nach unten federn */
+  }
+  60% {
+    top: 10px; /* Wieder nach oben gehen */
+  }
+}
+
+.show{
+  transform: translateX(0%) !important;
+  opacity: 1;
+}
+
