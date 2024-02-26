@@ -5,6 +5,8 @@ import { MainContentComponent } from './main-content/main-content.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
 import { ImprintComponent } from './imprint/imprint.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 @Component({
   selector: 'app-root',
@@ -22,10 +24,11 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
 })
 export class AppComponent {
   title = 'portfolio';
-  isLandscapeOrientation: boolean = false;
+  isLandscapeOrientation: boolean = false;  
 
   ngOnInit(): void {    
     this.isLandscapeOrientation = this.checkMobileOrientation();
+    Aos.init();
   }
 
   checkMobileOrientation(){
@@ -40,5 +43,4 @@ export class AppComponent {
       return false;
     }
   }
-
 }

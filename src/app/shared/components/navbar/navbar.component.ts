@@ -15,6 +15,7 @@ export class NavbarComponent {
   isContactClicked: boolean = false;
   isMenuOpen: boolean = false;
   showOverlay: boolean = false;
+  selectedLanguage: string = 'en';
 
   @ViewChild('menuMobile') menuMobile!: ElementRef;
   @ViewChild('lineTop') lineTop!: ElementRef;
@@ -23,6 +24,10 @@ export class NavbarComponent {
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  toggleLanguage(language: string){
+    this.selectedLanguage = language;
   }
 
   clickedLink(fragment: string, event: Event): void {    

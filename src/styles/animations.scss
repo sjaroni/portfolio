@@ -104,10 +104,19 @@
     top: 0;
   }
   40% {
-    top: 15px; /* Nach unten federn */
+    top: 15px;
   }
   60% {
-    top: 10px; /* Wieder nach oben gehen */
+    top: 10px;
+  }
+}
+
+@keyframes bounce2 {
+  0%, 100% {
+    top: -75px;
+  }
+  50% {
+    top: -40px;
   }
 }
 

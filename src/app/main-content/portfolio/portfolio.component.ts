@@ -5,12 +5,12 @@ import { ProjectdataService } from '../../shared/services/projectdata.service';
 @Component({
   selector: 'app-portfolio',
   standalone: true,
-  imports: [ ProjectComponent ],
+  imports: [ 
+    ProjectComponent,    
+  ],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.scss',
 })
-export class PortfolioComponent {
-  
+export class PortfolioComponent {  
   projectdata = inject(ProjectdataService);
-
 }
