@@ -1,21 +1,27 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../../services/translation.service';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    TranslationService
+  ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+  
+  translatedata = inject(TranslationService);
+  
   isAboutMeClicked: boolean = false;
   isSkillsClicked: boolean = false;
   isPortfolioClicked: boolean = false;
   isContactClicked: boolean = false;
   isMenuOpen: boolean = false;
   showOverlay: boolean = false;
-  selectedLanguage: string = 'en';
 
   @ViewChild('menuMobile') menuMobile!: ElementRef;
   @ViewChild('lineTop') lineTop!: ElementRef;
@@ -24,10 +30,6 @@ export class NavbarComponent {
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
-  }
-
-  toggleLanguage(language: string){
-    this.selectedLanguage = language;
   }
 
   clickedLink(fragment: string, event: Event): void {    

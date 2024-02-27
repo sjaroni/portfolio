@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-
+import { TranslationService } from '../../shared/services/translation.service';
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [],
+  imports: [TranslationService],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
-export class AboutMeComponent {
-  constructor() {
+export class AboutMeComponent {  
+
+  constructor(private translateService: TranslationService) {
     this.calculateYears();
   }
 

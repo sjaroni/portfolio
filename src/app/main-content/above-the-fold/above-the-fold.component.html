@@ -1,21 +1,52 @@
-<section class="atf">  
-  
-    <div class="picture-container">
-      <div class="image-wrapper">
-        <img class="image" id="hero-character-picture" src="./assets/img/atf/profile.png" />
-        <img class="image" id="shadow-character-picture" src="./assets/img/atf/profile-shadow.svg">      
-        <img class="image-overlay" src="./assets/img/atf/profile-overlay.png" />
+<section class="atf">
+  <div class="picture-container"
+  data-aos="fade-up"
+  data-aos-offset="100"
+  data-aos-delay="50"
+  data-aos-duration="125"
+  data-aos-easing="linear"
+  data-aos-mirror="true"
+  data-aos-once="false"
+  >
+    <div class="image-wrapper">
+      <img
+        class="image"
+        id="hero-character-picture"
+        src="./assets/img/atf/profile.png"
+      />
+      <img
+        class="image"
+        id="shadow-character-picture"
+        src="./assets/img/atf/profile-shadow.svg"
+      />
+      <img class="image-overlay" src="./assets/img/atf/profile-overlay.png" />
     </div>
     @if(imagePath == 'mobile'){
-    <img class="image bottom" id="background-shadow" src="./assets/img/atf/vector-mobile.svg">
+    <img
+      class="image bottom"
+      id="background-shadow"
+      src="./assets/img/atf/vector-mobile.svg"
+    />
     }
   </div>
-  
-  <div class="whoAmI">
-    <img id="whoAmI-picture" src="./assets/img/atf/whoami.png" />    
+
+  <div class="whoAmI"
+  data-aos="fade-up"
+  data-aos-offset="100"
+  data-aos-delay="50"
+  data-aos-duration="125"
+  data-aos-easing="linear"
+  data-aos-mirror="true"
+  data-aos-once="false"
+  >
+    <img id="whoAmI-picture" src="./assets/img/atf/whoami.png" />
     <button class="btn"><a href="#contact">Let's talk!</a></button>
   </div>
   @if(imagePath == 'desktop'){
-    <img class="image bottom" id="background-shadow" src="./assets/img/atf/vector.svg">
+  <img
+    class="image bottom"
+    id="background-shadow"
+    src="./assets/img/atf/vector.svg"
+  />
   }
 </section>

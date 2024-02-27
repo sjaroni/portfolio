@@ -1,32 +1,42 @@
 <div class="content">
-  <div 
-  data-aos="zoom-in-left"
-data-aos-offset="200"
-data-aos-delay="50"
-data-aos-duration="125"
-data-aos-easing="ease-in-out"
-data-aos-mirror="true"
-data-aos-once="false"
-
-  class="portfolio">    
-
-    <svg id="svg_left" xmlns="http://www.w3.org/2000/svg" width="20px" height="8">
+  <div
+  class="portfolio"
+  data-aos="fade-up"
+  data-aos-offset="100"
+  data-aos-delay="50"
+  data-aos-duration="125"
+  data-aos-easing="linear"
+  data-aos-mirror="true"
+  data-aos-once="false"
+  >
+    <svg
+      id="svg_left"
+      xmlns="http://www.w3.org/2000/svg"
+      width="20px"
+      height="8"
+    >
       <rect x="2" y="2" width="100%" height="4" rx="2" ry="2" fill="#4b47ff" />
     </svg>
 
     <h1>Portfolio</h1>
-    <svg id="svg_right" xmlns="http://www.w3.org/2000/svg" width="75px" height="8">
+    <svg
+      id="svg_right"
+      xmlns="http://www.w3.org/2000/svg"
+      width="75px"
+      height="8"
+    >
       <rect x="2" y="2" width="100%" height="4" fill="#4b47ff" />
     </svg>
   </div>
-  
+
   <div class="intro">
-    Explore a selection of my work here - Interact with projects to see my skills in action.
+    Explore a selection of my work here - Interact with projects to see my
+    skills in action.
   </div>
 
   <div class="projectlist">
     @for(project of projectdata.projects; track project.id; let index = $index){
-      <app-project [project]="project"></app-project>
-    }    
+    <app-project [project]="project"></app-project>
+    }
   </div>
 </div>
