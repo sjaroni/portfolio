@@ -7,7 +7,6 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-// import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -25,13 +24,6 @@ import 'aos/dist/aos.css';
 })
 export class AppComponent {
   title = 'portfolio';
-
-  // constructor(private translateService: TranslateService){}
-
-  // public selectLanguage(event: any){
-  //   this.translateService.use(event.target.value);
-  // }
-
   isLandscapeOrientation: boolean = false;  
 
   ngOnInit(): void {    

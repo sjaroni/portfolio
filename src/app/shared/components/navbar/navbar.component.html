@@ -12,7 +12,7 @@
           d="M2 0.5H0.5V3.5H2V0.5ZM57.5 3.5C58.3284 3.5 59 2.82843 59 2C59 1.17157 58.3284 0.5 57.5 0.5V3.5ZM2 3.5H57.5V0.5H2V3.5Z"
           fill="#00bee8"
         ></path>
-      </svg>
+      </svg>      
       <a href="#"> Stefan </a>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +34,7 @@
           (click)="clickedLink('aboutMe', $event)"
           href="#aboutMe"
           [ngClass]="{ isActive: isAboutMeClicked }"
-          >{{ 'about_me' | translate }}</a
+          >{{ "ABOUT_ME" | translate }}</a
         >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -54,7 +54,7 @@
           (click)="clickedLink('skills', $event)"
           href="#skills"
           [ngClass]="{ isActive: isSkillsClicked }"
-          >Skills</a
+          >{{ "SKILLS" | translate }}</a
         >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -91,11 +91,30 @@
       </div>
       <div class="navLinkContent">
         <div class="languageSelection">
-          <a (click)="translatedata.selectLanguage('en-GB')" [ngClass]="{ isActive: translatedata.selectedLanguage == 'en-GB' }">en</a>
+          <a
+            (click)="changeLanguage('en')"
+            [ngClass]="{ isActive: defaultLanguage == 'en' }"
+            >en</a
+          >
           |
-          <a (click)="translatedata.selectLanguage('de-DE')" [ngClass]="{ isActive: translatedata.selectedLanguage == 'de-DE' }">de</a>
+          <a
+            (click)="changeLanguage('de')"
+            [ngClass]="{ isActive: defaultLanguage == 'de' }"
+            >de</a
+          >
         </div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="59" height="4" viewBox="0 0 59 4" fill="none"><path d="M2 0.5H0.5V3.5H2V0.5ZM57.5 3.5C58.3284 3.5 59 2.82843 59 2C59 1.17157 58.3284 0.5 57.5 0.5V3.5ZM2 3.5H57.5V0.5H2V3.5Z" fill="#141d2f"></path></svg>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="59"
+          height="4"
+          viewBox="0 0 59 4"
+          fill="none"
+        >
+          <path
+            d="M2 0.5H0.5V3.5H2V0.5ZM57.5 3.5C58.3284 3.5 59 2.82843 59 2C59 1.17157 58.3284 0.5 57.5 0.5V3.5ZM2 3.5H57.5V0.5H2V3.5Z"
+            fill="#141d2f"
+          ></path>
+        </svg>
       </div>
     </div>
 
@@ -146,7 +165,7 @@
             (click)="clickedLink('aboutMe', $event)"
             href="#aboutMe"
             [ngClass]="{ isActive: isAboutMeClicked }"
-            >{{ 'about_me' | translate }}</a
+            >{{ "ABOUT_ME" | translate }}</a
           >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -166,7 +185,7 @@
             (click)="clickedLink('skills', $event)"
             href="#skills"
             [ngClass]="{ isActive: isSkillsClicked }"
-            >Skills</a
+            >{{ "SKILLS" | translate }}</a
           >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -206,7 +225,7 @@
             (click)="clickedLink('contact', $event)"
             href="#contact"
             [ngClass]="{ isActive: isContactClicked }"
-            >Contact</a
+            >{{ "CONTACT" | translate }}</a
           >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -224,13 +243,31 @@
 
         <div class="navLinkContent">
           <div class="languageSelection">
-            <a (click)="translatedata.selectLanguage('en-GB')" [ngClass]="{ isActive: translatedata.selectedLanguage == 'en-GB' }" href="#">en</a>
+            <a
+              (click)="changeLanguage('en')"
+              [ngClass]="{ isActive: defaultLanguage == 'en' }"
+              >en</a
+            >
             |
-            <a (click)="translatedata.selectLanguage('de-DE')" [ngClass]="{ isActive: translatedata.selectedLanguage == 'de-DE' }" href="#">de</a>
+            <a
+              (click)="changeLanguage('de')"
+              [ngClass]="{ isActive: defaultLanguage == 'de' }"
+              >de</a
+            >
           </div>
-          <svg xmlns="http://www.w3.org/2000/svg" width="59" height="4" viewBox="0 0 59 4" fill="none"><path d="M2 0.5H0.5V3.5H2V0.5ZM57.5 3.5C58.3284 3.5 59 2.82843 59 2C59 1.17157 58.3284 0.5 57.5 0.5V3.5ZM2 3.5H57.5V0.5H2V3.5Z" fill="#141d2f"></path></svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="59"
+            height="4"
+            viewBox="0 0 59 4"
+            fill="none"
+          >
+            <path
+              d="M2 0.5H0.5V3.5H2V0.5ZM57.5 3.5C58.3284 3.5 59 2.82843 59 2C59 1.17157 58.3284 0.5 57.5 0.5V3.5ZM2 3.5H57.5V0.5H2V3.5Z"
+              fill="#141d2f"
+            ></path>
+          </svg>
         </div>
-
       </div>
     </div>
   </div>

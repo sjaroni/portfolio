@@ -24,7 +24,7 @@
   </a>
 
   @if(showLineLeft){
-  <a class="email_address" href="#contact"> kontakt&#64;stefan-jaroni.de </a>
+  <a class="email_address" href="#contact"> {{ 'MAIL' | translate }}</a>
   } @if(showLineRight){
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@
   </svg>
   } @if(showLineLeft){
     <div class="scroll">
-      <span>Scroll down </span>
+      <span>{{ 'SCROLL' | translate }} </span>
       <img src="./assets/img/social/scroll_down.svg" />
     </div>
   }

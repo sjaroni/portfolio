@@ -1,12 +1,13 @@
 <section class="atf">
-  <div class="picture-container"
-  data-aos="fade-up"
-  data-aos-offset="100"
-  data-aos-delay="50"
-  data-aos-duration="125"
-  data-aos-easing="linear"
-  data-aos-mirror="true"
-  data-aos-once="false"
+  <div
+    class="picture-container"
+    data-aos="fade-up"
+    data-aos-offset="100"
+    data-aos-delay="50"
+    data-aos-duration="125"
+    data-aos-easing="linear"
+    data-aos-mirror="true"
+    data-aos-once="false"
   >
     <div class="image-wrapper">
       <img
@@ -30,17 +31,29 @@
     }
   </div>
 
-  <div class="whoAmI"
-  data-aos="fade-up"
-  data-aos-offset="100"
-  data-aos-delay="50"
-  data-aos-duration="125"
-  data-aos-easing="linear"
-  data-aos-mirror="true"
-  data-aos-once="false"
+  <div
+    class="whoAmI"
+    data-aos="fade-up"
+    data-aos-offset="100"
+    data-aos-delay="50"
+    data-aos-duration="125"
+    data-aos-easing="linear"
+    data-aos-mirror="true"
+    data-aos-once="false"
   >
-    <img id="whoAmI-picture" src="./assets/img/atf/whoami.png" />
-    <button class="btn"><a href="#contact">Let's talk!</a></button>
+    <img
+      id="whoAmI-picture"
+      [src]="
+        sharedData.getLanguage == 'de'
+          ? './assets/img/atf/whoami_de.png'
+          : './assets/img/atf/whoami.png'
+      "
+    />
+    <button class="btn">
+      <a href="#contact"
+        >{{ "TALK_BTN" | translate }}</a
+      >
+    </button>
   </div>
   @if(imagePath == 'desktop'){
   <img

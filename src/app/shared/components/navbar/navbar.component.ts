@@ -1,21 +1,35 @@
-import { Component, ElementRef, ViewChild, inject } from '@angular/core';
+import { Component, ElementRef, OnDestroy, ViewChild, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslationService } from '../../services/translation.service';
-
+import { TranslateModule, TranslateService, LangChangeEvent } from '@ngx-translate/core';
+import { SharedDataService } from '../../services/shared-data.service';
 @Component({
   selector: 'app-navbar',
   standalone: true,
   imports: [
     CommonModule,
-    TranslationService
+    TranslateModule
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
 
-export class NavbarComponent {
+export class NavbarComponent implements OnInit, OnDestroy{
+  defaultLanguage: string | undefined = 'en';
+  constructor(public translate: TranslateService, public sharedData: SharedDataService) {}
 
-  translatedata = inject(TranslationService);  
+  ngOnInit(): void {    
+    this.translate.onLangChange.subscribe((event: LangChangeEvent) => {      
+      this.defaultLanguage = event.lang;
+      this.sharedData.getLanguage = event.lang;
+    });
+  }
+  ngOnDestroy() {    
+    this.translate.onLangChange.unsubscribe();
+  }
+
+  changeLanguage(language: string) {
+    this.translate.use(language);
+  }
 
   isAboutMeClicked: boolean = false;
   isSkillsClicked: boolean = false;
