@@ -1,29 +1,30 @@
-import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
-import { TranslationService } from '../../shared/services/translation.service';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslationService } from '../../shared/services/translation.service';
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [ CommonModule,
-    TranslationService ],
+  imports: [ 
+    CommonModule,
+    TranslationService 
+  ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
 
-export class AboutMeComponent implements OnInit {
+export class AboutMeComponent implements OnInit{
 
-  translatedata = inject(TranslationService);
-  selectedLanguage: string | undefined;
-
+  currentLanguage: string | undefined;
   constructor(private translationService: TranslationService) {
     this.calculateYears();
-  }
-
+   }
+   
   ngOnInit(): void {
     this.translationService.selectedLanguage$.subscribe(language => {
-      this.selectedLanguage = language;
+      this.currentLanguage = language;      
     });
-  }  
+  }
+
 
   startYear = 2003;
   howManyYearsInIt: number = 0;

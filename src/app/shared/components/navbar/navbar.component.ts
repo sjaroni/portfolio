@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, inject, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslationService } from '../../services/translation.service';
 
@@ -13,18 +13,9 @@ import { TranslationService } from '../../services/translation.service';
   styleUrl: './navbar.component.scss',
 })
 
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
 
-  translatedata = inject(TranslationService);
-  selectedLanguage: string | undefined;
-
-  constructor(private translationService: TranslationService) { }
-
-  ngOnInit(): void {
-    this.translationService.selectedLanguage$.subscribe(language => {
-      this.selectedLanguage = language;
-    });
-  }
+  translatedata = inject(TranslationService);  
 
   isAboutMeClicked: boolean = false;
   isSkillsClicked: boolean = false;
