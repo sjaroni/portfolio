@@ -17,5 +17,16 @@
   "CONTACT_DESCRIPTION0": "xContact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.",  
   "CONTACT_DESCRIPTION1": "Need a Frontend developer?",
   "CONTACT_DESCRIPTION2": "Schreiben Sie mir!",
+  "FORM_NAME": "Ihr Name",
+  "FORM_NAME_REQUIRED": "Ihr Name wird benötigt.",
+  "FORM_EMAIL": "Ihre E-Mail-Adresse",
+  "FORM_EMAIL_REQUIRED": "Ihre E-Mail-Adresse wird benötigt.",
+  "FORM_MESSAGE": "Ihre Nachricht",
+  "FORM_MESSAGE_REQUIRED": "Ihre Nachricht ist leer.",
+  "FORM_BTN": "Nachricht senden",
+  "FORM_PRIVACY0": "Ich habe die",
+  "FORM_PRIVACY1": "Datenschutzerklärung",
+  "FORM_PRIVACY2": "gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.",
+  "FORM_PRIVACY_REQUIRED": "Bitte akzeptieren Sie die Datenschutzerklärung.",
   "IMPRINT": "Impressum"
 }

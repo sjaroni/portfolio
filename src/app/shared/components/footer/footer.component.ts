@@ -19,5 +19,6 @@ export class FooterComponent {
     }
   }
 
-  isHovered: boolean = false;
+  isHoveredImprint: boolean = false;
+  isHoveredPrivacy: boolean = false;
 }

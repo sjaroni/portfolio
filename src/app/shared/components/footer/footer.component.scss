@@ -28,7 +28,8 @@
     line-height: 27.6px;
   }
 
-  .imprintBox {    
+  .imprintBox,
+  .privacyBox {
     @include dFlex($jc: flex-end, $ai: flex-start, $fd: column, $g: 2px);
     
     a {    

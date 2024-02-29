@@ -143,8 +143,16 @@ form {
   form {
     padding: 0;
 
+    .form-box {
+      .input-with-icon {
+        img {
+          top: 25px;
+        }
+      }
+    }
+
     input[type="text"],
-    input[type="email"]{
+    input[type="email"] {
       height: 50px;
     }
 
@@ -152,12 +160,11 @@ form {
       height: 202px;
     }
 
-    .btnDisabled{
+    .btnDisabled {
       height: 58px;
       font-size: 23px;
       line-height: 27.6px;
     }
-
   }
   .navigation {
     padding: 0;
@@ -166,5 +173,4 @@ form {
   .privacy-policy {
     @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 8px);
   }
-
 }
