@@ -5,5 +5,17 @@
   "CONTACT": "Contact",
   "TALK_BTN": "Let's talk!",
   "MAIL": "contact@stefan-jaroni.com",
-  "SCROLL": "Scroll down"
+  "SCROLL": "Scroll down",
+  "SKILLS_DESCRIPTION": "I used the following tools to realize my projects",
+  "SKILLS_BTN": "Get in touch",
+  "PORTFOLIO": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+  "PORTFOLIO_BTN": "Live test",
+  "PROJECT0_DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+  "PROJECT1_DESCRIPTION": "Project 1 Description",
+  "PROJECT2_DESCRIPTION": "Project 2 Description",
+  "CONTACT_TITLE": "Got a problem to solve?",
+  "CONTACT_DESCRIPTION0": "Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.",
+  "CONTACT_DESCRIPTION1": "Need a Frontend developer?",
+  "CONTACT_DESCRIPTION2": "Contact me!",
+  "IMPRINT": "Imprint"
 }

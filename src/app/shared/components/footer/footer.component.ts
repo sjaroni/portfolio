@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ReferencesComponent } from '../../../main-content/references/references.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [ ReferencesComponent ],
+  imports: [ ReferencesComponent, TranslateModule ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss'
 })

@@ -14,11 +14,11 @@
     >{{ project.stack }}</div>
     <div class="description"
     [ngStyle]="isNotMobile && {'text-align': project.id % 2 === 0 ? 'left' : 'right'}"
-    >{{ project.description }}</div>
+    >{{ project.description | translate }}</div>
     <div class="buttons">
 
       <button class="btn-secondary">
-        <a href="{{ project.linkTryItOut }}" target="_blank">Live test</a>
+        <a href="{{ project.linkTryItOut }}" target="_blank">{{ 'PORTFOLIO_BTN' | translate }}</a>
       </button>
       <button class="btn-secondary">
         <a href="{{ project.linkGitHub }}" target="_blank">GitHub</a>

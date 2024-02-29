@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { ContactFormComponent } from './contact-form/contact-form.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [ ContactFormComponent ],
+  imports: [ ContactFormComponent, TranslateModule ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })

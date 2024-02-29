@@ -1,9 +1,21 @@
 {  
   "ABOUT_ME": "Über mich",
-  "SKILLS": "Fähigkeiten",
-  "MY_SKILLS": "Fähigkeiten",
+  "SKILLS": "Knowhow",
+  "MY_SKILLS": "Knowhow",
   "CONTACT": "Kontakt",
   "TALK_BTN": "Lassen Sie uns reden!",
   "MAIL": "kontakt@stefan-jaroni.de",
-  "SCROLL": "Runterscrollen"
+  "SCROLL": "Runterscrollen",
+  "SKILLS_DESCRIPTION": "Diese Werkzeuge habe ich für die Realisierung meiner Projekte genutzt",
+  "SKILLS_BTN": "In Kontakt treten",
+  "PORTFOLIO": "Entdecken Sie hier eine Auswahl meiner Arbeiten. Probiere Sie diese gerne aus!",
+  "PORTFOLIO_BTN": "Testen",
+  "PROJECT0_DESCRIPTION": "blablabla",
+  "PROJECT1_DESCRIPTION": "blablabla1",
+  "PROJECT2_DESCRIPTION": "blablabla2",
+  "CONTACT_TITLE": "xGot a problem to solve?",
+  "CONTACT_DESCRIPTION0": "xContact me through this form, I am interested in hearing you, knowing your ideas and contributing to your projects with my work.",  
+  "CONTACT_DESCRIPTION1": "Need a Frontend developer?",
+  "CONTACT_DESCRIPTION2": "Schreiben Sie mir!",
+  "IMPRINT": "Impressum"
 }
