@@ -11,7 +11,6 @@
 
   .logoBoxFooter {
     width: 120px;
-    height: 80px;
     @include dFlex($jc: flex-end, $ai: flex-start, $fd: column, $g: 2px);
     a {
       text-decoration: none;
@@ -57,6 +56,11 @@
     @include dFlex($jc: space-between, $ai: center, $fd: row, $g: 0px);
     padding: 0 100px;
     height: 291px;
+
+    .declarations{
+      @include dFlex($jc: space-between, $ai: center, $fd: row, $g: 16px);
+      padding-top: 8px;
+    }
 
     .logoBoxFooter,
     .copyright{
