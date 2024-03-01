@@ -28,5 +28,6 @@
   "FORM_PRIVACY1": "Datenschutzerklärung",
   "FORM_PRIVACY2": "gelesen und bin mit der beschriebenen Verarbeitung meiner Daten einverstanden.",
   "FORM_PRIVACY_REQUIRED": "Bitte akzeptieren Sie die Datenschutzerklärung.",
-  "IMPRINT": "Impressum"
+  "IMPRINT": "Impressum",
+  "PRIVACY_POLICY": "Datenschutz"
 }
