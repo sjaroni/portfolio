@@ -2,10 +2,25 @@
   @if(project.id == 2){  
     <img class="shadow" src="./assets/img/projects/project-shadow.svg" />
   }
-  <div class="project-img">
+  <div class="project-img"
+  data-aos="fade-up"
+    data-aos-offset="50"
+    data-aos-delay="50"
+    data-aos-duration="125"
+    data-aos-easing="linear"
+    data-aos-mirror="true"
+    data-aos-once="false"
+  >
     <img src="./assets/img/projects/{{ project.img }}" alt="">
   </div>
-  <div class="project-description"  
+  <div class="project-description" 
+  data-aos="fade-up"
+    data-aos-offset="50"
+    data-aos-delay="50"
+    data-aos-duration="125"
+    data-aos-easing="linear"
+    data-aos-mirror="true"
+    data-aos-once="false"
   [ngStyle]="isNotMobile && {'align-items': project.id % 2 === 0 ? 'flex-start' : 'flex-end'}"
   >    
     <div class="title">{{ project.title }} </div>

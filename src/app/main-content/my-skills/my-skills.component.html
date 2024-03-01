@@ -1,49 +1,56 @@
 <div class="content">
-  
-  <div class="skills_desktop"
-  data-aos="fade-up"
-  data-aos-offset="100"
-  data-aos-delay="50"
-  data-aos-duration="125"
-  data-aos-easing="linear"
-  data-aos-mirror="true"
-  data-aos-once="false"
+  <div
+    class="skills_desktop"
+    data-aos="fade-up"
+    data-aos-offset="50"
+    data-aos-delay="50"
+    data-aos-duration="125"
+    data-aos-easing="linear"
+    data-aos-mirror="true"
+    data-aos-once="false"
   >
-
     <div class="skills">
-      <h1>{{ 'MY_SKILLS' | translate }}</h1>
-      
+      <h1>{{ "MY_SKILLS" | translate }}</h1>
+
       <svg xmlns="http://www.w3.org/2000/svg" width="58" height="8">
         <rect x="4" y="2" width="99%" height="4" rx="2" ry="2" fill="#4b47ff" />
       </svg>
-
     </div>
-    <div class="intro">      
-      {{ 'SKILLS_DESCRIPTION' | translate }}
+    <div class="intro">
+      {{ "SKILLS_DESCRIPTION" | translate }}
     </div>
-    <button id="btnSkillsDesktop" class="btn"><a href="#contact">{{ 'SKILLS_BTN' | translate }}</a></button>
+    <button id="btnSkillsDesktop" class="btn">
+      <a href="#contact">{{ "SKILLS_BTN" | translate }}</a>
+    </button>
   </div>
 
-
-
-  <div class="applications"
-  data-aos="fade-up"
-  data-aos-offset="100"
-  data-aos-delay="50"
-  data-aos-duration="125"
-  data-aos-easing="linear"
-  data-aos-mirror="true"
-  data-aos-once="false"
-  >
+  <div class="applications">
     @for(application of applications; track application.name; let index =
     $index){
     <app-single-application
       class="single-application"
+      data-aos="fade-up"
+    data-aos-offset="50"
+    data-aos-delay="50"
+    data-aos-duration="125"
+    data-aos-easing="linear"
+    data-aos-mirror="true"
+    data-aos-once="false"
       [singleApplication]="application"
     ></app-single-application>
     }
   </div>
 
-  <button id="btnSkillsMobile" class="btn"><a href="#contact">{{ 'SKILLS_BTN' | translate }}</a></button>
+  <button id="btnSkillsMobile" class="btn"
+  data-aos="fade-up"
+    data-aos-offset="50"
+    data-aos-delay="50"
+    data-aos-duration="125"
+    data-aos-easing="linear"
+    data-aos-mirror="true"
+    data-aos-once="false"
+  >
+    <a href="#contact">{{ "SKILLS_BTN" | translate }}</a>
+  </button>
   <img class="shadow" src="./assets/img/my-skills/skills-shadow.svg" />
 </div>
