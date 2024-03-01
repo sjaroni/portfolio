@@ -10,10 +10,6 @@
     width: 100%;
     height: auto;
 
-    // transform: translateX(-100%);
-    // transition: 125ms;
-
-
     .image-wrapper {
       position: relative;
       width: 100%;
@@ -32,8 +28,7 @@
         position: absolute;
         top: 0;
         z-index: 0;
-      }
-      
+      }      
 
       #hero-character-picture {
         position: relative;
@@ -89,11 +84,20 @@
   .atf {
     width: 100%;
     @include dFlex($jc: center, $ai: center, $fd: row, $g: 0px);
+    margin-bottom: 85px;
 
     .image,
     .image-overlay {
       width: 100%;
       display: block;
+    }
+
+    .picture-container{
+      .image-wrapper{
+        #shadow-character-picture{
+          top:12%;
+        }
+      }
     }
 
   }
@@ -106,7 +110,7 @@
 
   .bottom {
     position: absolute;
-    top: 38%;
+    top: 41%;
     z-index: 1;
   }
 

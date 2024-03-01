@@ -14,8 +14,10 @@ import { SharedDataService } from '../../services/shared-data.service';
 })
 
 export class NavbarComponent implements OnInit, OnDestroy{
-  defaultLanguage: string | undefined = 'en';
-  constructor(public translate: TranslateService, public sharedData: SharedDataService) {}
+  defaultLanguage: string | undefined | null = 'en';
+  constructor(public translate: TranslateService, public sharedData: SharedDataService) {
+    this.setLanguage();
+  }
 
   ngOnInit(): void {    
     this.translate.onLangChange.subscribe((event: LangChangeEvent) => {      
@@ -23,12 +25,26 @@ export class NavbarComponent implements OnInit, OnDestroy{
       this.sharedData.getLanguage = event.lang;
     });
   }
+
   ngOnDestroy() {    
     this.translate.onLangChange.unsubscribe();
   }
 
   changeLanguage(language: string) {
     this.translate.use(language);
+    localStorage.setItem('portfolio', language);
+  }
+
+  setLanguage() {
+    this.defaultLanguage = localStorage.getItem('portfolio');
+    if (!this.defaultLanguage) {
+      this.defaultLanguage = 'en';
+      localStorage.setItem('portfolio', this.defaultLanguage);
+    } else if (this.defaultLanguage == 'en') {
+      this.changeLanguage('en');
+    } else {
+      this.changeLanguage('de');
+    }
   }
 
   isAboutMeClicked: boolean = false;

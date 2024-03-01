@@ -3,9 +3,9 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class SharedDataService {
+export class SharedDataService{
 
-  getLanguage: string | undefined;
+  getLanguage: string | undefined | null;
 
-  constructor() { }
+  constructor() {}
 }
