@@ -71,7 +71,7 @@
     @include dFlex($jc: space-between, $ai: flex-end, $fd: row, $g: 0px);
     width: 100%;
     box-sizing: border-box;
-    padding: 0 100px;
+    padding: 110px 50px 0 50px;
 
     .shadow{      
       z-index: 1;

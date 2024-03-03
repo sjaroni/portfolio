@@ -56,7 +56,7 @@ nav {
   animation: slideIn 125ms ease-in-out;
 
   .navLink {
-    @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 29px);
+    @include dFlex($jc: flex-start, $ai: center, $fd: column, $g: 29px);
   }
 }
 
