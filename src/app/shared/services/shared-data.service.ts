@@ -14,9 +14,6 @@ export class SharedDataService{
   constructor() {}
 
   clickedLink(fragment: string): void {
-
-    console.log('Stefan ' + fragment);
-    
     this.deactivateLinks();
     this.activateLink(fragment);
   }
@@ -31,7 +28,7 @@ export class SharedDataService{
   activateLink(fragment: string) {
     this.isAboutMeClicked = fragment === 'aboutMe';
     this.isSkillsClicked = fragment === 'skills';
-    this.isPortfolioClicked = fragment === 'portfolio';
+    this.isPortfolioClicked = fragment === 'portfolio';    
     this.isContactClicked = fragment === 'contact';
   }
 

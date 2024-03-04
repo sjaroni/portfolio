@@ -6,8 +6,7 @@
   background-color: #141d2f;
 
   .portfolio {
-    width: 100%;
-    margin-top: 109px;
+    width: 100%;    
     position: relative;
     @include dFlex($jc: flex-end, $ai: center, $fd: row, $g: 5px);
 
@@ -56,10 +55,7 @@ app-project{
 }
 
 @media (min-width: 993px){
-  .content{    
-    
-padding-top: 60px;
-
+  .content{
     .portfolio{
       h1{
         font-weight: 700;

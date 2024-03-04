@@ -6,6 +6,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReferencesComponent } from './references/references.component';
 import { SharedDataService } from '../shared/services/shared-data.service';
+import { DistanceAreaComponent } from '../shared/components/distance-area/distance-area.component';
+
 @Component({
   selector: 'app-main-content',
   standalone: true,
@@ -15,31 +17,42 @@ import { SharedDataService } from '../shared/services/shared-data.service';
     AboutMeComponent,
     MySkillsComponent,
     PortfolioComponent,
-    ContactComponent
+    ContactComponent,
+    DistanceAreaComponent,
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
 })
 export class MainContentComponent implements OnInit {
-
   sharedData = inject(SharedDataService);
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef) {}
 
   ngOnInit(): void {
-    const elementsToObserve = ['#atf', '#aboutMe', '#skills', '#portfolio', '#contact'];
+    const elementsToObserve = [
+      '#atf',
+      '#aboutMe',
+      '#skills',
+      '#portfolio',
+      '#contact',
+    ];    
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {          
-          this.sharedData.clickedLink(entry.target.id);
-        }
-      });
-    }, {
-      threshold: 0.6,
-      rootMargin: "100px",
-    });
-    
-    elementsToObserve.forEach(selector => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (entry.intersectionRatio > .4) {
+              this.sharedData.clickedLink(entry.target.id);
+            }
+          }
+        });
+      },
+      {
+        threshold: .2,
+        rootMargin: '10% 0px 0px'
+      }
+    );
+
+    elementsToObserve.forEach((selector) => {
       const target = this.elementRef.nativeElement.querySelector(selector);
       if (target) {
         observer.observe(target);

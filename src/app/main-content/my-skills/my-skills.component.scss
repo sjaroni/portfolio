@@ -15,7 +15,6 @@
 
   .skills {
     width: 100%;
-    margin-top: 154px;
     position: relative;
     @include dFlex($jc: flex-end, $ai: center, $fd: row, $g: 5px);
 
@@ -75,7 +74,7 @@
   .content {    
     @include dFlex($jc: space-between, $ai: center, $fd: row-reverse, $g: 25px);    
     box-sizing: border-box;    
-    padding: 190px 50px 0 50px;
+    padding: 0 50px;
 
     .skills_desktop {
       width: 38%;

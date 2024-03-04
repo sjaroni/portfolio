@@ -1,0 +1,14 @@
+p {
+  height: 100px;
+  background-color: #141d2f;
+  margin: 0;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+}
+
+@media (min-width: 993px) {
+  p {
+    height: 160px;
+  }
+}
