@@ -11,32 +11,24 @@
   >
     <h1>{{ "ABOUT_ME" | translate }}</h1>
 
-    <div class="intro">
+    <div class="intro">      
       <div>
-        {{ howManyYearsInIt }} Hi, I am a Front-end deverloper based in München,
-        Germany(....)Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-        auctor sem non tempus convallis. Integer et justo vitae urna finibus
-        eleifend sit amet porttitor sapien. Donec sollicitudin massa vel lorem
-        vestibulum efficitur.
+        {{ "ABOUT_ME_INTRO_PART1" | translate }}
+        {{ howManyYearsInIt }}
+        {{ "ABOUT_ME_INTRO_PART2" | translate }}
+        <p>{{ "ABOUT_ME_INTRO_PART3" | translate }}</p>
       </div>
       <div class="introduction">
         <div class="img-container" id="aboutMeCenter">
           <img class="image" src="./assets/img/about-me/light-bulb.svg" />
         </div>
-        <div class="share-aboutMe">
-          {{ "SOME_PERSONAL_THING_TO_SHARE1" | translate }}
-        </div>
+        <div class="share-aboutMe" [innerHTML]="'SOME_PERSONAL_THING_TO_SHARE1' | translate"></div>
       </div>
       <div class="introduction">
         <div class="img-container">
           <img class="image" src="./assets/img/about-me/puzzle.svg" />
         </div>
-        <div class="share-aboutMe">
-          {{ "SOME_PERSONAL_THING_TO_SHARE2" | translate }}
-          Some personal thing to share(...) Donec ut imperdiet diam, et
-          convallis neque. Class aptent taciti sociosqu ad litora torquent per
-          conubia nostra, per inceptos himenaeos.
-        </div>
+        <div class="share-aboutMe" [innerHTML]="'SOME_PERSONAL_THING_TO_SHARE2' | translate"></div>
       </div>
     </div>
   </div>

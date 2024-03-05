@@ -40,15 +40,26 @@ export class MainContentComponent implements OnInit {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            if (entry.intersectionRatio > .4) {
+            if (entry.intersectionRatio > .6 && entry.intersectionRatio < 1) {
               this.sharedData.clickedLink(entry.target.id);
+              console.log(entry.target.id, entry.intersectionRect, entry.intersectionRatio);
+              
             }
           }
         });
       },
       {
-        threshold: .2,
-        rootMargin: '10% 0px 0px'
+        // default
+          // threshold: .4,
+          // rootMargin: '10% 0px 0px'        
+        
+        // works okay
+          // threshold: 1,
+          // rootMargin: '50px'
+
+        threshold: 1,
+        rootMargin: '50px'
+
       }
     );
 

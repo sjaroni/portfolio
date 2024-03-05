@@ -4,15 +4,15 @@ import { TranslateModule } from '@ngx-translate/core';
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [ CommonModule, TranslateModule ],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
-export class AboutMeComponent {
+export class AboutMeComponent{
   
   constructor() {
     this.calculateYears();
-  }  
+  }
 
   startYear = 2003;
   howManyYearsInIt: number = 0;

@@ -25,7 +25,7 @@
   }
 
   .intro {
-    @include dFlex($jc: flex-start, $ai: center, $fd: column, $g: 35px);
+    @include dFlex($jc: flex-start, $ai: flex-start, $fd: column, $g: 35px);
 
     font-weight: 400;
     font-size: 16px;
@@ -62,7 +62,7 @@
 
 @media (min-width: 993px) {
   .content {
-    @include dFlex($jc: space-between, $ai: flex-end, $fd: row, $g: 0px);
+    @include dFlex($jc: space-between, $ai: center, $fd: row, $g: 0px);
     width: 100%;
     box-sizing: border-box;
     padding: 0 100px;
