@@ -71,9 +71,11 @@
 
 .shadow{
   position: absolute;
-  top: -35%;
+  top: -25%;
   right: -25px;
   z-index: -1;
+  width: 98%;
+  height: auto;
 }
 
 @media (max-width: 390px) {
@@ -111,4 +113,15 @@
     }
 
   }
+
+  .shadow{
+    position: absolute;
+    top: -25%;
+    right: -25px;
+    z-index: -2 !important;
+    width: 68%;
+    height: auto;
+    display: none;
+  }
+
 }

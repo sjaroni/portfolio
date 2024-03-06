@@ -3,17 +3,21 @@
 .content {
   @include dFlex($jc: flex-end, $ai: center, $fd: column, $g: 25px);
   position: relative;
-  background-color: #141d2f;
-
+  background-color: #141d2f;  
+  
   .contact_desktop{
-    padding-bottom: 49px;
-  }
+    padding-bottom: 49px;   
+    z-index: 2;
+  }  
 
   .shadow{
     position: absolute;
-    top: -16%;
-    right: 0;
+    top: -23%;
+    right: -46%;
     z-index: 0;
+    height: 41%;
+    width: auto;
+    transform: rotate(73deg);
   }
 
   .shadow-bottom{
@@ -76,7 +80,7 @@ app-contact-form{
   .content{
 
     .contact{
-
+      z-index: 2;
       svg{
         width: 50px;
       }
@@ -106,6 +110,16 @@ app-contact-form{
 
       }
 
+    }
+
+    .shadow{
+      position: absolute;
+      top: -65%;
+      right: -13%;
+      z-index: 0;
+      height: 69%;
+      width: auto;
+      transform: rotate(73deg);
     }
 
     .shadow-bottom{
