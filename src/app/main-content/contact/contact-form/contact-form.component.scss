@@ -160,6 +160,15 @@ form {
       height: 202px;
     }
 
+    .btn {
+      height: 58px;
+      font-size: 23px;
+      line-height: 27.6px;
+      &:hover{
+        height: 68px;
+      }
+    }
+
     .btnDisabled {
       height: 58px;
       font-size: 23px;

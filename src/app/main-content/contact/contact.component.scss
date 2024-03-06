@@ -18,9 +18,11 @@
 
   .shadow-bottom{
     position: absolute;
-    bottom: -27%;
-    left: 0;
+    bottom: -15%;
     z-index: 0;
+    height: 414px;
+    width: 343px;
+    left: -67px;
   }
 
   .contact {
@@ -104,9 +106,17 @@ app-contact-form{
 
       }
 
-    }    
-  }
+    }
 
+    .shadow-bottom{
+      position: absolute;      
+      left: 0;
+      z-index: 0;
+      height: 600px;
+      width: auto;
+    }
+
+  }
 
   app-contact-form{
     width: 50%;    
