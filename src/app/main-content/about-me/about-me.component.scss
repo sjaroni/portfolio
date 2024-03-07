@@ -7,9 +7,10 @@
 
   .shadow {
     position: absolute;
-    top: -20%;
-    right: 0;
+    top: -16%;
+    left: 57%;
     z-index: 1;
+    height: 415px;
   }
 
   h1 {
@@ -67,8 +68,10 @@
     box-sizing: border-box;
     padding: 0 100px;
 
-    .shadow {
-      z-index: 1;
+    .shadow {      
+      top: -16%;
+      left: 77%;
+      height: 608px;
     }
   }
 

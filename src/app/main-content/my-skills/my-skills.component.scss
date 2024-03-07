@@ -65,9 +65,11 @@
 
 .shadow{
   position: absolute;
-  bottom: -35%;
-  left: 0;
+  bottom: -25%;
+  left: -65%;
   z-index: 1;
+  transform: scaleX(-1) rotate(151deg);
+  width: 100%;
 }
 
 @media (min-width: 993px) {
@@ -123,6 +125,14 @@
     }
   }
 
+  .shadow{
+    position: absolute;
+    bottom: -103%;
+    left: -46%;
+    z-index: 1;
+    transform: scaleX(-1) rotate(151deg);
+    width: 70%;
+  }
 }
 
 @media (min-width: 993px) and (max-width: 1390px) {

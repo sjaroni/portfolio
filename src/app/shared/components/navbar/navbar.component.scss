@@ -3,9 +3,10 @@
 
 nav {
   height: 109px;
+  width: 100%;
+  max-width: 1440px;
   top: 0;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   z-index: 999;
   background-color: #141d2f;
   overflow: visible;

@@ -17,6 +17,7 @@ export class ProjectdataService {
       description: 'PROJECT0_DESCRIPTION',
       linkTryItOut: 'https://www.google.de',
       linkGitHub: 'https://www.vbohz.de',
+      status: ''
     },
     {
       id: 1,
@@ -26,15 +27,17 @@ export class ProjectdataService {
       description: 'PROJECT1_DESCRIPTION',
       linkTryItOut: '#1',
       linkGitHub: '#1',
+      status: ''
     },
     {
       id: 2,
       img: 'join.png',
-      title: 'Test',
-      stack: 'Angular | TypeScript | HTML | CSS | Firebase',
+      title: 'New Project ...',
+      stack: '... coming soon!',
       description: 'PROJECT2_DESCRIPTION',
       linkTryItOut: '#1',
       linkGitHub: '#1',
+      status: 'disabled'
     },
   ];
 

@@ -23,7 +23,7 @@
     data-aos-once="false"
   [ngStyle]="isNotMobile && {'align-items': project.id % 2 === 0 ? 'flex-start' : 'flex-end'}"
   >    
-    <div class="title">{{ project.title }} </div>
+    <div class="title">{{ project.title }}</div>
     <div class="stack"
     [ngStyle]="isNotMobile && {'text-align': project.id % 2 === 0 ? 'left' : 'right'}"
     >{{ project.stack }}</div>
@@ -32,12 +32,14 @@
     >{{ project.description | translate }}</div>
     <div class="buttons">
 
-      <button class="btn-secondary">
-        <a href="{{ project.linkTryItOut }}" target="_blank">{{ 'PORTFOLIO_BTN' | translate }}</a>
-      </button>
-      <button class="btn-secondary">
-        <a href="{{ project.linkGitHub }}" target="_blank">GitHub</a>
-      </button>
+      @if(project.status != 'disabled'){
+        <button class="btn-secondary">
+          <a href="{{ project.linkTryItOut }}" target="_blank">{{ 'PORTFOLIO_BTN' | translate }}</a>
+        </button>
+        <button class="btn-secondary">
+          <a href="{{ project.linkGitHub }}" target="_blank">GitHub</a>
+        </button>
+      }
     </div>
   </div>
 </div>
