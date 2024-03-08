@@ -33,7 +33,6 @@ export class ProjectdataService {
       id: 2,
       img: 'join.png',      
       title: 'PROJECT2_TITLE',
-      // stack: '... coming soon!',
       stack: 'PROJECT2_STACK',
       description: 'PROJECT2_DESCRIPTION',
       linkTryItOut: '#1',

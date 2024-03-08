@@ -49,6 +49,7 @@ export class MainContentComponent implements OnInit {
         });
       },
       {
+        /*ANCHOR - Prüfung */
         // default
           // threshold: .4,
           // rootMargin: '10% 0px 0px'        

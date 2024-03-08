@@ -18,19 +18,16 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class ContactFormComponent {
   http = inject(HttpClient);
-  
+  isChecked: boolean = false;
+  isHovered: boolean = false;
+  checkboxCounter: number = 0;
+  mailTest = true;
   contactData = {
     name: '',
     email: '',
     message: '',
   };
   
-  isChecked: boolean = false;
-  isHovered: boolean = false;
-  checkboxCounter: number = 0;
-
-  mailTest = true;
-
   post = {
     endPoint: 'https://stefan-jaroni.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
