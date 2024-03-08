@@ -12,7 +12,7 @@ export class ProjectdataService {
     {
       id: 0,
       img: 'join.png',
-      title: 'Join',
+      title: 'PROJECT0_TITLE',
       stack: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'PROJECT0_DESCRIPTION',
       linkTryItOut: 'https://www.google.de',
@@ -22,7 +22,7 @@ export class ProjectdataService {
     {
       id: 1,
       img: 'join.png',
-      title: 'Game',
+      title: 'PROJECT1_TITLE',
       stack: 'Angular | TypeScript | HTML | CSS | Firebase',
       description: 'PROJECT1_DESCRIPTION',
       linkTryItOut: '#1',
@@ -31,9 +31,10 @@ export class ProjectdataService {
     },
     {
       id: 2,
-      img: 'join.png',
-      title: 'New Project ...',
-      stack: '... coming soon!',
+      img: 'join.png',      
+      title: 'PROJECT2_TITLE',
+      // stack: '... coming soon!',
+      stack: 'PROJECT2_STACK',
       description: 'PROJECT2_DESCRIPTION',
       linkTryItOut: '#1',
       linkGitHub: '#1',

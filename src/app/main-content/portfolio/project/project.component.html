@@ -23,10 +23,10 @@
     data-aos-once="false"
   [ngStyle]="isNotMobile && {'align-items': project.id % 2 === 0 ? 'flex-start' : 'flex-end'}"
   >    
-    <div class="title">{{ project.title }}</div>
+    <div class="title">{{ project.title | translate }}</div>
     <div class="stack"
     [ngStyle]="isNotMobile && {'text-align': project.id % 2 === 0 ? 'left' : 'right'}"
-    >{{ project.stack }}</div>
+    >{{ project.stack | translate }}</div>
     <div class="description"
     [ngStyle]="isNotMobile && {'text-align': project.id % 2 === 0 ? 'left' : 'right'}"
     >{{ project.description | translate }}</div>
