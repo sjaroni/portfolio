@@ -14,5 +14,5 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './portfolio.component.scss',
 })
 export class PortfolioComponent {  
-  projectdata = inject(ProjectdataService);
+  projectData = inject(ProjectdataService);
 }

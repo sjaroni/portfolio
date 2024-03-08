@@ -16,11 +16,6 @@ import { SharedDataService } from '../../services/shared-data.service';
 export class NavbarComponent implements OnInit, OnDestroy{
   
   sharedData = inject(SharedDataService);
-
-  // isAboutMeClicked: boolean = false;
-  // isSkillsClicked: boolean = false;
-  // isPortfolioClicked: boolean = false;
-  // isContactClicked: boolean = false;
   isMenuOpen: boolean = false;
   showOverlay: boolean = false;  
 
@@ -69,20 +64,15 @@ export class NavbarComponent implements OnInit, OnDestroy{
   openMenu(): void {
     this.sharedData.deactivateLinks();
     this.showOverlay = true;
-
     let lineTop = this.getLineTopElement();
     let lineMiddle = this.getLineMiddleElement();
     let lineBottom = this.getLineBottomElement();
-
     lineTop.style.animation = 'rotateTop 125ms';
     lineTop.style.transform = 'translateY(12px) rotate(-45deg)';
-
     lineMiddle.style.animation = 'fadeOut 125ms';
     lineMiddle.style.backgroundColor = 'rgba(0, 190, 232 , 0)';
-
     lineBottom.style.animation = 'rotateBottom 125ms';
     lineBottom.style.transform = 'translateY(-8px) rotate(45deg)';
-
     this.toggleMenu();
   }
 
@@ -91,17 +81,13 @@ export class NavbarComponent implements OnInit, OnDestroy{
     let lineTop = this.getLineTopElement();
     let lineMiddle = this.getLineMiddleElement();
     let lineBottom = this.getLineBottomElement();
-
     menuMobile.style.animation = 'slideOut 125ms';
     menuMobile.style.transform = 'translateX(100%)';
     menuMobile.style.zIndex = '1';
-
     lineTop.style.animation = 'rotateBackTop 125ms';
     lineTop.style.transform = 'translateY(0px) rotate(0deg)';
-
     lineMiddle.style.animation = 'fadeIn 125ms';
     lineMiddle.style.backgroundColor = 'rgba(0, 190, 232 , 1)';
-
     lineBottom.style.animation = 'rotateBackBottom 125ms';
     lineBottom.style.transform = 'translateY(0px) rotate(0deg)';
 

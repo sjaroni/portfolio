@@ -42,7 +42,7 @@
   </div>
 
   <div class="projectlist">
-    @for(project of projectdata.projects; track project.id; let index = $index){
+    @for(project of projectData.projects; track project.id; let index = $index){
     <app-project [project]="project"></app-project>
     }
   </div>

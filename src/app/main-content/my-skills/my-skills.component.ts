@@ -12,12 +12,6 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './my-skills.component.scss',
 })
 export class MySkillsComponent {
-  hovered = false;
-
-  deleteHovered() {
-    this.hovered = false;
-    console.log('hovered');
-  }
 
   applications: Applications[] = [
     { name: 'Angular', icon: './assets/img/my-skills/angular.svg' },
