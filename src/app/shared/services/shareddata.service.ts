@@ -13,11 +13,18 @@ export class SharedDataService{
 
   constructor() {}
 
+  /**
+   * Check for clicked link in navbar
+   * @param fragment string
+   */
   clickedLink(fragment: string): void {
     this.deactivateLinks();
     this.activateLink(fragment);
   }
 
+  /**
+   * Deactivates all links from navbar
+   */
   deactivateLinks() {
     this.isAboutMeClicked = false;
     this.isSkillsClicked = false;
@@ -25,11 +32,14 @@ export class SharedDataService{
     this.isContactClicked = false;
   }
 
+  /**
+   * Activates current clicked link
+   * @param fragment string
+   */
   activateLink(fragment: string) {
     this.isAboutMeClicked = fragment === 'aboutMe';
     this.isSkillsClicked = fragment === 'skills';
     this.isPortfolioClicked = fragment === 'portfolio';    
     this.isContactClicked = fragment === 'contact';
   }
-
 }

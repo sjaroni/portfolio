@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { SharedDataService } from '../../shared/services/shared-data.service';
+import { SharedDataService } from '../../shared/services/shareddata.service';
 
 @Component({
   selector: 'app-above-the-fold',

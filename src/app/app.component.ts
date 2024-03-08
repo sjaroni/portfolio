@@ -31,6 +31,10 @@ export class AppComponent {
     Aos.init();
   }
 
+  /**
+   * Check Orientation
+   * @returns boolean
+   */
   checkMobileOrientation(){
     if (
       window.matchMedia('(orientation: landscape)').matches &&

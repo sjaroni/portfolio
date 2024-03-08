@@ -57,11 +57,17 @@ export class ContactFormComponent {
     }
   }
 
-
+/**
+ * Changing img on hover
+ * @param isHovered boolean
+ */
   handleHover(isHovered: boolean) {
     this.isHovered = isHovered;
   }
 
+  /**
+   * Changing checkbox state
+   */
   toggleCheckbox() {
     this.isChecked = !this.isChecked;
     this.checkboxCounter++;

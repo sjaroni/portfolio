@@ -162,7 +162,7 @@
       <div class="navLink">
         <div class="navLinkContent">
           <a
-            (click)="sharedData.clickedLink('aboutMe')"
+            (click)="sharedData.clickedLink('aboutMe');closeMenu()"
             href="#aboutMe"
             [ngClass]="{ isActive: sharedData.isAboutMeClicked }"
             >{{ "ABOUT_ME" | translate }}</a
@@ -182,7 +182,7 @@
         </div>
         <div class="navLinkContent">
           <a
-            (click)="sharedData.clickedLink('skills')"
+            (click)="sharedData.clickedLink('skills');closeMenu()"
             href="#skills"
             [ngClass]="{ isActive: sharedData.isSkillsClicked }"
             >{{ "SKILLS" | translate }}</a
@@ -202,7 +202,7 @@
         </div>
         <div class="navLinkContent">
           <a
-            (click)="sharedData.clickedLink('portfolio')"
+            (click)="sharedData.clickedLink('portfolio');closeMenu()"
             href="#portfolio"
             [ngClass]="{ isActive: sharedData.isPortfolioClicked }"
             >Portfolio</a
@@ -222,7 +222,7 @@
         </div>
         <div class="navLinkContent">
           <a
-            (click)="sharedData.clickedLink('contact')"
+            (click)="sharedData.clickedLink('contact');closeMenu()"
             href="#contact"
             [ngClass]="{ isActive: sharedData.isContactClicked }"
             >{{ "CONTACT" | translate }}</a
@@ -244,13 +244,13 @@
         <div class="navLinkContent">
           <div class="languageSelection">
             <a
-              (click)="changeLanguage('en')"
+              (click)="changeLanguage('en');closeMenu()"
               [ngClass]="{ isActive: defaultLanguage == 'en' }"
               >en</a
             >
             |
             <a
-              (click)="changeLanguage('de')"
+              (click)="changeLanguage('de');closeMenu()"
               [ngClass]="{ isActive: defaultLanguage == 'de' }"
               >de</a
             >

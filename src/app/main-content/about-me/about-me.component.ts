@@ -17,6 +17,9 @@ export class AboutMeComponent{
   startYear = 2003;
   howManyYearsInIt: number = 0;
 
+  /**
+   * Calculate years since august 2003
+   */
   calculateYears() {
     let currentDate = new Date();
     let currentYear = currentDate.getFullYear();
