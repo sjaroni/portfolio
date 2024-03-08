@@ -42,6 +42,7 @@ export class MainContentComponent implements OnInit {
           if (entry.isIntersecting) {
             if (entry.intersectionRatio > .6 && entry.intersectionRatio < 1) {
               this.sharedData.clickedLink(entry.target.id);
+              /*ANCHOR - console-log entfernen */
               console.log(entry.target.id, entry.intersectionRect, entry.intersectionRatio);
               
             }

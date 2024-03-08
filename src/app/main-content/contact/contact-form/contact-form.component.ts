@@ -51,6 +51,7 @@ export class ContactFormComponent {
             console.error(error);
           },
           complete: () => console.info('send post complete'),
+          // Animation here?
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();

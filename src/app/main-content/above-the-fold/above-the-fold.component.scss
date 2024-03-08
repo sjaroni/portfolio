@@ -5,7 +5,6 @@
   position: relative;
   background-color: #141d2f;
   margin-top: 109px;
-  // height: 100vh;
 
   .picture-container {
     position: relative;
@@ -121,5 +120,29 @@
     top: 41%;
     z-index: 1;
   }
+}
 
+@media (min-width: 768px) AND (max-width: 1365px) {
+  .image-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+
+  #hero-character-picture,
+  #whoAmI-picture,
+  .image-overlay{
+    width: 65% !important;
+  }
+
+  .bottom{
+    bottom: -67.3% !important;
+  }
+}
+
+@media (min-width: 1024px) AND (max-width: 1366px) {
+  #hero-character-picture,
+  #whoAmI-picture,
+  .image-overlay{
+    width: 100% !important;
+  }
 }
