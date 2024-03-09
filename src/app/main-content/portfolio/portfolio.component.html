@@ -1,13 +1,13 @@
 <div class="content">
   <div
-  class="portfolio"
-  data-aos="fade-up"
-  data-aos-offset="100"
-  data-aos-delay="50"
-  data-aos-duration="125"
-  data-aos-easing="linear"
-  data-aos-mirror="true"
-  data-aos-once="false"
+    class="portfolio"
+    data-aos="fade-up"
+    data-aos-offset="100"
+    data-aos-delay="50"
+    data-aos-duration="125"
+    data-aos-easing="linear"
+    data-aos-mirror="true"
+    data-aos-once="false"
   >
     <svg
       id="svg_left"
@@ -30,7 +30,7 @@
   </div>
 
   <div class="intro"
-  data-aos="fade-up"
+    data-aos="fade-up"
     data-aos-offset="50"
     data-aos-delay="50"
     data-aos-duration="125"
@@ -43,7 +43,7 @@
 
   <div class="projectlist">
     @for(project of projectData.projects; track project.id; let index = $index){
-    <app-project [project]="project"></app-project>
+      <app-project [project]="project"></app-project>
     }
   </div>
 </div>

@@ -9,5 +9,9 @@
   color: #ffffff;
   text-align: center;
   z-index: 999;
-  font-size: 2em;  
+  font-size: 2em;
+
+  img{    
+    animation: rotate90deg 2s ease-in-out infinite;
+  }
 }

@@ -25,24 +25,23 @@
   </div>
 
   <div class="applications">
-    @for(application of applications; track application.name; let index =
-    $index){
+    @for(application of applications; track application.name; let index = $index){
     <app-single-application
       class="single-application"
       data-aos="fade-up"
-    data-aos-offset="50"
-    data-aos-delay="50"
-    data-aos-duration="125"
-    data-aos-easing="linear"
-    data-aos-mirror="true"
-    data-aos-once="false"
+      data-aos-offset="50"
+      data-aos-delay="50"
+      data-aos-duration="125"
+      data-aos-easing="linear"
+      data-aos-mirror="true"
+      data-aos-once="false"
       [singleApplication]="application"
     ></app-single-application>
     }
   </div>
 
   <button id="btnSkillsMobile" class="btn"
-  data-aos="fade-up"
+    data-aos="fade-up"
     data-aos-offset="50"
     data-aos-delay="50"
     data-aos-duration="125"

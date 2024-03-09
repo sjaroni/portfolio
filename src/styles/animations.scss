@@ -123,3 +123,11 @@
   transform: translateX(0%) !important;
   opacity: 1;
 }
+
+@keyframes rotate90deg {
+  from {
+    transform: rotate(0);
+  } to {
+    transform: rotate(90deg);
+  }
+}

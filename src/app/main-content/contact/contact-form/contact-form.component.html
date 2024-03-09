@@ -4,12 +4,12 @@
   autocomplete="off"
   ngNativeValidate
   data-aos="fade-up"
-    data-aos-offset="50"
-    data-aos-delay="50"
-    data-aos-duration="125"
-    data-aos-easing="linear"
-    data-aos-mirror="true"
-    data-aos-once="false"
+  data-aos-offset="50"
+  data-aos-delay="50"
+  data-aos-duration="125"
+  data-aos-easing="linear"
+  data-aos-mirror="true"
+  data-aos-once="false"
 >
   <div class="form-box">
     <div class="input-with-icon">
@@ -27,15 +27,16 @@
             : {}
         "
       />
-      <img
-        *ngIf="name.touched"
+      @if(name.touched){
+        <img        
         [src]="
           name.valid
-            ? './assets/img/contact/done.svg'
-            : './assets/img/contact/error.svg'
-        "
+          ? './assets/img/contact/done.svg'
+          : './assets/img/contact/error.svg'
+          "
         alt="icon"
-      />
+        />
+      }
     </div>
     @if (!name.valid && name.touched && !name.disabled){
     <span class="required">{{ 'FORM_NAME_REQUIRED' | translate }}</span>
@@ -58,15 +59,16 @@
         "
         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
       />
-      <img
-        *ngIf="email.touched"
+      @if(email.touched){
+        <img        
         [src]="
           email.valid
-            ? './assets/img/contact/done.svg'
-            : './assets/img/contact/error.svg'
-        "
+          ? './assets/img/contact/done.svg'
+          : './assets/img/contact/error.svg'
+          "
         alt="icon"
-      />
+        />
+      }
     </div>
     @if (!email.valid && email.touched && !email.disabled){
     <span class="required">{{ 'FORM_EMAIL_REQUIRED' | translate}}</span>
@@ -89,8 +91,8 @@
             : {}
         "
       ></textarea>
-      <img
-        *ngIf="message.touched"
+     @if(message.touched){
+      <img        
         [src]="
           message.valid
             ? './assets/img/contact/done.svg'
@@ -98,6 +100,7 @@
         "
         alt="icon"
       />
+    }
     </div>
     @if (!message.valid && message.touched && !message.disabled){
     <span class="required">{{ 'FORM_MESSAGE_REQUIRED' | translate}}</span>
