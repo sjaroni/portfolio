@@ -26,6 +26,7 @@
   "CONTACT_DESCRIPTION0": "Please use this form. I look forward to exchanging ideas with you.",
   "CONTACT_DESCRIPTION1": "Need a Frontend developer?",
   "CONTACT_DESCRIPTION2": "Contact me!",
+  "SENDMAIL_CONFIRMATION": "Thank you for your message. I will get back to you immediately.",
   "FORM_NAME": "Your name",
   "FORM_NAME_REQUIRED": "Your name is required.",
   "FORM_EMAIL": "Your email",

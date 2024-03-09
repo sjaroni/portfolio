@@ -69,6 +69,16 @@ form {
     height: 162px;
   }
 
+  .confirmation{
+    height: 82px;
+    resize: none;
+    cursor:default;
+    border: 1px #70e61c solid;
+    &:hover {
+      border: 1px #70e61c solid;
+    }
+  }
+
   :focus-visible {
     outline: none;
   }

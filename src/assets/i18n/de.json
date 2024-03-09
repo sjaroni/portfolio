@@ -26,6 +26,7 @@
   "CONTACT_DESCRIPTION0": "Bitte nutzen Sie dieses Formular. Ich freue mich auf den Austausch mit Ihnen.",  
   "CONTACT_DESCRIPTION1": "Brauchen Sie einen Frontend-Entwickler?",
   "CONTACT_DESCRIPTION2": "Schreiben Sie mir!",
+  "SENDMAIL_CONFIRMATION": "Vielen Dank für Ihre Nachricht. Ich werde mich umgehend bei Ihnen melden.",
   "FORM_NAME": "Ihr Name",
   "FORM_NAME_REQUIRED": "Ihr Name wird benötigt.",
   "FORM_EMAIL": "Ihre E-Mail-Adresse",

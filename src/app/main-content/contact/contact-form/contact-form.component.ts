@@ -20,8 +20,10 @@ export class ContactFormComponent {
   http = inject(HttpClient);
   isChecked: boolean = false;
   isHovered: boolean = false;
+  isConfirmed: boolean = false;
+
   checkboxCounter: number = 0;
-  mailTest = true;
+  mailTest = false;
   contactData = {
     name: '',
     email: '',
@@ -50,8 +52,9 @@ export class ContactFormComponent {
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
-          // Animation here?
+          complete: () => {            
+            this.showConfirmation();
+          },
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();
@@ -72,5 +75,17 @@ export class ContactFormComponent {
   toggleCheckbox() {
     this.isChecked = !this.isChecked;
     this.checkboxCounter++;
+  }
+ 
+  /**
+   * Show sendMail Confirmation
+   */
+  showConfirmation(){
+    this.isConfirmed = true;
+
+    setTimeout(() => {
+      this.isConfirmed = false;
+    }, 5000);
+
   }
 }
