@@ -16,6 +16,7 @@ import { TranslateModule } from '@ngx-translate/core';
   templateUrl: './contact-form.component.html',
   styleUrl: './contact-form.component.scss',
 })
+
 export class ContactFormComponent {
   http = inject(HttpClient);
   isChecked: boolean = false;
@@ -85,6 +86,7 @@ export class ContactFormComponent {
 
     setTimeout(() => {
       this.isConfirmed = false;
+      this.checkboxCounter = 0;
     }, 5000);
 
   }

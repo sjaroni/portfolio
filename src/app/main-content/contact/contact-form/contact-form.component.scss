@@ -69,10 +69,10 @@ form {
     height: 162px;
   }
 
-  .confirmation{
-    height: 82px;
+  .confirmation {
+    height: 108px;
     resize: none;
-    cursor:default;
+    cursor: default;
     border: 1px #70e61c solid;
     &:hover {
       border: 1px #70e61c solid;
@@ -174,7 +174,7 @@ form {
       height: 58px;
       font-size: 23px;
       line-height: 27.6px;
-      &:hover{
+      &:hover {
         height: 68px;
       }
     }
@@ -183,6 +183,10 @@ form {
       height: 58px;
       font-size: 23px;
       line-height: 27.6px;
+    }
+
+    .confirmation {
+      height: 82px;
     }
   }
   .navigation {

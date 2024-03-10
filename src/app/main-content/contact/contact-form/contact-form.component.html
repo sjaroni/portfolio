@@ -56,7 +56,7 @@
         [ngStyle]="
           !email.valid && email.touched && !email.disabled
             ? { border: '1px #E61C40 solid' }
-            : {}
+            : { }
         "
         pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
       />
@@ -152,10 +152,11 @@
       >
     </div>
     <span [style.visibility]="isChecked || checkboxCounter < 2 ? 'hidden' : 'visible'" class="required">{{ 'FORM_PRIVACY_REQUIRED' | translate}}</span>
-  </div>
+  </div>    
+
   <input
-    [ngClass]="{ btnDisabled: !isChecked, btn: isChecked }"
-    [disabled]="!isChecked"
+    [ngClass]="{ btnDisabled: !name.valid || !email.valid || !message.valid || !isChecked, btn: isChecked }"
+    [disabled]="!name.valid || !email.valid || !message.valid || !isChecked"
     type="submit"
     value="{{ 'FORM_BTN' | translate }} :)"
   />
