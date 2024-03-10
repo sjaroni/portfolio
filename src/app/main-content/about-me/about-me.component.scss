@@ -56,6 +56,10 @@
     }
   }
 
+  .about_me{
+    z-index: 15;
+  }
+
   .about_me_picture {
     display: none;
   }
@@ -92,7 +96,7 @@
   .about_me_picture {
     @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 0px);
     width: 50%;
-
+    z-index: 15;
     img {
       width: 453px;
       height: 453px;
