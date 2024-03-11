@@ -24,7 +24,16 @@ import { DistanceAreaComponent } from '../shared/components/distance-area/distan
   styleUrl: './main-content.component.scss',
 })
 export class MainContentComponent implements OnInit {
-  sharedData = inject(SharedDataService);
+  sharedData = inject(SharedDataService);  
+  defaultThreshold = .4;  
+  thresholdsByResolution: any = {
+    '(max-width: 1920px)': .4,    
+    '(min-width: 1921px) and (max-width: 2560px)': .8,
+    '(min-width: 2561px) and (max-width: 2880px)': .5,
+    '(min-width: 2881px) and (max-width: 3440px)': .8,
+    '(min-width: 3441px)': .9
+  };
+  
   constructor(private elementRef: ElementRef) {}
 
   ngOnInit(): void {
@@ -34,30 +43,20 @@ export class MainContentComponent implements OnInit {
       '#skills',
       '#portfolio',
       '#contact',
-    ];    
+    ];
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-
-
-            // console.log(entry);
-            
-
-            if (entry.intersectionRatio > .9) {
-            // if (entry.intersectionRatio > .4 && entry.intersectionRatio < 1) {
-              //this.sharedData.clickedLink(entry.target.id);
-              /*ANCHOR - console-log entfernen */
-              //console.log(entry.target.id, entry.intersectionRect, entry.intersectionRatio);
-              
+            if (entry.intersectionRatio > this.getThreshold()) {            
+              this.sharedData.clickedLink(entry.target.id);              
             }
           }
         });
       },
-      {
-        threshold: .6,
-        rootMargin: '50px'
+      {        
+        threshold: this.getThreshold(),
       }
     );
 
@@ -68,4 +67,18 @@ export class MainContentComponent implements OnInit {
       }
     });
   }
+
+  /**
+   * Function to set threshold based on resolution
+   * @returns string - threshold by resolution
+   */
+  getThreshold() {
+    for (let resolution in this.thresholdsByResolution) {
+      if (window.matchMedia(resolution).matches) {
+          return this.thresholdsByResolution[resolution];
+      }
+    }
+    return this.defaultThreshold;
+  }
+
 }

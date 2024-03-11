@@ -3,11 +3,17 @@ import { Component } from '@angular/core';
 import { Applications } from '../../shared/interfaces/applications.interface';
 import { SingleApplicationComponent } from './single-application/single-application.component';
 import { TranslateModule } from '@ngx-translate/core';
+import { DistanceAreaComponent } from '../../shared/components/distance-area/distance-area.component';
 
 @Component({
   selector: 'app-my-skills',
   standalone: true,
-  imports: [ CommonModule , SingleApplicationComponent, TranslateModule],
+  imports: [ 
+    CommonModule, 
+    SingleApplicationComponent, 
+    TranslateModule, 
+    DistanceAreaComponent
+  ],
   templateUrl: './my-skills.component.html',
   styleUrl: './my-skills.component.scss',
 })

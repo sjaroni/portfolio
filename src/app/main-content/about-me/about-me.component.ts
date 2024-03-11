@@ -1,10 +1,15 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
+import { DistanceAreaComponent } from '../../shared/components/distance-area/distance-area.component';
 @Component({
   selector: 'app-about-me',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [
+    CommonModule, 
+    TranslateModule,
+    DistanceAreaComponent
+   ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss',
 })
