@@ -56,18 +56,8 @@ export class MainContentComponent implements OnInit {
         });
       },
       {
-        /*ANCHOR - Prüfung */
-        // default
-          // threshold: .4,
-          // rootMargin: '10% 0px 0px'        
-        
-        // works okay
-          // threshold: 1,
-          // rootMargin: '50px'
-
-        threshold: .95,
+        threshold: .6,
         rootMargin: '50px'
-
       }
     );
 

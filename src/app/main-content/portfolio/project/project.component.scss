@@ -1,17 +1,20 @@
 @import "../../../../styles/mixins.scss";
-.content{
+.content {
   @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
-  position: relative;  
-  
+  position: relative;
+
   .project-img {
-    @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);    
-    img{
-      width: 75%;
-      height: auto;
+    @include dFlex($jc: center, $ai: center, $fd: column, $g: 0px);
+    width: 95%;
+    height: 280px;
+
+    img {
+      width: 100%;
+      object-fit: contain;
     }
   }
 
-  .project-description{
+  .project-description {
     @include dFlex($jc: center, $ai: center, $fd: column, $g: 35px);
     width: 100%;
 
@@ -26,50 +29,70 @@
       font-weight: 400;
     }
 
-    .title{
+    .title {
       font-weight: 700;
       font-size: 32px;
       line-height: 38.4px;
-      color: #4B47FF;
+      color: #4b47ff;
     }
 
-    .stack{
+    .stack {
       font-size: 23px;
       line-height: 27.6px;
-      color: #00BEE8;
+      color: #00bee8;
     }
 
-    .description{
+    .description {
       font-size: 16px;
       line-height: 19.2px;
-      color: #FFFFFF;
+      color: #ffffff;
     }
 
-    .buttons{
+    .buttons {
       position: relative;
       display: flex;
       gap: 51px;
 
-      .btn-secondary:nth-child(1){
-        @include btn-secondary($h: 58px, $p: 15px 30px, $bc: #4B47FF, $c: #4B47FF, $fw: 400, $lh: 27.6px, $fs: 23px, $hc: #00BEE8, $ph: 15px 30px);
-        &:active{
-          background-color: #FFFFFF;
-          color: #00BEE8;
+      .btn-secondary:nth-child(1) {
+        @include btn-secondary(
+          $h: 58px,
+          $p: 15px 30px,
+          $bc: #4b47ff,
+          $c: #4b47ff,
+          $fw: 400,
+          $lh: 27.6px,
+          $fs: 23px,
+          $hc: #00bee8,
+          $ph: 15px 30px
+        );
+        &:active {
+          background-color: #ffffff;
+          color: #00bee8;
         }
       }
-      .btn-secondary:nth-child(2){
-        @include btn-secondary($h: 58px, $p: 15px 30px, $bc: #00BEE8,$c: transparent, $fw: 400, $lh: 27.6px, $fs: 23px, $hc: #00BEE8, $ph: 15px 30px);
-        
-        &:active{
-          background-color: #FFFFFF;
-          color: #00BEE8;
+      .btn-secondary:nth-child(2) {
+        @include btn-secondary(
+          $h: 58px,
+          $p: 15px 30px,
+          $bc: #00bee8,
+          $c: transparent,
+          $fw: 400,
+          $lh: 27.6px,
+          $fs: 23px,
+          $hc: #00bee8,
+          $ph: 15px 30px
+        );
+
+        &:active {
+          background-color: #ffffff;
+          color: #00bee8;
         }
       }
-    }    
-  }  
+    }
+  }
 }
 
-.shadow{
+.shadow {
   position: absolute;
   top: -40%;
   right: -25px;
@@ -79,42 +102,37 @@
 }
 
 @media (max-width: 390px) {
-  .buttons {    
+  .buttons {
     gap: 30px !important;
-  }  
+  }
 }
 
-
-@media (min-width: 993px){
-  
-  .content{
+@media (min-width: 993px) {
+  .content {
     @include dFlex($jc: center, $ai: center, $fd: row, $g: 35px);
     padding: 0 50px;
 
-    .project-img{
+    .project-img {
       width: 51%;
     }
 
-    .project-description{
+    .project-description {
       @include dFlex($jc: center, $ai: flex-start, $fd: column, $g: 35px);
       width: 40%;
 
       .stack,
-      .description{
+      .description {
         text-align: left;
         word-wrap: break-word;
       }
 
-      .buttons{        
+      .buttons {
         gap: 86px;
       }
-
-
     }
-
   }
 
-  .shadow{
+  .shadow {
     position: absolute;
     top: -25%;
     right: -25px;
@@ -123,11 +141,10 @@
     height: auto;
     display: none;
   }
-
 }
 
 @media (min-width: 768px) AND (max-width: 1365px) {
-  .shadow{
+  .shadow {
     width: 80%;
   }
 }
