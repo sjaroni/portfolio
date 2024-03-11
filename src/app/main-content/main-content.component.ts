@@ -40,10 +40,16 @@ export class MainContentComponent implements OnInit {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            if (entry.intersectionRatio > .6 && entry.intersectionRatio < 1) {
-              this.sharedData.clickedLink(entry.target.id);
+
+
+            // console.log(entry);
+            
+
+            if (entry.intersectionRatio > .9) {
+            // if (entry.intersectionRatio > .4 && entry.intersectionRatio < 1) {
+              //this.sharedData.clickedLink(entry.target.id);
               /*ANCHOR - console-log entfernen */
-              console.log(entry.target.id, entry.intersectionRect, entry.intersectionRatio);
+              //console.log(entry.target.id, entry.intersectionRect, entry.intersectionRatio);
               
             }
           }
@@ -59,7 +65,7 @@ export class MainContentComponent implements OnInit {
           // threshold: 1,
           // rootMargin: '50px'
 
-        threshold: 1,
+        threshold: .95,
         rootMargin: '50px'
 
       }

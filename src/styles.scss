@@ -1,12 +1,11 @@
 @import "./styles/mixins.scss";
 @import "./styles/animations.scss";
+@import 'aos/dist/aos.css';
 
 html{
-  scroll-behavior: smooth;
   overflow-x: hidden;  
   background-color: #000000;
-  outline: 1px solid;
-  outline-color: red;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -54,7 +53,7 @@ body {
 
 *{
   scrollbar-width: thin;
-  scrollbar-color: #00BEE8 #dddddd00;
+  scrollbar-color: #00BEE8 #dddddd00;  
 }
 
 ::-webkit-scrollbar {
