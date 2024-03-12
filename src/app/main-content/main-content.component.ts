@@ -33,7 +33,7 @@ export class MainContentComponent implements OnInit {
     '(max-width: 1920px)': .4,    
     '(min-width: 1921px) and (max-width: 2560px)': .8,
     '(min-width: 2561px) and (max-width: 2880px)': .5,
-    '(min-width: 2881px) and (max-width: 3440px)': .8,
+    '(min-width: 2881px) and (max-width: 3440px)': .6,
     '(min-width: 3441px)': .9
   };
   
