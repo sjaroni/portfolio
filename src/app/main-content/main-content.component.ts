@@ -7,6 +7,7 @@ import { ContactComponent } from './contact/contact.component';
 import { ReferencesComponent } from './references/references.component';
 import { SharedDataService } from '../shared/services/shareddata.service';
 import { DistanceAreaComponent } from '../shared/components/distance-area/distance-area.component';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-main-content',
@@ -24,6 +25,8 @@ import { DistanceAreaComponent } from '../shared/components/distance-area/distan
   styleUrl: './main-content.component.scss',
 })
 export class MainContentComponent implements OnInit {
+  titles: string[] = ['Stefan Jaroni - Portfolio', 'Frontend Developer', 'Angular, TS, JS, SCSS']; // Array von Titeln
+  currentTitleIndex = 0;
   sharedData = inject(SharedDataService);  
   defaultThreshold = .4;  
   thresholdsByResolution: any = {
@@ -34,9 +37,16 @@ export class MainContentComponent implements OnInit {
     '(min-width: 3441px)': .9
   };
   
-  constructor(private elementRef: ElementRef) {}
+  constructor(private elementRef: ElementRef, private titleService: Title) {}
 
   ngOnInit(): void {
+    
+    this.setTitle();    
+    setInterval(() => {
+      this.currentTitleIndex = (this.currentTitleIndex + 1) % this.titles.length;
+      this.setTitle();
+    }, 10000);
+
     const elementsToObserve = [
       '#atf',
       '#aboutMe',
@@ -79,6 +89,13 @@ export class MainContentComponent implements OnInit {
       }
     }
     return this.defaultThreshold;
+  }
+
+  /**
+   * Function to set page-title from array
+   */
+  setTitle() {
+    this.titleService.setTitle(this.titles[this.currentTitleIndex]);
   }
 
 }

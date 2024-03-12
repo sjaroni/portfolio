@@ -76,7 +76,8 @@ app-project{
       text-align: center;
     }
     .projectlist {
-      @include dFlex($jc: normal, $ai: center, $fd: column, $g: 48px);
+      @include dFlex($jc: normal, $ai: center, $fd: column, $g: 108px);
+      margin-top: 50px;
     }
   }
 }

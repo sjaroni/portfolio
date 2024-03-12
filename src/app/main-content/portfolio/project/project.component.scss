@@ -94,7 +94,7 @@
 
 .shadow {
   position: absolute;
-  top: -40%;
+  top: -16%;
   right: -25px;
   z-index: -1;
   width: 98%;
@@ -109,11 +109,12 @@
 
 @media (min-width: 993px) {
   .content {
-    @include dFlex($jc: center, $ai: center, $fd: row, $g: 35px);
+    @include dFlex($jc: center, $ai: center, $fd: row, $g: 50px);
     padding: 0 50px;
 
     .project-img {
-      width: 51%;
+      width: 40%;
+      height: unset;
     }
 
     .project-description {
