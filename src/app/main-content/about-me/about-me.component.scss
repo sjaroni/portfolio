@@ -35,7 +35,7 @@
     z-index: 1;
 
     .introduction {
-      @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 35px);
+      @include dFlex($jc: flex-start, $ai: center, $fd: row, $g: 16px);
       width: 100%;
       .img-container {
         position: relative;
@@ -53,10 +53,16 @@
           padding-right: 60px;
         }
       }
+
+      .share-aboutMe {
+        h2 {          
+          line-height: 32px !important;
+        }
+      }
     }
   }
 
-  .about_me{
+  .about_me {
     z-index: 15;
   }
 
@@ -72,7 +78,7 @@
     box-sizing: border-box;
     padding: 0 100px;
 
-    .shadow {      
+    .shadow {
       top: -16%;
       left: 77%;
       height: 608px;

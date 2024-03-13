@@ -23,13 +23,19 @@
         <div class="img-container" id="aboutMeCenter">
           <img class="image" src="./assets/img/about-me/light-bulb.svg" />
         </div>
-        <div class="share-aboutMe" [innerHTML]="'SOME_PERSONAL_THING_TO_SHARE1' | translate"></div>
+        <div class="share-aboutMe">
+          <h2 [innerHTML]="'SOME_PERSONAL_THING_TO_SHARE_HEAD1' | translate"></h2>
+          <span [innerHTML]="'SOME_PERSONAL_THING_TO_SHARE_TEXT1' | translate"></span>
+        </div>
       </div>
       <div class="introduction">
         <div class="img-container">
           <img class="image" src="./assets/img/about-me/puzzle.svg" />
         </div>
-        <div class="share-aboutMe" [innerHTML]="'SOME_PERSONAL_THING_TO_SHARE2' | translate"></div>
+        <div class="share-aboutMe">
+          <h2 [innerHTML]="'SOME_PERSONAL_THING_TO_SHARE_HEAD2' | translate"></h2>
+          <span [innerHTML]="'SOME_PERSONAL_THING_TO_SHARE_TEXT2' | translate"></span>
+        </div>
       </div>
     </div>
   </div>

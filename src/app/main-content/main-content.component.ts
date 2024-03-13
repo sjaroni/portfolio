@@ -25,7 +25,11 @@ import { Title } from '@angular/platform-browser';
   styleUrl: './main-content.component.scss',
 })
 export class MainContentComponent implements OnInit {
-  titles: string[] = ['Stefan Jaroni - Portfolio', 'Frontend Developer', 'Angular, TS, JS, SCSS']; // Array von Titeln
+  titles: string[] = [
+      'Stefan Jaroni - Portfolio', 
+      'Frontend Developer', 
+      'Stefan Jaroni - Portfolio', 
+      'Angular, TS, JS, SCSS'];
   currentTitleIndex = 0;
   sharedData = inject(SharedDataService);  
   defaultThreshold = .4;  
