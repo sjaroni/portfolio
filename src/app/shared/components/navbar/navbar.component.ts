@@ -157,14 +157,18 @@ export class NavbarComponent implements OnInit, OnDestroy {
   }
 
   /**
-   * Set language
+   * Set language, depending on topLevelDomain or localStorage
    */
   setLanguage() {
-    this.defaultLanguage = localStorage.getItem('portfolio');
+    this.defaultLanguage = localStorage.getItem('portfolio');    
+    
     if (!this.defaultLanguage) {
-      this.defaultLanguage = 'en';
+      const currentUrl = window.location.href;
+      const topLevelDomain = currentUrl.split('.');    
+      const resultTopLevelDomain = topLevelDomain[1] == 'com/' ? "en" : "de";
+      this.defaultLanguage = resultTopLevelDomain;
       localStorage.setItem('portfolio', this.defaultLanguage);
-    } else if (this.defaultLanguage == 'en') {
+      } else if (this.defaultLanguage == 'en') {
       this.changeLanguage('en');
     } else {
       this.changeLanguage('de');
