@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { MainContentComponent } from './main-content/main-content.component';
@@ -21,14 +21,22 @@ import 'aos/dist/aos.css';
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  encapsulation: ViewEncapsulation.None,
 })
-export class AppComponent {
+
+export class AppComponent implements OnInit, OnDestroy {
   title = 'portfolio';
   isLandscapeOrientation: boolean = false;  
 
   ngOnInit(): void {    
-    this.isLandscapeOrientation = this.checkMobileOrientation();
-    Aos.init();
+    //this.isLandscapeOrientation = this.checkMobileOrientation();
+    window.addEventListener('resize', this.onResize.bind(this));
+    this.onResize(); // Initial check when component mounts
+    // Aos.init();
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('resize', this.onResize.bind(this));
   }
 
   /**
@@ -46,5 +54,10 @@ export class AppComponent {
     } else {      
       return false;
     }
+  }
+
+  onResize(event?: UIEvent): void {
+    this.isLandscapeOrientation = this.checkMobileOrientation();
+    Aos.init();    
   }
 }

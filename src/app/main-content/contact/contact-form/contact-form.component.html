@@ -57,8 +57,8 @@
           !email.valid && email.touched && !email.disabled
             ? { border: '1px #E61C40 solid' }
             : { }
-        "
-        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+        "        
+        pattern="[a-zA-ZO0-9.%+\-]+@[a-zA-Z0-9.\-]+.[a-zA-Z]{2,}"
       />
       @if(email.touched){
         <img        
