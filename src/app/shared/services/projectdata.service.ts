@@ -31,10 +31,20 @@ export class ProjectdataService {
     },
     {
       id: 2,
-      img: 'new_project.png',      
+      img: 'messenger.png',      
       title: 'PROJECT2_TITLE',
-      stack: 'PROJECT2_STACK',
+      stack: 'Angular | TypeScript | Firebase',
       description: 'PROJECT2_DESCRIPTION',
+      linkTryItOut: 'https://messenger.stefan-jaroni.com',
+      linkGitHub: 'https://github.com/sjaroni/dabubble',
+      status: ''
+    },
+    {
+      id: 3,
+      img: 'new_project.png',      
+      title: 'PROJECT3_TITLE',
+      stack: 'PROJECT3_STACK',
+      description: 'PROJECT3_DESCRIPTION',
       linkTryItOut: '#1',
       linkGitHub: '#1',
       status: 'disabled'
