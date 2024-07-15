@@ -27,9 +27,7 @@ import { Title } from '@angular/platform-browser';
 export class MainContentComponent implements OnInit {
   titles: string[] = [
       'Stefan Jaroni - Portfolio', 
-      'Frontend Developer', 
-      'Stefan Jaroni - Portfolio', 
-      'Angular, TS, JS, SCSS'];
+      'Frontend Developer'];
   currentTitleIndex = 0;
   sharedData = inject(SharedDataService);  
   defaultThreshold = .4;  

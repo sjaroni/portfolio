@@ -29,10 +29,8 @@ export class AppComponent implements OnInit, OnDestroy {
   isLandscapeOrientation: boolean = false;  
 
   ngOnInit(): void {    
-    //this.isLandscapeOrientation = this.checkMobileOrientation();
     window.addEventListener('resize', this.onResize.bind(this));
-    this.onResize(); // Initial check when component mounts
-    // Aos.init();
+    this.onResize();    
   }
 
   ngOnDestroy(): void {

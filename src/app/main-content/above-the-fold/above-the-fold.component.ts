@@ -10,15 +10,32 @@ import { SharedDataService } from '../../shared/services/shareddata.service';
   styleUrl: './above-the-fold.component.scss',
 })
 export class AboveTheFoldComponent {
+  public maxWidth = 992;
+  public hasReloadedForMaxWidth = false;
+  public hasReloadedForMinWidth = false;
+
   imagePath: string | undefined;
 
   constructor(public sharedData: SharedDataService) {}
 
   ngOnInit(): void {
-    if (window.matchMedia('(max-width: 992px)').matches) {
+    this.checkWidthAndReload();
+    window.addEventListener('resize', this.checkWidthAndReload.bind(this));
+  }
+
+  checkWidthAndReload() {
+    const isMaxWidth = window.matchMedia(
+      `(max-width: ${this.maxWidth}px)`
+    ).matches;
+
+    if (isMaxWidth && !this.hasReloadedForMaxWidth) {
       this.imagePath = 'mobile';
-    } else {
+      this.hasReloadedForMaxWidth = true;
+      this.hasReloadedForMinWidth = false;
+    } else if (!isMaxWidth && !this.hasReloadedForMinWidth) {
       this.imagePath = 'desktop';
+      this.hasReloadedForMinWidth = true;
+      this.hasReloadedForMaxWidth = false;
     }
   }
 }
