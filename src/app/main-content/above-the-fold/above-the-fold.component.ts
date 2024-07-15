@@ -23,6 +23,10 @@ export class AboveTheFoldComponent {
     window.addEventListener('resize', this.checkWidthAndReload.bind(this));
   }
 
+  /**
+   * Checks whether the current width is less than or equal to 992px
+   * Set necessary values
+   */
   checkWidthAndReload() {
     const isMaxWidth = window.matchMedia(
       `(max-width: ${this.maxWidth}px)`
