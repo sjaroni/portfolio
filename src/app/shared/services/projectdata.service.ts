@@ -39,16 +39,16 @@ export class ProjectdataService {
       linkGitHub: 'https://github.com/sjaroni/dabubble',
       status: ''
     },
-    {
-      id: 3,
-      img: 'new_project.png',      
-      title: 'PROJECT3_TITLE',
-      stack: 'PROJECT3_STACK',
-      description: 'PROJECT3_DESCRIPTION',
-      linkTryItOut: '#1',
-      linkGitHub: '#1',
-      status: 'disabled'
-    },
+    // {
+    //   id: 3,
+    //   img: 'new_project.png',      
+    //   title: 'PROJECT3_TITLE',
+    //   stack: 'PROJECT3_STACK',
+    //   description: 'PROJECT3_DESCRIPTION',
+    //   linkTryItOut: '#1',
+    //   linkGitHub: '#1',
+    //   status: 'disabled'
+    // },
   ];
 
 }
