@@ -23,7 +23,7 @@ export class ProjectdataService {
       id: 1,
       img: 'game.png',
       title: 'PROJECT1_TITLE',
-      stack: 'JavaScript | HTML | CSS',
+      stack: 'JavaScript | OOP | HTML | CSS',
       description: 'PROJECT1_DESCRIPTION',
       linkTryItOut: 'https://game.stefan-jaroni.com',
       linkGitHub: 'https://github.com/sjaroni/2D-Game',
