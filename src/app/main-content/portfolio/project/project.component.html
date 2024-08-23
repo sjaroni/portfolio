@@ -40,6 +40,9 @@
           <a href="{{ project.linkGitHub }}" target="_blank">GitHub</a>
         </button>
       }
+      @else {
+        {{ project.statusText | translate }}
+      }
     </div>
   </div>
 </div>

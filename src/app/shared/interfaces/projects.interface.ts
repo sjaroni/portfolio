@@ -7,5 +7,6 @@ export interface Projects {
   linkTryItOut: string;
   linkGitHub: string;
   status: string;
+  statusText: string;
 }
 

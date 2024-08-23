@@ -17,7 +17,8 @@ export class ProjectdataService {
       description: 'PROJECT0_DESCRIPTION',
       linkTryItOut: 'https://kanban.stefan-jaroni.com',
       linkGitHub: 'https://github.com/sjaroni/join',
-      status: ''
+      status: '',
+      statusText: 'PROJECT4_STACK'
     },
     {
       id: 1,
@@ -27,7 +28,8 @@ export class ProjectdataService {
       description: 'PROJECT1_DESCRIPTION',
       linkTryItOut: 'https://game.stefan-jaroni.com',
       linkGitHub: 'https://github.com/sjaroni/2D-Game',
-      status: ''
+      status: '',
+      statusText: 'PROJECT4_STACK',
     },
     {
       id: 2,
@@ -37,7 +39,8 @@ export class ProjectdataService {
       description: 'PROJECT2_DESCRIPTION',
       linkTryItOut: 'https://messenger.stefan-jaroni.com',
       linkGitHub: 'https://github.com/sjaroni/dabubble',
-      status: ''
+      status: '',
+      statusText: 'PROJECT4_STACK'
     },
     {
       id: 3,
@@ -47,7 +50,8 @@ export class ProjectdataService {
       description: 'PROJECT3_DESCRIPTION',
       linkTryItOut: '#',
       linkGitHub: 'https://github.com/sjaroni/stock-dashboard',
-      status: ''
+      status: 'disabled',
+      statusText: 'PROJECT4_STACK'
     },
     // {
     //   id: 4,
@@ -57,7 +61,8 @@ export class ProjectdataService {
     //   description: 'PROJECT3_DESCRIPTION',
     //   linkTryItOut: '#1',
     //   linkGitHub: '#1',
-    //   status: 'disabled'
+    //   status: 'disabled',
+    //   statusText: 'PROJECT4_STACK'
     // },
   ];
 

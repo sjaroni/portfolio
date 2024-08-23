@@ -19,7 +19,8 @@ export class ProjectComponent {
     description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
     linkTryItOut: '#1',
     linkGitHub: '#1',
-    status: 'disabled'
+    status: 'disabled',
+    statusText: 'Coming soon...',
   };
 
   @Input() isNotMobile: any = true;
