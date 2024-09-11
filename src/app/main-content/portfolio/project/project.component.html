@@ -9,7 +9,7 @@
     data-aos-duration="125"
     data-aos-easing="linear"
     data-aos-mirror="true"
-    data-aos-once="false"
+    data-aos-once="true"
   >
     <img src="./assets/img/projects/{{ project.img }}" alt="">
   </div>
@@ -20,7 +20,7 @@
     data-aos-duration="125"
     data-aos-easing="linear"
     data-aos-mirror="true"
-    data-aos-once="false"
+    data-aos-once="true"
     [ngStyle]="isNotMobile && {'align-items': project.id % 2 === 0 ? 'flex-start' : 'flex-end'}"
   >    
     <div class="title">{{ project.title | translate }}</div>
