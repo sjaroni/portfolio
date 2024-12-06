@@ -34,10 +34,10 @@
 
       @if(project.status != 'disabled'){
         <button class="btn-secondary">
-          <a href="{{ project.linkTryItOut }}" target="_blank">{{ 'PORTFOLIO_BTN' | translate }}</a>
+          <a href="{{ project.linkTryItOut }}" target="_blank" rel="noreferrer">{{ 'PORTFOLIO_BTN' | translate }}</a>
         </button>
         <button class="btn-secondary">
-          <a href="{{ project.linkGitHub }}" target="_blank">GitHub</a>
+          <a href="{{ project.linkGitHub }}" target="_blank" rel="noreferrer">GitHub</a>
         </button>
       }
       @else {
