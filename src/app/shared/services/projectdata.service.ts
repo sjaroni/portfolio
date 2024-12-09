@@ -48,22 +48,22 @@ export class ProjectdataService {
       title: 'PROJECT3_TITLE',
       stack: 'Vue.js | API | Chart.js',
       description: 'PROJECT3_DESCRIPTION',
-      linkTryItOut: '#',
+      linkTryItOut: 'https://stockchart.stefan-jaroni.com/',
       linkGitHub: 'https://github.com/sjaroni/stock-dashboard',
+      status: '',
+      statusText: 'PROJECT4_STACK'
+    },
+    {
+      id: 4,
+      img: 'new_project.png',      
+      title: 'PROJECT4_TITLE',
+      stack: 'PROJECT4_STACK',
+      description: 'PROJECT4_DESCRIPTION',
+      linkTryItOut: '#',
+      linkGitHub: '#',
       status: 'disabled',
       statusText: 'PROJECT4_STACK'
     },
-    // {
-    //   id: 4,
-    //   img: 'new_project.png',      
-    //   title: 'PROJECT3_TITLE',
-    //   stack: 'PROJECT3_STACK',
-    //   description: 'PROJECT3_DESCRIPTION',
-    //   linkTryItOut: '#1',
-    //   linkGitHub: '#1',
-    //   status: 'disabled',
-    //   statusText: 'PROJECT4_STACK'
-    // },
   ];
 
 }
