@@ -44,7 +44,7 @@ export class ProjectdataService {
     },
     {
       id: 3,
-      img: 'new_project.png',      
+      img: 'stockchart.png',      
       title: 'PROJECT3_TITLE',
       stack: 'Vue.js | API | Chart.js',
       description: 'PROJECT3_DESCRIPTION',
