@@ -31,6 +31,7 @@ export class AppComponent implements OnInit, OnDestroy {
   ngOnInit(): void {    
     window.addEventListener('resize', this.onResize.bind(this));
     this.onResize();    
+    console.log('%cMade with ❤️ in Bremen', 'color: #00BEE8; font-size: 16px; font-weight: bold;');
   }
 
   ngOnDestroy(): void {
