@@ -18,8 +18,7 @@ import { Title } from '@angular/platform-browser';
     AboutMeComponent,
     MySkillsComponent,
     PortfolioComponent,
-    ContactComponent,
-    DistanceAreaComponent,
+    ContactComponent
   ],
   templateUrl: './main-content.component.html',
   styleUrl: './main-content.component.scss',
@@ -27,7 +26,7 @@ import { Title } from '@angular/platform-browser';
 export class MainContentComponent implements OnInit {
   titles: string[] = [
       'Stefan Jaroni - Portfolio', 
-      'Frontend Developer'];
+      'Fullstack Developer'];
   currentTitleIndex = 0;
   sharedData = inject(SharedDataService);  
   defaultThreshold = .4;  

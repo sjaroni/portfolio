@@ -21,6 +21,7 @@ export class MySkillsComponent {
 
   applications: Applications[] = [
     { name: 'Angular', icon: './assets/img/my-skills/angular.svg' },
+    { name: 'NestJS', icon: './assets/img/my-skills/nestjs.svg' },
     { name: 'Vue.js', icon: './assets/img/my-skills/vue.svg' },
     { name: 'TypeScript', icon: './assets/img/my-skills/typescript.svg' },
     { name: 'JavaScript', icon: './assets/img/my-skills/javascript.svg' },
@@ -31,7 +32,6 @@ export class MySkillsComponent {
     { name: 'Material design', icon: './assets/img/my-skills/material.svg' },
     { name: 'Rest-Api', icon: './assets/img/my-skills/api.svg' },
     { name: 'Scrum', icon: './assets/img/my-skills/scrum.svg' },
-    { name: '', icon: '' },
     { name: '', icon: '' },
   ];
 }
