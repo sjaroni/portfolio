@@ -45,5 +45,6 @@
   "FORM_PRIVACY2": "and agree to the processing of my data as outlined.",
   "FORM_PRIVACY_REQUIRED": "Please accept the privacy policy.",
   "IMPRINT": "Imprint",
-  "PRIVACY_POLICY": "privacy policy"
+  "PRIVACY_POLICY": "privacy policy",
+  "NOT_FOUND": "404 - Page not found"
 }
